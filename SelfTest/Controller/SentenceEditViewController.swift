@@ -17,5 +17,5 @@ class SentenceEditViewController: UIViewController {
     
     func displayData() {
     }
-    
+    //表示自体は後続のPRで対応予定
 }
