@@ -1,12 +1,12 @@
 import UIKit
 
-protocol TestTableViewCellDelegate {
+protocol TestTableViewCellDelegate: AnyObject {
     func testTableViewCellDidTapButton(cell: UITableViewCell)
 }
 
 class TestTableViewCell: UITableViewCell {
     
-    var delegate: TestTableViewCellDelegate?
+    weak var delegate: TestTableViewCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
