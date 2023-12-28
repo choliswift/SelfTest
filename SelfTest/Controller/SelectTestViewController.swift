@@ -9,14 +9,14 @@ class SelectTestViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "TestTableViewCell", bundle: nil), forCellReuseIdentifier: "TestTableViewCell")
+        tableView.reloadData()
     }
     
-    var testDataList: [TestDataModel] = []
+    private(set) var testDataList: [TestDataModel] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setTestData()
-        tableView.reloadData()
     }
     
     func setTestData() {
@@ -45,8 +45,8 @@ extension SelectTestViewController: UITableViewDataSource {
 
 extension SelectTestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyborad = UIStoryboard(name: "Main", bundle: nil)
-        if let sentenceEditViewController = storyborad.instantiateViewController(identifier: "SentenceEditViewController") as? SentenceEditViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "SentenceEditViewController") as? SentenceEditViewController {
             let testData = testDataList[indexPath.row]
             sentenceEditViewController.configure(test: testData)
             tableView.deselectRow(at: indexPath, animated: true)
