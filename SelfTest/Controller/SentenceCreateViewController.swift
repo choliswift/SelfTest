@@ -1,13 +1,13 @@
 import UIKit
 import RealmSwift
 
-class SentenceCreateViewController: UIViewController {
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var testContentTextField: UITextField!
-    @IBOutlet weak var answerTextField: UITextField!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var saveButton: UIButton!
+final class SentenceCreateViewController: UIViewController {
+    @IBOutlet private weak var titleTextField: UITextField!
+    @IBOutlet private weak var testContentTextField: UITextField!
+    @IBOutlet private weak var answerTextField: UITextField!
+    @IBOutlet private weak var deleteButton: UIButton!
+    @IBOutlet private weak var addButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
     
     @IBAction func deleteButton(_ sender: UIButton) {
     }
@@ -22,7 +22,7 @@ class SentenceCreateViewController: UIViewController {
         setDoneButton()
     }
     
-    var testData = TestDataModel()
+    private(set) var testData = TestDataModel()
     
     @objc func tapDoneButton() {
         view.endEditing(true)
