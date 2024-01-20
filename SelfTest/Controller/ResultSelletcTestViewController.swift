@@ -1,7 +1,7 @@
 import UIKit
 import RealmSwift
 
-class ResultViewController: UIViewController {
+class ResultSelletcTestViewController: UIViewController {
     
     @IBOutlet weak var viewCloseButon: UIButton!
     

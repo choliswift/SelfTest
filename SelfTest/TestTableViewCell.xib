@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,13 +24,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFA-KE-fKf">
-                        <rect key="frame" x="16" y="76.333333333333329" width="52" height="21"/>
+                        <rect key="frame" x="16" y="76.333333333333329" width="48" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR6-iL-HL5">
-                        <rect key="frame" x="94" y="59.333333333333343" width="50" height="55"/>
+                        <rect key="frame" x="90" y="59.333333333333343" width="50" height="55"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="1GZ-kx-BcF"/>
                             <constraint firstAttribute="height" constant="55" id="fdL-wt-Z61"/>
@@ -40,7 +40,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVY-8q-M1X">
-                        <rect key="frame" x="249" y="69.333333333333329" width="59" height="35"/>
+                        <rect key="frame" x="254" y="69.333333333333329" width="59" height="35"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="F7D-8w-K0E"/>
@@ -54,7 +54,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-6D-s6i">
-                        <rect key="frame" x="182" y="69.333333333333329" width="59" height="35"/>
+                        <rect key="frame" x="187" y="69.333333333333329" width="59" height="35"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="5Oh-AN-28D"/>
@@ -76,8 +76,8 @@
                     <constraint firstItem="vFA-KE-fKf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="I6o-4N-6ah"/>
                     <constraint firstItem="zVY-8q-M1X" firstAttribute="centerY" secondItem="ZR6-iL-HL5" secondAttribute="centerY" id="JYX-bl-bdI"/>
                     <constraint firstItem="vFA-KE-fKf" firstAttribute="top" secondItem="RjQ-Zn-MCJ" secondAttribute="bottom" constant="40" id="RTg-m0-hAk"/>
+                    <constraint firstAttribute="trailing" secondItem="zVY-8q-M1X" secondAttribute="trailing" constant="15" id="UDX-G4-LX6"/>
                     <constraint firstAttribute="trailing" secondItem="RjQ-Zn-MCJ" secondAttribute="trailing" constant="16" id="ZNa-Qr-odk"/>
-                    <constraint firstItem="rUf-6D-s6i" firstAttribute="leading" secondItem="ZR6-iL-HL5" secondAttribute="trailing" constant="38" id="czp-Kc-sA1"/>
                     <constraint firstAttribute="bottom" secondItem="vFA-KE-fKf" secondAttribute="bottom" constant="22.670000000000002" id="geK-1X-mAI"/>
                     <constraint firstItem="rUf-6D-s6i" firstAttribute="centerY" secondItem="ZR6-iL-HL5" secondAttribute="centerY" id="iE9-ec-9aU"/>
                     <constraint firstItem="RjQ-Zn-MCJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="sFo-lN-BCA"/>
@@ -95,10 +95,10 @@
     </objects>
     <resources>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

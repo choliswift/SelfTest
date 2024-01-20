@@ -1,12 +1,15 @@
 import UIKit
+import RealmSwift
 
-protocol TestTableViewCellDelegate: AnyObject {
-    func testTableViewCellDidTapButton(cell: UITableViewCell)
+protocol TestTableViewCellDelegate {
+    func editCell(_ cell: UITableViewCell)
+    func deleteCell(_ cell: UITableViewCell)
 }
+
 
 class TestTableViewCell: UITableViewCell {
     
-    weak var delegate: TestTableViewCellDelegate?
+    var delegate: TestTableViewCellDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
@@ -14,10 +17,11 @@ class TestTableViewCell: UITableViewCell {
     @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func editButton(_ sender: UIButton) {
-        delegate?.testTableViewCellDidTapButton(cell: self)
+        delegate?.editCell(self)
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
+        delegate?.deleteCell(self)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,6 +30,6 @@ class TestTableViewCell: UITableViewCell {
     
     func update(_ model: TestDataModel) {
         titleLabel.text = model.title
-        countLabel.text = model.number
+        countLabel.text = "10"
     }
 }
