@@ -1,8 +1,8 @@
 import UIKit
 import RealmSwift
 
-class SelectTestViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+final class SelectTestViewController: UIViewController {
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +72,7 @@ extension SelectTestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //セルタップ時にアラートを表示
         let alert = UIAlertController(title: "問題を開始しますか？", message: "", preferredStyle: UIAlertController.Style.alert)
-        let start = UIAlertAction(title: "はい", style: .cancel) { (action) in
+        let start = UIAlertAction(title: "はい", style: .cancel) { _ in
             
             let kindTest = self.testDataList[indexPath.row].kind
             if kindTest == 1 {
@@ -90,7 +90,7 @@ extension SelectTestViewController: UITableViewDelegate {
                 //選択式問題
                 let storyboard: UIStoryboard = UIStoryboard(name: "StartSelectTest", bundle: nil)
                 if let vc = storyboard.instantiateViewController(identifier: "StartSellectTestViewController") as? StartSellectTestViewController {
-                    let testData = self.testDataList[indexPath.row]
+                    //let testData = self.testDataList[indexPath.row]
                     //vc.configure(test: testData)　これは後ほど実装。
                     self.present(vc, animated: true, completion: nil)
                 }
