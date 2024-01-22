@@ -1,13 +1,13 @@
 import UIKit
 import RealmSwift
 
-class StartSellectTestViewController: UIViewController {
+final class StartSellectTestViewController: UIViewController {
     
-    @IBOutlet weak var testCount: UILabel!
-    @IBOutlet weak var ContentLabel: UILabel!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet private weak var testCount: UILabel!
+    @IBOutlet private weak var ContentLabel: UILabel!
+    @IBOutlet private weak var nextButton: UIButton!
 
-    @IBAction func nextButton(_ sender: UIButton) {
+    @IBAction private func nextButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toResultVC", sender: nil)
     }
     
