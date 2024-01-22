@@ -8,32 +8,32 @@ protocol TestCountedDelegate {
 final class SentenceCreateViewController: UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
-    @IBAction func saveButton(_ sender: UIButton) {
+    @IBAction private func saveButton(_ sender: UIButton) {
         saveData()
     }
-    @IBOutlet weak var listScrollView: UIScrollView!
-    @IBOutlet weak var listScrollViewButtom: NSLayoutConstraint!
+    @IBOutlet private weak var listScrollView: UIScrollView!
+    @IBOutlet private weak var listScrollViewButtom: NSLayoutConstraint!
     //ひとつだけ設定して、あとはそれぞれにタグつけるやり方でもできるかもしれない
-    @IBOutlet weak var contentTextView1: UITextView!
-    @IBOutlet weak var answerTextView1: UITextView!
-    @IBOutlet weak var contentTextView2: UITextView!
-    @IBOutlet weak var answerTextView2: UITextView!
-    @IBOutlet weak var contentTextView3: UITextView!
-    @IBOutlet weak var answerTextView3: UITextView!
-    @IBOutlet weak var contentTextView4: UITextView!
-    @IBOutlet weak var answerTextView4: UITextView!
-    @IBOutlet weak var contentTextView5: UITextView!
-    @IBOutlet weak var answerTextView5: UITextView!
-    @IBOutlet weak var contentTextView6: UITextView!
-    @IBOutlet weak var answerTextView6: UITextView!
-    @IBOutlet weak var contentTextView7: UITextView!
-    @IBOutlet weak var answerTextView7: UITextView!
-    @IBOutlet weak var contentTextView8: UITextView!
-    @IBOutlet weak var answerTextView8: UITextView!
-    @IBOutlet weak var contentTextView9: UITextView!
-    @IBOutlet weak var answerTextView9: UITextView!
-    @IBOutlet weak var contentTextView10: UITextView!
-    @IBOutlet weak var answerTextView10: UITextView!
+    @IBOutlet private weak var contentTextView1: UITextView!
+    @IBOutlet private weak var answerTextView1: UITextView!
+    @IBOutlet private weak var contentTextView2: UITextView!
+    @IBOutlet private weak var answerTextView2: UITextView!
+    @IBOutlet private weak var contentTextView3: UITextView!
+    @IBOutlet private weak var answerTextView3: UITextView!
+    @IBOutlet private weak var contentTextView4: UITextView!
+    @IBOutlet private weak var answerTextView4: UITextView!
+    @IBOutlet private weak var contentTextView5: UITextView!
+    @IBOutlet private weak var answerTextView5: UITextView!
+    @IBOutlet private weak var contentTextView6: UITextView!
+    @IBOutlet private weak var answerTextView6: UITextView!
+    @IBOutlet private weak var contentTextView7: UITextView!
+    @IBOutlet private weak var answerTextView7: UITextView!
+    @IBOutlet private weak var contentTextView8: UITextView!
+    @IBOutlet private weak var answerTextView8: UITextView!
+    @IBOutlet private weak var contentTextView9: UITextView!
+    @IBOutlet private weak var answerTextView9: UITextView!
+    @IBOutlet private weak var contentTextView10: UITextView!
+    @IBOutlet private weak var answerTextView10: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
