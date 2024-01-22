@@ -1,33 +1,33 @@
 import UIKit
 import RealmSwift
 
-class SentenceEditViewController: UIViewController {
-    @IBOutlet weak var titleEditTextField: UITextField!
+final class SentenceEditViewController: UIViewController {
+    @IBOutlet private weak var titleEditTextField: UITextField!
     //多分、タグ付けでリファクタリングできる
-    @IBOutlet weak var contentEditTextView1: UITextView!
-    @IBOutlet weak var answerEditTextView1: UITextView!
-    @IBOutlet weak var contentEditTextView2: UITextView!
-    @IBOutlet weak var answerEditTextView2: UITextView!
-    @IBOutlet weak var contentEditTextView3: UITextView!
-    @IBOutlet weak var answerEditTextView3: UITextView!
-    @IBOutlet weak var contentEditTextView4: UITextView!
-    @IBOutlet weak var answerEditTextView4: UITextView!
-    @IBOutlet weak var contentEditTextView5: UITextView!
-    @IBOutlet weak var answerEditTextView5: UITextView!
-    @IBOutlet weak var contentEditTextView6: UITextView!
-    @IBOutlet weak var answerEditTextView6: UITextView!
-    @IBOutlet weak var contentEditTextView7: UITextView!
-    @IBOutlet weak var answerEditTextView7: UITextView!
-    @IBOutlet weak var contentEditTextView8: UITextView!
-    @IBOutlet weak var answerEditTextView8: UITextView!
-    @IBOutlet weak var contentEditTextView9: UITextView!
-    @IBOutlet weak var answerEditTextView9: UITextView!
-    @IBOutlet weak var contentEditTextView10: UITextView!
-    @IBOutlet weak var answerEditTextView10: UITextView!
+    @IBOutlet private weak var contentEditTextView1: UITextView!
+    @IBOutlet private weak var answerEditTextView1: UITextView!
+    @IBOutlet private weak var contentEditTextView2: UITextView!
+    @IBOutlet private weak var answerEditTextView2: UITextView!
+    @IBOutlet private weak var contentEditTextView3: UITextView!
+    @IBOutlet private weak var answerEditTextView3: UITextView!
+    @IBOutlet private weak var contentEditTextView4: UITextView!
+    @IBOutlet private weak var answerEditTextView4: UITextView!
+    @IBOutlet private weak var contentEditTextView5: UITextView!
+    @IBOutlet private weak var answerEditTextView5: UITextView!
+    @IBOutlet private weak var contentEditTextView6: UITextView!
+    @IBOutlet private weak var answerEditTextView6: UITextView!
+    @IBOutlet private weak var contentEditTextView7: UITextView!
+    @IBOutlet private weak var answerEditTextView7: UITextView!
+    @IBOutlet private weak var contentEditTextView8: UITextView!
+    @IBOutlet private weak var answerEditTextView8: UITextView!
+    @IBOutlet private weak var contentEditTextView9: UITextView!
+    @IBOutlet private weak var answerEditTextView9: UITextView!
+    @IBOutlet private weak var contentEditTextView10: UITextView!
+    @IBOutlet private weak var answerEditTextView10: UITextView!
     
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
     
-    @IBAction func savaButton(_ sender: UIButton) {
+    @IBAction private func savaButton(_ sender: UIButton) {
         saveData()
     }
     
