@@ -1,7 +1,7 @@
 import UIKit
 import RealmSwift
 
-class CreateNewViewController: UIViewController {
+final class CreateNewViewController: UIViewController {
     @IBOutlet private weak var sentenceButton: UIButton!
     @IBOutlet private weak var choiceButton: UIButton!
     
