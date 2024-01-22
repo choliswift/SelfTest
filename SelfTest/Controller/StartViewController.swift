@@ -1,17 +1,17 @@
 import UIKit
 import RealmSwift
 
-class StartViewController: UIViewController {
+final class StartViewController: UIViewController {
     
-    @IBOutlet weak var testCountLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var inputTextView: UITextView!
-    @IBOutlet weak var correctAnswerLabel: UILabel!
+    @IBOutlet private weak var testCountLabel: UILabel!
+    @IBOutlet private weak var contentLabel: UILabel!
+    @IBOutlet private  weak var inputTextView: UITextView!
+    @IBOutlet private weak var correctAnswerLabel: UILabel!
     
-    @IBOutlet weak var bestAnswer: UILabel!
-    @IBOutlet weak var confirmationButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBAction func confirmationButton(_ sender: UIButton) {
+    @IBOutlet private weak var bestAnswer: UILabel!
+    @IBOutlet private weak var confirmationButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBAction private func confirmationButton(_ sender: UIButton) {
         //ボタンの重複処理を無効にする
         confirmationButton.isEnabled = false
         if inputTextView.text == testData.testAnswer1 {
@@ -22,7 +22,7 @@ class StartViewController: UIViewController {
         bestAnswer.isHidden = false
         correctAnswerLabel.isHidden = false
     }
-    @IBAction func nextButton(_ sender: UIButton) {
+    @IBAction private func nextButton(_ sender: UIButton) {
         //問題が終わった際に次の画面へ向かう。
         performSegue(withIdentifier: "toScoreVC", sender: nil)
     }
@@ -50,9 +50,9 @@ class StartViewController: UIViewController {
     
     private(set) var testDataList: [TestDataModel] = []
     
-    var testData = TestDataModel()
+    private var testData = TestDataModel()
     
-    var testCount = 0
+    private var testCount = 0
 
     @objc func tapDoneButton() {
         view.endEditing(true)
