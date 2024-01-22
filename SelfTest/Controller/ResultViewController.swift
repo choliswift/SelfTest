@@ -1,11 +1,11 @@
 import UIKit
 import RealmSwift
 
-class ResultViewController: UIViewController {
+final class ResultViewController: UIViewController {
     
-    @IBOutlet weak var viewCloseButon: UIButton!
+    @IBOutlet private weak var viewCloseButon: UIButton!
     
-    @IBAction func viewCloseButton(_ sender: UIButton) {
+    @IBAction private func viewCloseButton(_ sender: UIButton) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
     override func viewDidLoad() {
