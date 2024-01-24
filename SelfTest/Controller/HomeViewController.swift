@@ -5,7 +5,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var selectButton: UIButton!
     @IBOutlet private weak var createButton: UIButton!
     @IBOutlet private weak var modeButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()

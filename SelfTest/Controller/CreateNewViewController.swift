@@ -1,9 +1,8 @@
 import UIKit
 import RealmSwift
 
-class CreateNewViewController: UIViewController {
+final class CreateNewViewController: UIViewController {
     @IBOutlet private weak var sentenceButton: UIButton!
-    @IBOutlet private weak var wordButton: UIButton!
     @IBOutlet private weak var choiceButton: UIButton!
     
     override func viewDidLoad() {
@@ -13,7 +12,6 @@ class CreateNewViewController: UIViewController {
     
     func configureButton() {
         sentenceButton.layer.cornerRadius = sentenceButton.bounds.width / 11
-        wordButton.layer.cornerRadius = wordButton.bounds.width / 11
         choiceButton.layer.cornerRadius = choiceButton.bounds.width / 11
     }
     
