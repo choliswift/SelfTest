@@ -35,7 +35,7 @@ final class SentenceCreateViewController: UIViewController {
     @IBOutlet private weak var contentTextView10: UITextView!
     @IBOutlet private weak var answerTextView10: UITextView!
     
-    @IBOutlet weak var alertLabel: UILabel!
+    @IBOutlet private weak var alertLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
