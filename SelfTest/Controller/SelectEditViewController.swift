@@ -48,12 +48,30 @@ final class SelectEditViewController: UIViewController {
         saveButtonisEnabled()
     }
     
-    @IBOutlet weak var listScrollViewButtom: NSLayoutConstraint!
+    @IBOutlet private weak var listScrollViewButtom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayData()
         setupNotifications()
+        setDoneButton()
+        
+        //解答をpickerViewに変更
+        pickerView1.delegate = self
+        pickerView1.dataSource = self
+        pickerView2.delegate = self
+        pickerView2.dataSource = self
+        pickerView3.delegate = self
+        pickerView3.dataSource = self
+        pickerView4.delegate = self
+        pickerView4.dataSource = self
+        pickerView5.delegate = self
+        pickerView5.dataSource = self
+        answerEditTextView1.inputView = pickerView1
+        answerEditTextView2.inputView = pickerView2
+        answerEditTextView3.inputView = pickerView3
+        answerEditTextView4.inputView = pickerView4
+        answerEditTextView5.inputView = pickerView5
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapDoneButton))
         tapGesture.cancelsTouchesInView = false
@@ -64,7 +82,50 @@ final class SelectEditViewController: UIViewController {
         view.endEditing(true)
     }
     
-    var testData = TestDataModel()
+    private let pickerView1 = UIPickerView()
+    private let pickerView2 = UIPickerView()
+    private let pickerView3 = UIPickerView()
+    private let pickerView4 = UIPickerView()
+    private let pickerView5 = UIPickerView()
+    private(set) var testData = TestDataModel()
+    private var list: [String] = ["", "1", "2", "3", "4"]
+    
+    func setDoneButton() {
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
+            toolBar.items = [commitButton]
+        titleEditTextField.inputAccessoryView = toolBar
+        contentEditTextView1.inputAccessoryView = toolBar
+        contentEditTextView2.inputAccessoryView = toolBar
+        contentEditTextView3.inputAccessoryView = toolBar
+        contentEditTextView4.inputAccessoryView = toolBar
+        contentEditTextView5.inputAccessoryView = toolBar
+        choicesEditTextView1of1.inputAccessoryView = toolBar
+        choicesEditTextView2of1.inputAccessoryView = toolBar
+        choicesEditTextView3of1.inputAccessoryView = toolBar
+        choicesEditTextView4of1.inputAccessoryView = toolBar
+        choicesEditTextView1of2.inputAccessoryView = toolBar
+        choicesEditTextView2of2.inputAccessoryView = toolBar
+        choicesEditTextView3of2.inputAccessoryView = toolBar
+        choicesEditTextView4of2.inputAccessoryView = toolBar
+        choicesEditTextView1of3.inputAccessoryView = toolBar
+        choicesEditTextView2of3.inputAccessoryView = toolBar
+        choicesEditTextView3of3.inputAccessoryView = toolBar
+        choicesEditTextView4of3.inputAccessoryView = toolBar
+        choicesEditTextView1of4.inputAccessoryView = toolBar
+        choicesEditTextView2of4.inputAccessoryView = toolBar
+        choicesEditTextView3of4.inputAccessoryView = toolBar
+        choicesEditTextView4of4.inputAccessoryView = toolBar
+        choicesEditTextView1of5.inputAccessoryView = toolBar
+        choicesEditTextView2of5.inputAccessoryView = toolBar
+        choicesEditTextView3of5.inputAccessoryView = toolBar
+        choicesEditTextView4of5.inputAccessoryView = toolBar
+        answerEditTextView1.inputAccessoryView = toolBar
+        answerEditTextView2.inputAccessoryView = toolBar
+        answerEditTextView3.inputAccessoryView = toolBar
+        answerEditTextView4.inputAccessoryView = toolBar
+        answerEditTextView5.inputAccessoryView = toolBar
+    }
     
     func configure(test: TestDataModel) {
         testData.id = test.id
@@ -264,5 +325,33 @@ extension SelectEditViewController: UITextViewDelegate {
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         textView.resignFirstResponder()
         return true
+    }
+}
+
+extension SelectEditViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return list.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return list[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView === pickerView1 {
+            answerEditTextView1.text = list[row]
+        } else if pickerView === pickerView2 {
+            answerEditTextView2.text = list[row]
+        } else if pickerView === pickerView3 {
+            answerEditTextView3.text = list[row]
+        } else if pickerView === pickerView4 {
+            answerEditTextView4.text = list[row]
+        } else if pickerView === pickerView5 {
+            answerEditTextView5.text = list[row]
+        }
     }
 }
