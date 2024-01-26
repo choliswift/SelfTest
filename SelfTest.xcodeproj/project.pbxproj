@@ -28,10 +28,17 @@
 		DF0949E82B2E130D00D8642C /* SentenceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0949E72B2E130D00D8642C /* SentenceCreateViewController.swift */; };
 		DF0949EA2B2E131D00D8642C /* SentenceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0949E92B2E131D00D8642C /* SentenceEditViewController.swift */; };
 		DF0949EC2B2E132F00D8642C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0949EB2B2E132F00D8642C /* StartViewController.swift */; };
+		DF40EBC42B62248800558AFA /* SelectEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF40EBC32B62248800558AFA /* SelectEditViewController.swift */; };
+		DF43EBAF2B60A12500A78CBC /* テーマソング.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBAE2B60A12500A78CBC /* テーマソング.mp3 */; };
+		DF43EBB22B60A12F00A78CBC /* クイズ不正解.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB02B60A12F00A78CBC /* クイズ不正解.mp3 */; };
+		DF43EBB32B60A12F00A78CBC /* クイズ正解.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB12B60A12F00A78CBC /* クイズ正解.mp3 */; };
+		DF43EBB52B60A4B600A78CBC /* セルフテストロゴ.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB42B60A4B600A78CBC /* セルフテストロゴ.png */; };
+		DF43EBB92B60B96E00A78CBC /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB72B60B96E00A78CBC /* correct.png */; };
+		DF43EBBA2B60B96E00A78CBC /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB82B60B96E00A78CBC /* incorrect.png */; };
 		DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */; };
-		DF50453E2B5A35350046B3FD /* StartSellectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50453D2B5A35350046B3FD /* StartSellectTestViewController.swift */; };
-		DF5045402B5A36960046B3FD /* ResultSelletcTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50453F2B5A36960046B3FD /* ResultSelletcTestViewController.swift */; };
-		DF5045422B5A3E9E0046B3FD /* SellectCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5045412B5A3E9E0046B3FD /* SellectCreateViewController.swift */; };
+		DF50453E2B5A35350046B3FD /* StartSelectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50453D2B5A35350046B3FD /* StartSelectTestViewController.swift */; };
+		DF5045402B5A36960046B3FD /* ResultSelectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50453F2B5A36960046B3FD /* ResultSelectTestViewController.swift */; };
+		DF5045422B5A3E9E0046B3FD /* SelectCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5045412B5A3E9E0046B3FD /* SelectCreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,10 +89,17 @@
 		DF0949E72B2E130D00D8642C /* SentenceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceCreateViewController.swift; sourceTree = "<group>"; };
 		DF0949E92B2E131D00D8642C /* SentenceEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceEditViewController.swift; sourceTree = "<group>"; };
 		DF0949EB2B2E132F00D8642C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		DF40EBC32B62248800558AFA /* SelectEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEditViewController.swift; sourceTree = "<group>"; };
+		DF43EBAE2B60A12500A78CBC /* テーマソング.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "テーマソング.mp3"; path = "SelfTest/Image&Song Data/テーマソング.mp3"; sourceTree = SOURCE_ROOT; };
+		DF43EBB02B60A12F00A78CBC /* クイズ不正解.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "クイズ不正解.mp3"; path = "SelfTest/Image&Song Data/クイズ不正解.mp3"; sourceTree = SOURCE_ROOT; };
+		DF43EBB12B60A12F00A78CBC /* クイズ正解.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "クイズ正解.mp3"; path = "SelfTest/Image&Song Data/クイズ正解.mp3"; sourceTree = SOURCE_ROOT; };
+		DF43EBB42B60A4B600A78CBC /* セルフテストロゴ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "セルフテストロゴ.png"; path = "SelfTest/Image&Song Data/セルフテストロゴ.png"; sourceTree = SOURCE_ROOT; };
+		DF43EBB72B60B96E00A78CBC /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
+		DF43EBB82B60B96E00A78CBC /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
 		DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartSelectTest.storyboard; sourceTree = "<group>"; };
-		DF50453D2B5A35350046B3FD /* StartSellectTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSellectTestViewController.swift; sourceTree = "<group>"; };
-		DF50453F2B5A36960046B3FD /* ResultSelletcTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSelletcTestViewController.swift; sourceTree = "<group>"; };
-		DF5045412B5A3E9E0046B3FD /* SellectCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellectCreateViewController.swift; sourceTree = "<group>"; };
+		DF50453D2B5A35350046B3FD /* StartSelectTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSelectTestViewController.swift; sourceTree = "<group>"; };
+		DF50453F2B5A36960046B3FD /* ResultSelectTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSelectTestViewController.swift; sourceTree = "<group>"; };
+		DF5045412B5A3E9E0046B3FD /* SelectCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCreateViewController.swift; sourceTree = "<group>"; };
 		EEA782B9CFE5FD4F9F204801 /* Pods-SelfTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfTestTests.debug.xcconfig"; path = "Target Support Files/Pods-SelfTestTests/Pods-SelfTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0949EF2B2EC14200D8642C /* Controller */,
+				DF43EBB62B60A4EB00A78CBC /* Image&Song Data */,
 				DF0949DC2B2E037400D8642C /* Storyboard */,
 				DF0949D52B2DFE3100D8642C /* Delegate */,
 				DF0949CE2B2DFDFF00D8642C /* TestDataModel.swift */,
@@ -206,16 +221,30 @@
 			children = (
 				DF0949DF2B2E10AC00D8642C /* HomeViewController.swift */,
 				DF0949E52B2E12FF00D8642C /* SelectTestViewController.swift */,
-				DF0949E92B2E131D00D8642C /* SentenceEditViewController.swift */,
 				DF0949E12B2E12DB00D8642C /* CreateNewViewController.swift */,
 				DF0949E72B2E130D00D8642C /* SentenceCreateViewController.swift */,
-				DF5045412B5A3E9E0046B3FD /* SellectCreateViewController.swift */,
+				DF0949E92B2E131D00D8642C /* SentenceEditViewController.swift */,
+				DF5045412B5A3E9E0046B3FD /* SelectCreateViewController.swift */,
+				DF40EBC32B62248800558AFA /* SelectEditViewController.swift */,
 				DF0949EB2B2E132F00D8642C /* StartViewController.swift */,
 				DF0949E32B2E12F200D8642C /* ResultViewController.swift */,
-				DF50453D2B5A35350046B3FD /* StartSellectTestViewController.swift */,
-				DF50453F2B5A36960046B3FD /* ResultSelletcTestViewController.swift */,
+				DF50453D2B5A35350046B3FD /* StartSelectTestViewController.swift */,
+				DF50453F2B5A36960046B3FD /* ResultSelectTestViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DF43EBB62B60A4EB00A78CBC /* Image&Song Data */ = {
+			isa = PBXGroup;
+			children = (
+				DF43EBB72B60B96E00A78CBC /* correct.png */,
+				DF43EBB82B60B96E00A78CBC /* incorrect.png */,
+				DF43EBB42B60A4B600A78CBC /* セルフテストロゴ.png */,
+				DF43EBB12B60A12F00A78CBC /* クイズ正解.mp3 */,
+				DF43EBB02B60A12F00A78CBC /* クイズ不正解.mp3 */,
+				DF43EBAE2B60A12500A78CBC /* テーマソング.mp3 */,
+			);
+			path = "Image&Song Data";
 			sourceTree = "<group>";
 		};
 		EFFE06DB4CA064CE09E4161B /* Pods */ = {
@@ -341,10 +370,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF0949DB2B2E02F900D8642C /* StartTest.storyboard in Resources */,
+				DF43EBB52B60A4B600A78CBC /* セルフテストロゴ.png in Resources */,
 				DF0949D92B2E017700D8642C /* Main.storyboard in Resources */,
 				DF09499F2B2DFCC000D8642C /* Assets.xcassets in Resources */,
+				DF43EBB32B60A12F00A78CBC /* クイズ正解.mp3 in Resources */,
+				DF43EBAF2B60A12500A78CBC /* テーマソング.mp3 in Resources */,
 				DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */,
+				DF43EBB92B60B96E00A78CBC /* correct.png in Resources */,
 				DF0949D12B2DFDFF00D8642C /* TestTableViewCell.xib in Resources */,
+				DF43EBB22B60A12F00A78CBC /* クイズ不正解.mp3 in Resources */,
+				DF43EBBA2B60B96E00A78CBC /* incorrect.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,15 +510,16 @@
 				DF0949E42B2E12F200D8642C /* ResultViewController.swift in Sources */,
 				DF0949E82B2E130D00D8642C /* SentenceCreateViewController.swift in Sources */,
 				DF0949E22B2E12DB00D8642C /* CreateNewViewController.swift in Sources */,
-				DF5045422B5A3E9E0046B3FD /* SellectCreateViewController.swift in Sources */,
+				DF5045422B5A3E9E0046B3FD /* SelectCreateViewController.swift in Sources */,
 				DF0949D22B2DFDFF00D8642C /* TestDataModel.swift in Sources */,
-				DF50453E2B5A35350046B3FD /* StartSellectTestViewController.swift in Sources */,
-				DF5045402B5A36960046B3FD /* ResultSelletcTestViewController.swift in Sources */,
+				DF50453E2B5A35350046B3FD /* StartSelectTestViewController.swift in Sources */,
+				DF5045402B5A36960046B3FD /* ResultSelectTestViewController.swift in Sources */,
 				DF0949962B2DFCC000D8642C /* AppDelegate.swift in Sources */,
 				DF0949EA2B2E131D00D8642C /* SentenceEditViewController.swift in Sources */,
 				DF0949EC2B2E132F00D8642C /* StartViewController.swift in Sources */,
 				DF0949982B2DFCC000D8642C /* SceneDelegate.swift in Sources */,
 				DF0949E62B2E12FF00D8642C /* SelectTestViewController.swift in Sources */,
+				DF40EBC42B62248800558AFA /* SelectEditViewController.swift in Sources */,
 				DF0949E02B2E10AC00D8642C /* HomeViewController.swift in Sources */,
 				DF0949D42B2DFDFF00D8642C /* TestTableViewCell.swift in Sources */,
 			);
@@ -656,8 +692,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -686,8 +722,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

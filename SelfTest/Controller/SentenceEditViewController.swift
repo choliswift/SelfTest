@@ -25,15 +25,27 @@ final class SentenceEditViewController: UIViewController {
     @IBOutlet private weak var contentEditTextView10: UITextView!
     @IBOutlet private weak var answerEditTextView10: UITextView!
     
+    @IBOutlet weak var alertLabel: UILabel!
+    
     @IBOutlet private weak var saveButton: UIButton!
     
     @IBAction private func savaButton(_ sender: UIButton) {
-        saveData()
+        saveButtonisEnabled()
     }
+    
+    @IBOutlet weak var listScrollViewButtom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayData()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapDoneButton))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapDoneButton() {
+        view.endEditing(true)
     }
     
     var testData = TestDataModel()
@@ -116,5 +128,85 @@ final class SentenceEditViewController: UIViewController {
                 }
             }
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    //キーボードを表示した際にtextViewが隠れないようにする処理
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillClose), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillAppear(_ notification: Notification) {
+        print("キーボード表示")
+        //キーボードのサイズ
+        guard let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+              //キーボードのアニメーション時間を設定
+              let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+              //キーボードのアニメーションの曲線
+              let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+              //Outletで結びつけたlistScrollViewのButtomをここで制約
+              let scrollViewButtomConstraint = self.listScrollViewButtom else { return }
+        
+        //キーボードの高さを読み込む
+        let keyboardHeight = keyboardFrame.height
+        //scrollViewのButtomを再設定
+        scrollViewButtomConstraint.constant = keyboardHeight
+        
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @objc private func keyboardWillClose(_ notification: Notification) {
+        //キーボードのアニメーション時間を設定
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+              //キーボードのアニメーションの曲線
+              let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+              //Outletで結びつけたlistScrollViewのButtomをここで制約
+              let scrollViewButtomConstraint = self.listScrollViewButtom else { return }
+        
+        //scrollViewのButtomを再設定
+        scrollViewButtomConstraint.constant = 0
+        
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    //未入力があった際に保存できないようにする
+    func saveButtonisEnabled() {
+        if contentEditTextView1.text.count != 0
+            && contentEditTextView2.text.count != 0
+            && contentEditTextView3.text.count != 0
+            && contentEditTextView4.text.count != 0
+            && contentEditTextView5.text.count != 0
+            && contentEditTextView6.text.count != 0
+            && contentEditTextView7.text.count != 0
+            && contentEditTextView8.text.count != 0
+            && contentEditTextView9.text.count != 0
+            && contentEditTextView10.text.count != 0
+            && answerEditTextView1.text.count != 0
+            && answerEditTextView2.text.count != 0
+            && answerEditTextView3.text.count != 0
+            && answerEditTextView4.text.count != 0
+            && answerEditTextView5.text.count != 0
+            && answerEditTextView6.text.count != 0
+            && answerEditTextView7.text.count != 0
+            && answerEditTextView8.text.count != 0
+            && answerEditTextView8.text.count != 0
+            && answerEditTextView10.text.count != 0
+            && titleEditTextField.text != "" {
+            saveData()
+        } else {
+            alertLabel.text = "空欄があります。入力してください。"
+            alertLabel.textColor = .red
+        }
+    }
+    
+}
+
+extension SentenceEditViewController: UITextViewDelegate {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        return true
     }
 }
