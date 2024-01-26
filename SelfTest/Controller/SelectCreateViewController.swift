@@ -45,20 +45,43 @@ class SelectCreateViewController: UIViewController {
     @IBOutlet private weak var choicesTextView4of5: UITextView!
     @IBOutlet private weak var answerTextView5: UITextView!
     
-    @IBOutlet weak var alertLabel: UILabel!
+    @IBOutlet private weak var alertLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDoneButton()
         setupNotifications()
         
+        //解答をpickerViewに変更
+        pickerView1.delegate = self
+        pickerView1.dataSource = self
+        pickerView2.delegate = self
+        pickerView2.dataSource = self
+        pickerView3.delegate = self
+        pickerView3.dataSource = self
+        pickerView4.delegate = self
+        pickerView4.dataSource = self
+        pickerView5.delegate = self
+        pickerView5.dataSource = self
+        answerTextView1.inputView = pickerView1
+        answerTextView2.inputView = pickerView2
+        answerTextView3.inputView = pickerView3
+        answerTextView4.inputView = pickerView4
+        answerTextView5.inputView = pickerView5
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapDoneButton))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
     }
     
+    private let pickerView1 = UIPickerView()
+    private let pickerView2 = UIPickerView()
+    private let pickerView3 = UIPickerView()
+    private let pickerView4 = UIPickerView()
+    private let pickerView5 = UIPickerView()
     private var testDataList: [TestDataModel] = []
     private var testData = TestDataModel()
+    private var list: [String] = ["", "1", "2", "3", "4"]
     
     @objc func tapDoneButton() {
         view.endEditing(true)
@@ -231,5 +254,34 @@ extension SelectCreateViewController: UITextViewDelegate {
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         textView.resignFirstResponder()
         return true
+    }
+}
+
+//解答をpickerViewに変更
+extension SelectCreateViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return list.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return list[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView === pickerView1 {
+            answerTextView1.text = list[row]
+        } else if pickerView === pickerView2 {
+            answerTextView2.text = list[row]
+        } else if pickerView === pickerView3 {
+            answerTextView3.text = list[row]
+        } else if pickerView === pickerView4 {
+            answerTextView4.text = list[row]
+        } else if pickerView === pickerView5 {
+            answerTextView5.text = list[row]
+        }
     }
 }
