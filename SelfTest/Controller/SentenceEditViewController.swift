@@ -25,7 +25,7 @@ final class SentenceEditViewController: UIViewController {
     @IBOutlet private weak var contentEditTextView10: UITextView!
     @IBOutlet private weak var answerEditTextView10: UITextView!
     
-    @IBOutlet weak var alertLabel: UILabel!
+    @IBOutlet private weak var alertLabel: UILabel!
     
     @IBOutlet private weak var saveButton: UIButton!
     
@@ -33,7 +33,7 @@ final class SentenceEditViewController: UIViewController {
         saveButtonisEnabled()
     }
     
-    @IBOutlet weak var listScrollViewButtom: NSLayoutConstraint!
+    @IBOutlet private weak var listScrollViewButtom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,34 @@ final class SentenceEditViewController: UIViewController {
         view.endEditing(true)
     }
     
-    var testData = TestDataModel()
+    private(set) var testData = TestDataModel()
+    
+    func setDoneButton() {
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
+        toolBar.items = [commitButton]
+        titleEditTextField.inputAccessoryView = toolBar
+        contentEditTextView1.inputAccessoryView = toolBar
+        contentEditTextView2.inputAccessoryView = toolBar
+        contentEditTextView3.inputAccessoryView = toolBar
+        contentEditTextView4.inputAccessoryView = toolBar
+        contentEditTextView5.inputAccessoryView = toolBar
+        contentEditTextView6.inputAccessoryView = toolBar
+        contentEditTextView7.inputAccessoryView = toolBar
+        contentEditTextView8.inputAccessoryView = toolBar
+        contentEditTextView9.inputAccessoryView = toolBar
+        contentEditTextView10.inputAccessoryView = toolBar
+        answerEditTextView1.inputAccessoryView = toolBar
+        answerEditTextView2.inputAccessoryView = toolBar
+        answerEditTextView3.inputAccessoryView = toolBar
+        answerEditTextView4.inputAccessoryView = toolBar
+        answerEditTextView5.inputAccessoryView = toolBar
+        answerEditTextView6.inputAccessoryView = toolBar
+        answerEditTextView7.inputAccessoryView = toolBar
+        answerEditTextView8.inputAccessoryView = toolBar
+        answerEditTextView9.inputAccessoryView = toolBar
+        answerEditTextView10.inputAccessoryView = toolBar
+    }
     
     func configure(test: TestDataModel) {
         testData.id = test.id
