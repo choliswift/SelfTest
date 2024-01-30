@@ -49,9 +49,11 @@ final class SentenceEditViewController: UIViewController {
     }
     
     private(set) var testData = TestDataModel()
+    private let toolbarWidthValue = 320
+    private let toolbarHeightValue = 40
     
     func setDoneButton() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: toolbarWidthValue, height: toolbarHeightValue))
         let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
         toolBar.items = [commitButton]
         titleEditTextField.inputAccessoryView = toolBar
