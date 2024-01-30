@@ -118,10 +118,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-1a-vaz">
-                                <rect key="frame" x="38" y="162" width="316" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-1a-vaz">
+                                <rect key="frame" x="38" y="163" width="317" height="230"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="1bM-Eo-5qK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -130,10 +132,12 @@
                                     <segue destination="PWJ-ki-fFh" kind="show" id="adt-UW-7WS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-pX-Sst">
-                                <rect key="frame" x="38" y="468" width="316" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-pX-Sst">
+                                <rect key="frame" x="38" y="528" width="317" height="230"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="dqb-P8-pWE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -145,6 +149,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rq2-uG-OvK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iHJ-pX-Sst" firstAttribute="leading" secondItem="rq2-uG-OvK" secondAttribute="leading" constant="38" id="0fg-MS-5La"/>
+                            <constraint firstItem="rq2-uG-OvK" firstAttribute="bottom" secondItem="iHJ-pX-Sst" secondAttribute="bottom" constant="60" id="2Uj-KF-dkF"/>
+                            <constraint firstItem="3wy-1a-vaz" firstAttribute="leading" secondItem="rq2-uG-OvK" secondAttribute="leading" constant="38" id="Ox6-Ay-WTV"/>
+                            <constraint firstItem="3wy-1a-vaz" firstAttribute="top" secondItem="rq2-uG-OvK" secondAttribute="top" constant="60" id="V53-0G-tqH"/>
+                            <constraint firstItem="rq2-uG-OvK" firstAttribute="trailing" secondItem="iHJ-pX-Sst" secondAttribute="trailing" constant="38" id="eVi-4U-MJB"/>
+                            <constraint firstItem="rq2-uG-OvK" firstAttribute="trailing" secondItem="3wy-1a-vaz" secondAttribute="trailing" constant="38" id="tRB-lb-5UV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="新規作成" id="Jq9-yz-V0p"/>
                     <connections>
@@ -728,12 +740,12 @@
                     <navigationItem key="navigationItem" title="入力問題新規作成" id="UmF-ou-Oc0">
                         <barButtonItem key="backBarButtonItem" title="戻る" id="CIc-n2-Btu"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Ab8-6o-TBh">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bNp-7o-H6e">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bNp-7o-H6e">
                                 <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="Fe5-p2-bre"/>
+                                    <constraint firstAttribute="width" constant="60" id="Fe5-p2-bre"/>
                                     <constraint firstAttribute="height" constant="35" id="cNb-Uy-pcs"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1407,12 +1419,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="選択問題新規作成" id="1Qb-qX-XSF">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="VSj-sV-QuE">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BBI-wc-N12">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BBI-wc-N12">
                                 <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="cuf-5U-viw"/>
+                                    <constraint firstAttribute="width" constant="60" id="cuf-5U-viw"/>
                                     <constraint firstAttribute="height" constant="35" id="zel-YB-zWY"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2080,7 +2092,6 @@
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="r4g-aF-xnZ"/>
-                                    <constraint firstAttribute="width" constant="56" id="sfh-4J-64c"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -2758,7 +2769,6 @@
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="IeZ-Mz-SeG"/>
-                                    <constraint firstAttribute="width" constant="56" id="wIo-z7-hbH"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
