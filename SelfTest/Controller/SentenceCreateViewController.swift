@@ -50,13 +50,16 @@ final class SentenceCreateViewController: UIViewController {
     
     private var testDataList: [TestDataModel] = []
     private var testData = TestDataModel()
+    private let versionNumber = 11
+    private let toolbarWidthValue = 320
+    private let toolbarHeightValue = 40
     
     @objc func tapDoneButton() {
         view.endEditing(true)
     }
     
     func setDoneButton() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: toolbarWidthValue, height: toolbarHeightValue))
         let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
         toolBar.items = [commitButton]
         titleTextField.inputAccessoryView = toolBar
@@ -83,7 +86,7 @@ final class SentenceCreateViewController: UIViewController {
     }
     
     func saveData() { //保存する内容の書き方を修正する必要がある
-        let config = Realm.Configuration(schemaVersion: 11)
+        let config = Realm.Configuration(schemaVersion: UInt64(versionNumber))
         Realm.Configuration.defaultConfiguration = config
         
         let realm = try! Realm()
