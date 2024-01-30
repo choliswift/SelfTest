@@ -16,6 +16,7 @@ final class SelectTestViewController: UIViewController {
     }
     
     private(set) var testDataList: [TestDataModel] = []
+    private let versionNumber = 11
     //保存した内容をセルに表示する処理
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,7 +25,7 @@ final class SelectTestViewController: UIViewController {
     }
 
     func setTestData() {
-        let config = Realm.Configuration(schemaVersion: 11)
+        let config = Realm.Configuration(schemaVersion: UInt64(versionNumber))
         Realm.Configuration.defaultConfiguration = config
         let realm = try! Realm()
         let result = realm.objects(TestDataModel.self)
