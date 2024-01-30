@@ -43,24 +43,13 @@ final class StartSelectTestViewController: UIViewController {
     }
     
     @IBAction private func nextButton(_ sender: UIButton) {
-        if testCount < 5 {
-            testCount += 1
-            //次の画面で「どうだ！」ボタンを有効にする
-            choicesButton1.isEnabled = true
-            choicesButton2.isEnabled = true
-            choicesButton3.isEnabled = true
-            choicesButton4.isEnabled = true
-            //testCountに合わせて問題と回答を更新
-            displayData()
-        } else {
-            //問題が終わった際に次の画面へ向かう。
-            performSegue(withIdentifier: "toResultVC", sender: nil)
-        }
+        nextTest()
     }
     
     private(set) var testDataList: [TestDataModel] = []
     private var testData = TestDataModel()
     private var testCount = 1
+    private var maxTestCount = 5
     private var answerCount = 0
     private var audioPlayer: AVAudioPlayer?
     
@@ -294,6 +283,22 @@ final class StartSelectTestViewController: UIViewController {
             } catch {
                 print("再生失敗")
             }
+        }
+    }
+    
+    func nextTest() {
+        if testCount < maxTestCount {
+            testCount += 1
+            //次の画面で「どうだ！」ボタンを有効にする
+            choicesButton1.isEnabled = true
+            choicesButton2.isEnabled = true
+            choicesButton3.isEnabled = true
+            choicesButton4.isEnabled = true
+            //testCountに合わせて問題と回答を更新
+            displayData()
+        } else {
+            //問題が終わった際に次の画面へ向かう。
+            performSegue(withIdentifier: "toResultVC", sender: nil)
         }
     }
 }
