@@ -1,11 +1,41 @@
 import UIKit
 import RealmSwift
 
-class SelectCreateViewController: UIViewController {
+final class SelectCreateViewController: UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
     @IBAction private func saveButton(_ sender: UIButton) {
-        saveButtonisEnabled()
+        saveButtonisEnabled(text: contentTextView1.text)
+        saveButtonisEnabled(text: contentTextView2.text)
+        saveButtonisEnabled(text: contentTextView3.text)
+        saveButtonisEnabled(text: contentTextView4.text)
+        saveButtonisEnabled(text: contentTextView5.text)
+        saveButtonisEnabled(text: answerTextView1.text)
+        saveButtonisEnabled(text: answerTextView2.text)
+        saveButtonisEnabled(text: answerTextView3.text)
+        saveButtonisEnabled(text: answerTextView4.text)
+        saveButtonisEnabled(text: answerTextView5.text)
+        saveButtonisEnabled(text: choicesTextView1of1.text)
+        saveButtonisEnabled(text: choicesTextView2of1.text)
+        saveButtonisEnabled(text: choicesTextView3of1.text)
+        saveButtonisEnabled(text: choicesTextView4of1.text)
+        saveButtonisEnabled(text: choicesTextView1of2.text)
+        saveButtonisEnabled(text: choicesTextView2of2.text)
+        saveButtonisEnabled(text: choicesTextView3of2.text)
+        saveButtonisEnabled(text: choicesTextView4of2.text)
+        saveButtonisEnabled(text: choicesTextView1of3.text)
+        saveButtonisEnabled(text: choicesTextView2of3.text)
+        saveButtonisEnabled(text: choicesTextView3of3.text)
+        saveButtonisEnabled(text: choicesTextView4of3.text)
+        saveButtonisEnabled(text: choicesTextView1of4.text)
+        saveButtonisEnabled(text: choicesTextView2of4.text)
+        saveButtonisEnabled(text: choicesTextView3of4.text)
+        saveButtonisEnabled(text: choicesTextView4of4.text)
+        saveButtonisEnabled(text: choicesTextView1of5.text)
+        saveButtonisEnabled(text: choicesTextView2of5.text)
+        saveButtonisEnabled(text: choicesTextView3of5.text)
+        saveButtonisEnabled(text: choicesTextView4of5.text)
+
     }
     @IBOutlet private weak var listScrollView: UIScrollView!
     @IBOutlet private weak var listScrollViewButtom: NSLayoutConstraint!
@@ -82,13 +112,16 @@ class SelectCreateViewController: UIViewController {
     private var testDataList: [TestDataModel] = []
     private var testData = TestDataModel()
     private var list: [String] = ["", "1", "2", "3", "4"]
+    private let versionNumber = 11
+    private let toolbarWidthValue = 320
+    private let toolbarHeightValue = 40
     
     @objc func tapDoneButton() {
         view.endEditing(true)
     }
     
     func setDoneButton() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: toolbarWidthValue, height: toolbarHeightValue))
         let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
             toolBar.items = [commitButton]
         titleTextField.inputAccessoryView = toolBar
@@ -125,7 +158,7 @@ class SelectCreateViewController: UIViewController {
     }
     
     func saveData() { //保存する内容の書き方を修正する必要がある
-        let config = Realm.Configuration(schemaVersion: 11)
+        let config = Realm.Configuration(schemaVersion: UInt64(versionNumber))
         Realm.Configuration.defaultConfiguration = config
         
         let realm = try! Realm()
@@ -210,38 +243,8 @@ class SelectCreateViewController: UIViewController {
         })
     }
     //未入力があった際に保存できないようにする
-    func saveButtonisEnabled() {
-        if contentTextView1.text.count != 0
-            && contentTextView2.text.count != 0
-            && contentTextView3.text.count != 0
-            && contentTextView4.text.count != 0
-            && contentTextView5.text.count != 0
-            && answerTextView1.text.count != 0
-            && answerTextView2.text.count != 0
-            && answerTextView3.text.count != 0
-            && answerTextView4.text.count != 0
-            && answerTextView5.text.count != 0
-            && choicesTextView1of1.text.count != 0
-            && choicesTextView2of1.text.count != 0
-            && choicesTextView3of1.text.count != 0
-            && choicesTextView4of1.text.count != 0
-            && choicesTextView1of2.text.count != 0
-            && choicesTextView2of2.text.count != 0
-            && choicesTextView3of2.text.count != 0
-            && choicesTextView4of2.text.count != 0
-            && choicesTextView1of3.text.count != 0
-            && choicesTextView2of3.text.count != 0
-            && choicesTextView3of3.text.count != 0
-            && choicesTextView4of3.text.count != 0
-            && choicesTextView1of4.text.count != 0
-            && choicesTextView2of4.text.count != 0
-            && choicesTextView3of4.text.count != 0
-            && choicesTextView4of4.text.count != 0
-            && choicesTextView1of5.text.count != 0
-            && choicesTextView2of5.text.count != 0
-            && choicesTextView3of5.text.count != 0
-            && choicesTextView4of5.text.count != 0
-            && titleTextField.text != "" {
+    func saveButtonisEnabled(text: String) {
+        if text.count != 0 && titleTextField.text != "" {
             saveData()
         } else {
             alertLabel.text = "空欄があります。入力してください。"
