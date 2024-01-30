@@ -88,10 +88,12 @@ final class SelectEditViewController: UIViewController {
     private let pickerView4 = UIPickerView()
     private let pickerView5 = UIPickerView()
     private(set) var testData = TestDataModel()
-    private var list: [String] = ["", "1", "2", "3", "4"]
+    private var pickerList: [String] = ["", "1", "2", "3", "4"]
+    private let toolbarWidthValue = 320
+    private let toolbarHeightValue = 40
     
     func setDoneButton() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width:toolbarWidthValue, height: toolbarHeightValue))
         let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
             toolBar.items = [commitButton]
         titleEditTextField.inputAccessoryView = toolBar
@@ -334,24 +336,24 @@ extension SelectEditViewController: UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return list.count
+        return pickerList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return list[row]
+        return pickerList[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView === pickerView1 {
-            answerEditTextView1.text = list[row]
+            answerEditTextView1.text = pickerList[row]
         } else if pickerView === pickerView2 {
-            answerEditTextView2.text = list[row]
+            answerEditTextView2.text = pickerList[row]
         } else if pickerView === pickerView3 {
-            answerEditTextView3.text = list[row]
+            answerEditTextView3.text = pickerList[row]
         } else if pickerView === pickerView4 {
-            answerEditTextView4.text = list[row]
+            answerEditTextView4.text = pickerList[row]
         } else if pickerView === pickerView5 {
-            answerEditTextView5.text = list[row]
+            answerEditTextView5.text = pickerList[row]
         }
     }
 }
