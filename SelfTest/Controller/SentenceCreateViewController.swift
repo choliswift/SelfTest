@@ -9,11 +9,11 @@ final class SentenceCreateViewController: UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
     @IBAction private func saveButton(_ sender: UIButton) {
-        saveData()
+        saveButtonisEnabled()
     }
     @IBOutlet private weak var listScrollView: UIScrollView!
     @IBOutlet private weak var listScrollViewButtom: NSLayoutConstraint!
-    //ひとつだけ設定して、あとはそれぞれにタグつけるやり方でもできるかもしれない
+    //ひとつだけ設定して、配列にする方法もある
     @IBOutlet private weak var contentTextView1: UITextView!
     @IBOutlet private weak var answerTextView1: UITextView!
     @IBOutlet private weak var contentTextView2: UITextView!
@@ -35,10 +35,13 @@ final class SentenceCreateViewController: UIViewController {
     @IBOutlet private weak var contentTextView10: UITextView!
     @IBOutlet private weak var answerTextView10: UITextView!
     
+    @IBOutlet private weak var alertLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setDoneButton()
         setupNotifications()
+        contentTextView1.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapDoneButton))
         tapGesture.cancelsTouchesInView = false
@@ -47,13 +50,16 @@ final class SentenceCreateViewController: UIViewController {
     
     private var testDataList: [TestDataModel] = []
     private var testData = TestDataModel()
+    private let versionNumber = 11
+    private let toolbarWidthValue = 320
+    private let toolbarHeightValue = 40
     
     @objc func tapDoneButton() {
         view.endEditing(true)
     }
     
     func setDoneButton() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: toolbarWidthValue, height: toolbarHeightValue))
         let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
         toolBar.items = [commitButton]
         titleTextField.inputAccessoryView = toolBar
@@ -80,7 +86,7 @@ final class SentenceCreateViewController: UIViewController {
     }
     
     func saveData() { //保存する内容の書き方を修正する必要がある
-        let config = Realm.Configuration(schemaVersion: 9)
+        let config = Realm.Configuration(schemaVersion: UInt64(versionNumber))
         Realm.Configuration.defaultConfiguration = config
         
         let realm = try! Realm()
@@ -153,6 +159,35 @@ final class SentenceCreateViewController: UIViewController {
         UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
             self.view.layoutIfNeeded()
         })
+    }
+    //未入力があった際に保存できないようにする
+    func saveButtonisEnabled() {
+        if contentTextView1.text.count != 0
+            && contentTextView2.text.count != 0
+            && contentTextView3.text.count != 0
+            && contentTextView4.text.count != 0
+            && contentTextView5.text.count != 0
+            && contentTextView6.text.count != 0
+            && contentTextView7.text.count != 0
+            && contentTextView8.text.count != 0
+            && contentTextView9.text.count != 0
+            && contentTextView10.text.count != 0
+            && answerTextView1.text.count != 0
+            && answerTextView2.text.count != 0
+            && answerTextView3.text.count != 0
+            && answerTextView4.text.count != 0
+            && answerTextView5.text.count != 0
+            && answerTextView6.text.count != 0
+            && answerTextView7.text.count != 0
+            && answerTextView8.text.count != 0
+            && answerTextView8.text.count != 0
+            && answerTextView10.text.count != 0
+            && titleTextField.text != "" {
+            saveData()
+        } else {
+            alertLabel.text = "空欄があります。入力してください。"
+            alertLabel.textColor = .red
+        }
     }
 }
 

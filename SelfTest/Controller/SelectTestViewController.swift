@@ -16,6 +16,7 @@ final class SelectTestViewController: UIViewController {
     }
     
     private(set) var testDataList: [TestDataModel] = []
+    private let versionNumber = 11
     //保存した内容をセルに表示する処理
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,7 +25,7 @@ final class SelectTestViewController: UIViewController {
     }
 
     func setTestData() {
-        let config = Realm.Configuration(schemaVersion: 9)
+        let config = Realm.Configuration(schemaVersion: UInt64(versionNumber))
         Realm.Configuration.defaultConfiguration = config
         let realm = try! Realm()
         let result = realm.objects(TestDataModel.self)
@@ -40,10 +41,17 @@ extension SelectTestViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TestTableViewCell", for: indexPath) as? TestTableViewCell {
             
+            //テストの種類を判別
+            let kindTest = testDataList[indexPath.row].kind
+            if kindTest == 1 {
+                cell.testKindsLabel.text = "入力式問題"
+            } else if kindTest == 2 {
+                cell.testKindsLabel.text = "選択式問題"
+            }
             //削除ボタンをセル内で押せるようにaddTarget方式で追加
             let deleteButton = cell.deleteButton
             deleteButton?.addTarget(self, action: #selector(deleteCell), for: .touchUpInside)
-            
+            //編集ボタンをセル内で押せるようにaddTarget方式で追加
             let editButton = cell.editButton
             editButton?.addTarget(self, action: #selector(editCell), for: .touchUpInside)
             
@@ -72,7 +80,7 @@ extension SelectTestViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //セルタップ時にアラートを表示
         let alert = UIAlertController(title: "問題を開始しますか？", message: "", preferredStyle: UIAlertController.Style.alert)
-        let start = UIAlertAction(title: "はい", style: .cancel) { _ in
+        let start = UIAlertAction(title: "はい", style: .destructive) { _ in
             
             let kindTest = self.testDataList[indexPath.row].kind
             if kindTest == 1 {
@@ -86,17 +94,17 @@ extension SelectTestViewController: UITableViewDelegate {
                     self.present(vc, animated: true, completion: nil)
                     //追記。storyBoardのpresentationで「FullScrean」を押して、全画面表示にすることにより、テスト中に戻れないようにする。途中中断ボタンを用意する。
                 }
-            } else {
+            } else if kindTest == 2 {
                 //選択式問題
                 let storyboard: UIStoryboard = UIStoryboard(name: "StartSelectTest", bundle: nil)
-                if let vc = storyboard.instantiateViewController(identifier: "StartSellectTestViewController") as? StartSellectTestViewController {
-                    //let testData = self.testDataList[indexPath.row]
-                    //vc.configure(test: testData)　これは後ほど実装。
+                if let vc = storyboard.instantiateViewController(identifier: "StartSelectTestViewController") as? StartSelectTestViewController {
+                    let testData = self.testDataList[indexPath.row]
+                    vc.configure(test: testData)
                     self.present(vc, animated: true, completion: nil)
                 }
             }
         }
-        let close = UIAlertAction(title: "いいえ", style: .destructive, handler: nil)
+        let close = UIAlertAction(title: "いいえ", style: .default, handler: nil)
         
         //実行順に左から並ぶ
         alert.addAction(close)
@@ -125,11 +133,20 @@ extension SelectTestViewController: TestTableViewCellDelegate {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         //いつもならdelegateで記述していた処理を、セルのボタンタップ時に行うように修正
+        let kindTest = self.testDataList[indexPath.row].kind
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "SentenceEditViewController") as? SentenceEditViewController {
-            let testData = testDataList[indexPath.row]
-            sentenceEditViewController.configure(test: testData)
-            navigationController?.pushViewController(sentenceEditViewController, animated: true)
+        if kindTest == 1 {
+            if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "SentenceEditViewController") as? SentenceEditViewController {
+                let testData = testDataList[indexPath.row]
+                sentenceEditViewController.configure(test: testData)
+                navigationController?.pushViewController(sentenceEditViewController, animated: true)
+            }
+        } else if kindTest == 2 {
+            if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "SelectEditViewController") as? SelectEditViewController {
+                let testData = testDataList[indexPath.row]
+                sentenceEditViewController.configure(test: testData)
+                navigationController?.pushViewController(sentenceEditViewController, animated: true)
+            }
         }
     }
     
@@ -143,7 +160,7 @@ extension SelectTestViewController: TestTableViewCellDelegate {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         //削除ボタンを押した際にアラート画面を表示
         let alert = UIAlertController(title: "問題を削除しますか？", message: "", preferredStyle: UIAlertController.Style.alert)
-        let start = UIAlertAction(title: "はい", style: .cancel) { (action) in
+        let start = UIAlertAction(title: "はい", style: .destructive) { (action) in
             //Realmから削除する処理。これがないと、画面遷移した際に削除したセルが復活する
             let targetTest = self.testDataList[indexPath.row]
             let realm = try! Realm()
@@ -154,7 +171,7 @@ extension SelectTestViewController: TestTableViewCellDelegate {
             self.testDataList.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        let close = UIAlertAction(title: "いいえ", style: .destructive, handler: nil)
+        let close = UIAlertAction(title: "いいえ", style: .default, handler: nil)
 
         alert.addAction(close)
         alert.addAction(start)

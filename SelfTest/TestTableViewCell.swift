@@ -6,15 +6,12 @@ protocol TestTableViewCellDelegate: AnyObject {
     func deleteCell(_ cell: UITableViewCell)
 }
 
-
 final class TestTableViewCell: UITableViewCell {
     
     weak var delegate: TestTableViewCellDelegate?
     
-    var testCountNumber = "10" //問題の数をカウントする記述は後ほど予定
-    
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var testKindsLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -32,6 +29,6 @@ final class TestTableViewCell: UITableViewCell {
     
     func update(_ model: TestDataModel) {
         titleLabel.text = model.title
-        countLabel.text = testCountNumber
     }
+    
 }
