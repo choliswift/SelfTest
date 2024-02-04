@@ -27,7 +27,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="問題" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tk0-Y3-akJ">
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ブルーに問題、オレンジに解答を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tk0-Y3-akJ">
                         <rect key="frame" x="10" y="41" width="303" height="34"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
@@ -36,7 +36,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="解答" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNg-k2-ss6">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNg-k2-ss6">
                         <rect key="frame" x="10" y="85" width="303" height="34"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>

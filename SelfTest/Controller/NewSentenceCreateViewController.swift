@@ -1,18 +1,23 @@
 import UIKit
 import RealmSwift
 
-final class SentenceNewViewController: UIViewController {
+final class NewSentenceCreateViewController: UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBAction func saveButton(_ sender: UIButton) {
-        saveData()
+    @IBOutlet private weak var saveButton: UIButton!
+    @IBAction private func saveButton(_ sender: UIButton) {
+        saveButtonisEnabled()
     }
-    @IBOutlet weak var arertLabel: UILabel!
+    @IBOutlet private weak var alertLabel: UILabel!
+    
+    //ここで注意なのが、StoryBoardでtableViewのBottomを設定するとき、safeareaに対してではなく、Viewに対してButtomを設定する
+    @IBOutlet private weak var tableViewBottom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTestData()
+        //今のやり方だと、textFieldの際は自動で調整されるけど、textViewの際は手動で調整する必要がある。理由は不明。
+        setupNotifications()
         tableView.register(UINib(nibName: "ContentTestTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentTestTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -35,10 +40,16 @@ final class SentenceNewViewController: UIViewController {
     }
 
     func setDoneButton() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
-        let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
-        toolBar.items = [commitButton]
-        titleTextField.inputAccessoryView = toolBar
+        //inputAccesoryViewに入れるtoolbar
+        let toolbar = UIToolbar()
+        //完了ボタンを右寄せにする為に、左側を埋めるスペース作成
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        //完了ボタンを作成
+        let done = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(tapDoneButton))
+        //toolbarのitemsに作成したスペースと完了ボタンを入れる。実際にも左から順に表示されます。
+        toolbar.items = [space, done]
+        toolbar.sizeToFit()
+        titleTextField.inputAccessoryView = toolbar
     }
     
     func saveData() { //保存する内容の書き方を修正する必要がある
@@ -51,8 +62,24 @@ final class SentenceNewViewController: UIViewController {
             testDataModel.title = titleTextField.text ?? ""
             testDataModel.testContent1 = testContentData[0].testYobiText
             testDataModel.testContent2 = testContentData[1].testYobiText
+            testDataModel.testContent3 = testContentData[2].testYobiText
+            testDataModel.testContent4 = testContentData[3].testYobiText
+            testDataModel.testContent5 = testContentData[4].testYobiText
+            testDataModel.testContent6 = testContentData[5].testYobiText
+            testDataModel.testContent7 = testContentData[6].testYobiText
+            testDataModel.testContent8 = testContentData[7].testYobiText
+            testDataModel.testContent9 = testContentData[8].testYobiText
+            testDataModel.testContent10 = testContentData[9].testYobiText
             testDataModel.testAnswer1 = testAnswerData[0].testYobiText
             testDataModel.testAnswer2 = testAnswerData[1].testYobiText
+            testDataModel.testAnswer3 = testAnswerData[2].testYobiText
+            testDataModel.testAnswer4 = testAnswerData[3].testYobiText
+            testDataModel.testAnswer5 = testAnswerData[4].testYobiText
+            testDataModel.testAnswer6 = testAnswerData[5].testYobiText
+            testDataModel.testAnswer7 = testAnswerData[6].testYobiText
+            testDataModel.testAnswer8 = testAnswerData[7].testYobiText
+            testDataModel.testAnswer9 = testAnswerData[8].testYobiText
+            testDataModel.testAnswer10 = testAnswerData[9].testYobiText
             testDataModel.kind = 1
             realm.add(testDataModel)
         }
@@ -68,16 +95,72 @@ final class SentenceNewViewController: UIViewController {
             testAnswerData.append(testYobiDataModel)
         }
     }
+    
+    func saveButtonisEnabled() {
+        if testYobiDataModel.testYobiText.count != 0 && titleTextField.text != "" {
+            saveData()
+        } else {
+            alertLabel.text = "空欄があります。入力してください。"
+            alertLabel.textColor = .red
+        }
+    }
+    
+    //キーボードを表示した際にtextViewが隠れないようにする処理
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillClose), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillAppear(_ notification: Notification) {
+        print("キーボード表示")
+        //キーボードのサイズ
+        guard let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+              //キーボードのアニメーション時間を設定
+              let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+              //キーボードのアニメーションの曲線
+              let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+              //Outletで結びつけたtableViewのButtomをここで制約
+              let tableViewButtomConstraint = self.tableViewBottom else { return }
+        
+        //キーボードの高さを読み込む
+        let keyboardHeight = keyboardFrame.height
+        //tableViewのButtomを再設定
+        tableViewButtomConstraint.constant = keyboardHeight
+        
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @objc private func keyboardWillClose(_ notification: Notification) {
+        //キーボードのアニメーション時間を設定
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+              //キーボードのアニメーションの曲線
+              let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+              //Outletで結びつけたtableViewのButtomをここで制約
+              let tableViewButtomConstraint = self.tableViewBottom else { return }
+        
+        //tableViewのButtomを再設定
+        tableViewButtomConstraint.constant = 0
+        
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
 }
 
-extension SentenceNewViewController: UITableViewDataSource {
+extension NewSentenceCreateViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ContentTestTableViewCell", for: indexPath) as? ContentTestTableViewCell {
-            //let testModel: TestDataModel = testDataList[indexPath.row]
+            cell.testContentTextField.text = nil
+            cell.answerTextView.text = nil
+            
+            cell.testContentTextField.text = testContentData[indexPath.row].testYobiText
+            cell.answerTextView.text = testAnswerData[indexPath.row].testYobiText
             //第⚪︎問の数字がセルが増えるごとにセルに合わせて増えるように処理。修正が必要。
             cell.addSentenceNumber(update: "\(indexPath.row + 1)")
             cell.delegate = self
@@ -88,23 +171,21 @@ extension SentenceNewViewController: UITableViewDataSource {
     }
 }
 
-extension SentenceNewViewController: UITableViewDelegate {
+extension NewSentenceCreateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("タップしたindexpathは\(indexPath.row)です")
     }
 }
 
-extension SentenceNewViewController: SentenceTableViewCellDelegate {
+extension NewSentenceCreateViewController: SentenceTableViewCellDelegate {
     //cellに配置したtextFieldの変更の通知を受け取る
     func textFieldEditing(cell: ContentTestTableViewCell, value contentvalue: String) {
         let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
         let testNumber = path?.row
         testContentData.append(TestYobiDataModel(testYobiText: contentvalue))
         testContentData[testNumber!] = TestYobiDataModel(testYobiText: contentvalue)
-
-        //入力内容を終わった際に確認
-        NSLog("row = %d, contentvalue = %@", path!.row, contentvalue)
+        NSLog("row = %d, value = %@", path!.row, contentvalue)
     }
     //cellに配置したtextViewの変更の通知を受け取る
     func textViewEditing(cell: ContentTestTableViewCell, value answervalue: String) {
@@ -112,6 +193,6 @@ extension SentenceNewViewController: SentenceTableViewCellDelegate {
         let testNumber = path?.row
         testAnswerData.append(TestYobiDataModel(testYobiText: answervalue))
         testAnswerData[testNumber!] = TestYobiDataModel(testYobiText: answervalue)
-        NSLog("row = %d, answervalue = %@", path!.row, answervalue)
+        NSLog("row = %d, value = %@", path!.row, answervalue)
     }
 }
