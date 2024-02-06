@@ -6,7 +6,7 @@ final class NewSentenceCreateViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var saveButton: UIButton!
     @IBAction private func saveButton(_ sender: UIButton) {
-        saveButtonisEnabled()
+        textIsEmpty()
     }
     @IBOutlet private weak var alertLabel: UILabel!
     
@@ -96,13 +96,27 @@ final class NewSentenceCreateViewController: UIViewController {
         }
     }
     
-    func saveButtonisEnabled() {
-        if testYobiDataModel.testYobiText.count != 0 && titleTextField.text != "" {
-            saveData()
-        } else {
-            alertLabel.text = "空欄があります。入力してください。"
-            alertLabel.textColor = .red
+    func textIsEmpty() {
+        for i in 0...9 {
+            if testContentData[i].testYobiText.isEmpty {
+                alertLabel.text = "空欄があります。入力してください。"
+                alertLabel.textColor = .red
+                return
+            }
+            if testAnswerData[i].testYobiText.isEmpty {
+                alertLabel.text = "空欄があります。入力してください。"
+                alertLabel.textColor = .red
+                return
+            }
+            if titleTextField.text == "" {
+                alertLabel.text = "空欄があります。入力してください。"
+                alertLabel.textColor = .red
+                return
+            }
         }
+        alertLabel.text = "OK"
+        alertLabel.textColor = .blue
+        saveData()
     }
     
     //キーボードを表示した際にtextViewが隠れないようにする処理
@@ -161,6 +175,7 @@ extension NewSentenceCreateViewController: UITableViewDataSource {
             
             cell.testContentTextField.text = testContentData[indexPath.row].testYobiText
             cell.answerTextView.text = testAnswerData[indexPath.row].testYobiText
+            
             //第⚪︎問の数字がセルが増えるごとにセルに合わせて増えるように処理。修正が必要。
             cell.addSentenceNumber(update: "\(indexPath.row + 1)")
             cell.delegate = self
