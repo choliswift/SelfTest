@@ -3,11 +3,11 @@ import RealmSwift
 
 protocol SentenceTableViewCellDelegate: AnyObject {
     //TextFieldの変更を通知するdelegateを作成
-    func textFieldEditing(cell: ContentTestTableViewCell, value: String)
-    func textViewEditing(cell: ContentTestTableViewCell, value: String)
+    func testContentTextFieldDidEditing(_ cell: ContentTestTableViewCell, didChangeValue value: String)
+    func answerTextViewDidEditing(_ cell: ContentTestTableViewCell, didChangeValue value: String)
 }
 
-class ContentTestTableViewCell: UITableViewCell {
+final class ContentTestTableViewCell: UITableViewCell {
     
     weak var delegate: SentenceTableViewCellDelegate?
 
@@ -63,7 +63,7 @@ extension ContentTestTableViewCell: UITextFieldDelegate {
     }
     //textFieldの変更をコントローラー側に通知する
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        self.delegate?.textFieldEditing(cell: self, value: textField.text!)
+        self.delegate?.testContentTextFieldDidEditing(self, didChangeValue: textField.text ?? "")
     }
 }
 
@@ -71,6 +71,6 @@ extension ContentTestTableViewCell: UITextViewDelegate {
     //textViewの変更をコントローラー側に通知する
     //textViewDidChangeSelectionにすると、なぜかセルの再利用が行われてしまうので、didChangeにしてある
     func textViewDidChange(_ textView: UITextView) {
-        self.delegate?.textViewEditing(cell: self, value: textView.text!)
+        self.delegate?.answerTextViewDidEditing(self, didChangeValue: textView.text ?? "")
     }
 }

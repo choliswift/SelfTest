@@ -4,15 +4,15 @@ import RealmSwift
 protocol SelectTableViewCellDelegate: AnyObject {
     //TextFieldの変更を通知するdelegateを作成
     //それぞれに通知する関数を作ってあげることで、値が同じになるエラーを防ぐ
-    func ContentTextFieldEditing(cell: SelectTestTableViewCell, value: String)
-    func choiceTextField1Editing(cell: SelectTestTableViewCell, value: String)
-    func choiceTextField2Editing(cell: SelectTestTableViewCell, value: String)
-    func choiceTextField3Editing(cell: SelectTestTableViewCell, value: String)
-    func choiceTextField4Editing(cell: SelectTestTableViewCell, value: String)
-    func answerTextFieldEditing(cell: SelectTestTableViewCell, value: String)
+    func contentTextFieldDidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String)
+    func choiceTextField1DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String)
+    func choiceTextField2DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String)
+    func choiceTextField3DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String)
+    func choiceTextField4DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String)
+    func answerTextFieldDidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String)
 }
 
-class SelectTestTableViewCell: UITableViewCell {
+final class SelectTestTableViewCell: UITableViewCell {
     
     weak var delegate: SelectTableViewCellDelegate?
 
@@ -25,7 +25,7 @@ class SelectTestTableViewCell: UITableViewCell {
     @IBOutlet weak var answerTextField: UITextField!
     
     private let pickerView = UIPickerView()
-    private var list: [String] = ["", "1", "2", "3", "4"]
+    private var Pickerlist: [String] = ["", "1", "2", "3", "4"]
     
     func addSentenceNumber(update: String) {
         numberOfSentenceTextLabel.text = "第\(update)問"
@@ -88,12 +88,12 @@ extension SelectTestTableViewCell: UITextFieldDelegate {
     //textFieldの変更をコントローラー側に通知する
     func textFieldDidChangeSelection(_ textField: UITextField) {
         //それぞれに通知する関数を作ってあげることで、値が同じになるエラーを防ぐ
-        self.delegate?.ContentTextFieldEditing(cell: self, value: contentTextField.text!)
-        self.delegate?.choiceTextField1Editing(cell: self, value: choiceTextField1.text!)
-        self.delegate?.choiceTextField2Editing(cell: self, value: choiceTextField2.text!)
-        self.delegate?.choiceTextField3Editing(cell: self, value: choiceTextField3.text!)
-        self.delegate?.choiceTextField4Editing(cell: self, value: choiceTextField4.text!)
-        self.delegate?.answerTextFieldEditing(cell: self, value: answerTextField.text!)
+        self.delegate?.contentTextFieldDidEditing(self, didChangeValue: contentTextField.text ?? "")
+        self.delegate?.choiceTextField1DidEditing(self, didChangeValue: choiceTextField1.text ?? "")
+        self.delegate?.choiceTextField2DidEditing(self, didChangeValue: choiceTextField2.text ?? "")
+        self.delegate?.choiceTextField3DidEditing(self, didChangeValue: choiceTextField3.text ?? "")
+        self.delegate?.choiceTextField4DidEditing(self, didChangeValue: choiceTextField4.text ?? "")
+        self.delegate?.answerTextFieldDidEditing(self, didChangeValue: answerTextField.text ?? "")
     }
 }
 
@@ -103,16 +103,16 @@ extension SelectTestTableViewCell: UIPickerViewDataSource, UIPickerViewDelegate 
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return list.count
+        return Pickerlist.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return list[row]
+        return Pickerlist[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView === pickerView {
-            answerTextField.text = list[row]
+            answerTextField.text = Pickerlist[row]
         }
     }
 }

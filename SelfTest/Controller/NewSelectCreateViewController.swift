@@ -182,30 +182,27 @@ extension NewSelectCreateViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "SelectTestTableViewCell", for: indexPath) as? SelectTestTableViewCell {
-            //cellを初期化する処理。
-            cell.contentTextField.text = nil
-            cell.choiceTextField1.text = nil
-            cell.choiceTextField2.text = nil
-            cell.choiceTextField3.text = nil
-            cell.choiceTextField4.text = nil
-            cell.answerTextField.text = nil
-            
-            //cellに入力した値を随時代入していく処理
-            cell.contentTextField.text = testContentData[indexPath.row].testYobiText
-            cell.choiceTextField1.text = testChoiceData1[indexPath.row].testYobiText
-            cell.choiceTextField2.text = testChoiceData2[indexPath.row].testYobiText
-            cell.choiceTextField3.text = testChoiceData3[indexPath.row].testYobiText
-            cell.choiceTextField4.text = testChoiceData4[indexPath.row].testYobiText
-            cell.answerTextField.text = testAnswerData[indexPath.row].testYobiText
-
-            //第⚪︎問の数字がセルが増えるごとにセルに合わせて増えるように処理。修正が必要。
-            cell.addSentenceNumber(update: "\(indexPath.row + 1)")
-            cell.delegate = self
-            return cell
-        } else {
-            return UITableViewCell()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SelectTestTableViewCell", for: indexPath) as? SelectTestTableViewCell else { return UITableViewCell() }
+        //cellを初期化する処理。
+        cell.contentTextField.text = nil
+        cell.choiceTextField1.text = nil
+        cell.choiceTextField2.text = nil
+        cell.choiceTextField3.text = nil
+        cell.choiceTextField4.text = nil
+        cell.answerTextField.text = nil
+        
+        //cellに入力した値を随時代入していく処理
+        cell.contentTextField.text = testContentData[indexPath.row].testYobiText
+        cell.choiceTextField1.text = testChoiceData1[indexPath.row].testYobiText
+        cell.choiceTextField2.text = testChoiceData2[indexPath.row].testYobiText
+        cell.choiceTextField3.text = testChoiceData3[indexPath.row].testYobiText
+        cell.choiceTextField4.text = testChoiceData4[indexPath.row].testYobiText
+        cell.answerTextField.text = testAnswerData[indexPath.row].testYobiText
+        
+        //第⚪︎問の数字がセルが増えるごとにセルに合わせて増えるように処理。修正が必要。
+        cell.addSentenceNumber(update: "\(indexPath.row + 1)")
+        cell.delegate = self
+        return cell
     }
 }
 
@@ -218,45 +215,45 @@ extension NewSelectCreateViewController: UITableViewDelegate {
 //、一つ一つfuncで分けてあげないと全部同じ値になる。
 //もし一つの関数で行った場合、どれか一つに入力した内容がすべてのtextFieldに反映され(最後に入力したvalueがすべてに反映)、datasourceの中で記述した代入処理が行われ、全て同じ値になる。
 extension NewSelectCreateViewController: SelectTableViewCellDelegate {
-    func ContentTextFieldEditing(cell: SelectTestTableViewCell, value: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func contentTextFieldDidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testContentData.append(TestYobiDataModel(testYobiText: value))
-        testContentData[testNumber!] = TestYobiDataModel(testYobiText: value)
+        testContentData[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
     
-    func choiceTextField1Editing(cell: SelectTestTableViewCell, value: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func choiceTextField1DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testChoiceData1.append(TestYobiDataModel(testYobiText: value))
-        testChoiceData1[testNumber!] = TestYobiDataModel(testYobiText: value)
+        testChoiceData1[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
     
-    func choiceTextField2Editing(cell: SelectTestTableViewCell, value: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func choiceTextField2DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testChoiceData2.append(TestYobiDataModel(testYobiText: value))
-        testChoiceData2[testNumber!] = TestYobiDataModel(testYobiText: value)
+        testChoiceData2[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
     
-    func choiceTextField3Editing(cell: SelectTestTableViewCell, value: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func choiceTextField3DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testChoiceData3.append(TestYobiDataModel(testYobiText: value))
-        testChoiceData3[testNumber!] = TestYobiDataModel(testYobiText: value)
+        testChoiceData3[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
     
-    func choiceTextField4Editing(cell: SelectTestTableViewCell, value: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func choiceTextField4DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testChoiceData4.append(TestYobiDataModel(testYobiText: value))
-        testChoiceData4[testNumber!] = TestYobiDataModel(testYobiText: value)
+        testChoiceData4[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
     
-    func answerTextFieldEditing(cell: SelectTestTableViewCell, value: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func answerTextFieldDidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testAnswerData.append(TestYobiDataModel(testYobiText: value))
-        testAnswerData[testNumber!] = TestYobiDataModel(testYobiText: value)
+        testAnswerData[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
 }

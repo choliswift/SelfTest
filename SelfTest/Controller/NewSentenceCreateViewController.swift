@@ -169,20 +169,17 @@ extension NewSentenceCreateViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ContentTestTableViewCell", for: indexPath) as? ContentTestTableViewCell {
-            cell.testContentTextField.text = nil
-            cell.answerTextView.text = nil
-            
-            cell.testContentTextField.text = testContentData[indexPath.row].testYobiText
-            cell.answerTextView.text = testAnswerData[indexPath.row].testYobiText
-            
-            //第⚪︎問の数字がセルが増えるごとにセルに合わせて増えるように処理。修正が必要。
-            cell.addSentenceNumber(update: "\(indexPath.row + 1)")
-            cell.delegate = self
-            return cell
-        } else {
-            return UITableViewCell()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContentTestTableViewCell", for: indexPath) as? ContentTestTableViewCell else { return UITableViewCell()}
+        cell.testContentTextField.text = nil
+        cell.answerTextView.text = nil
+        
+        cell.testContentTextField.text = testContentData[indexPath.row].testYobiText
+        cell.answerTextView.text = testAnswerData[indexPath.row].testYobiText
+        
+        //第⚪︎問の数字がセルが増えるごとにセルに合わせて増えるように処理。修正が必要。
+        cell.addSentenceNumber(update: "\(indexPath.row + 1)")
+        cell.delegate = self
+        return cell
     }
 }
 
@@ -195,19 +192,17 @@ extension NewSentenceCreateViewController: UITableViewDelegate {
 
 extension NewSentenceCreateViewController: SentenceTableViewCellDelegate {
     //cellに配置したtextFieldの変更の通知を受け取る
-    func textFieldEditing(cell: ContentTestTableViewCell, value contentvalue: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func testContentTextFieldDidEditing(_ cell: ContentTestTableViewCell, didChangeValue contentvalue: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testContentData.append(TestYobiDataModel(testYobiText: contentvalue))
-        testContentData[testNumber!] = TestYobiDataModel(testYobiText: contentvalue)
-        NSLog("row = %d, value = %@", path!.row, contentvalue)
+        testContentData[testNumber ?? 0] = TestYobiDataModel(testYobiText: contentvalue)
     }
     //cellに配置したtextViewの変更の通知を受け取る
-    func textViewEditing(cell: ContentTestTableViewCell, value answervalue: String) {
-        let path = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
-        let testNumber = path?.row
+    func answerTextViewDidEditing(_ cell: ContentTestTableViewCell, didChangeValue answervalue: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
         testAnswerData.append(TestYobiDataModel(testYobiText: answervalue))
-        testAnswerData[testNumber!] = TestYobiDataModel(testYobiText: answervalue)
-        NSLog("row = %d, value = %@", path!.row, answervalue)
+        testAnswerData[testNumber ?? 0] = TestYobiDataModel(testYobiText: answervalue)
     }
 }
