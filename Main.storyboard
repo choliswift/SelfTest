@@ -1419,7 +1419,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="選択問題新規作成" id="1Qb-qX-XSF">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="VSj-sV-QuE">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BBI-wc-N12">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BBI-wc-N12">
                                 <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -1518,7 +1518,7 @@
         <!--入力問題編集-->
         <scene sceneID="646-dH-AYB">
             <objects>
-                <viewController storyboardIdentifier="NewSentenceEditViewController" id="72c-JO-Arq" customClass="NewSentenceEditViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SentenceEditViewController" id="72c-JO-Arq" customClass="SentenceEditViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3g0-Nr-8mI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2900,7 +2900,7 @@
         <!--入力問題編集-->
         <scene sceneID="JHa-Zq-esd">
             <objects>
-                <viewController id="iVG-47-cSI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewSentenceEditViewController" id="iVG-47-cSI" customClass="NewSentenceEditViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dia-Xb-YjD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2953,17 +2953,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="保存"/>
                                 <connections>
-                                    <action selector="savaButton:" destination="iVG-47-cSI" eventType="touchUpInside" id="UFL-oX-efc"/>
+                                    <action selector="savaButton:" destination="iVG-47-cSI" eventType="touchUpInside" id="X5M-qK-jay"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <value key="contentSizeForViewInPopover" type="size" width="393" height="852"/>
                     <connections>
-                        <outlet property="alertLabel" destination="GLZ-2I-RU9" id="xS9-as-xes"/>
-                        <outlet property="saveButton" destination="L4r-Q5-TiH" id="B7F-w1-CJK"/>
-                        <outlet property="tableView" destination="cI4-2o-fDg" id="HMO-uv-Y0w"/>
-                        <outlet property="titleEditTextField" destination="t2b-E3-LwT" id="VG1-o8-iVY"/>
+                        <outlet property="alertLabel" destination="GLZ-2I-RU9" id="xfe-x3-NJ8"/>
+                        <outlet property="saveButton" destination="L4r-Q5-TiH" id="Ddy-aa-DRt"/>
+                        <outlet property="tableView" destination="cI4-2o-fDg" id="FwJ-WI-kjy"/>
+                        <outlet property="titleEditTextField" destination="t2b-E3-LwT" id="djQ-sp-cQa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jS0-Ld-V3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3014,7 +3014,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="選択問題新規作成" id="C9G-Vu-C1Q">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="3fe-pr-25z">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6Tm-1I-YLU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6Tm-1I-YLU">
                                 <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -3054,16 +3054,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
