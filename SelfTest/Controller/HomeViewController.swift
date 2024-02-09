@@ -14,6 +14,9 @@ final class HomeViewController: UIViewController {
     @IBAction func createButton(_ sender: UIButton) {
         audioPlayer?.stop()
     }
+    @IBAction func stopMusicButton(_ sender: UIButton) {
+        audioPlayer?.stop()
+    }
     
     var audioPlayer: AVAudioPlayer?
 
