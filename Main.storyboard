@@ -74,7 +74,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="韓国語モード"/>
+                                <state key="normal" title="消音モード"/>
+                                <connections>
+                                    <action selector="stopMusicButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="33N-f8-p9C"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="セルフテストロゴ.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPJ-Op-KJE">
                                 <rect key="frame" x="38" y="87" width="316" height="314"/>
@@ -129,7 +132,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="文章入力問題"/>
                                 <connections>
-                                    <segue destination="PWJ-ki-fFh" kind="show" id="adt-UW-7WS"/>
+                                    <segue destination="Gpj-wS-NRq" kind="show" id="ccH-Zq-kfE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-pX-Sst">
@@ -143,7 +146,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="選択問題"/>
                                 <connections>
-                                    <segue destination="zbv-Ef-PFg" kind="show" id="SWE-Ug-pJd"/>
+                                    <segue destination="zSQ-BZ-HW4" kind="show" id="ZnW-IM-T7w"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -177,12 +180,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2j-gy-L69">
-                                <rect key="frame" x="15" y="113" width="363" height="34"/>
+                                <rect key="frame" x="15" y="69" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8O-Yw-9Dc">
-                                <rect key="frame" x="20" y="168" width="353" height="21"/>
+                                <rect key="frame" x="20" y="124" width="353" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gix-fR-EpK"/>
                                 </constraints>
@@ -191,7 +194,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIr-v0-gXY">
-                                <rect key="frame" x="0.0" y="209" width="393" height="643"/>
+                                <rect key="frame" x="0.0" y="165" width="393" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMZ-Jj-Knn">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1393.3333333333333"/>
@@ -219,7 +222,7 @@
                                                         </connections>
                                                     </textView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="解答入力" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="whY-V3-oFd">
-                                                        <rect key="frame" x="0.0" y="75.333333333333314" width="373" height="35"/>
+                                                        <rect key="frame" x="0.0" y="75.333333333333343" width="373" height="35"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="968-jY-bs3"/>
@@ -494,7 +497,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i0K-Fs-1qi">
-                                                        <rect key="frame" x="0.0" y="30.333333333333258" width="373" height="35"/>
+                                                        <rect key="frame" x="0.0" y="30.333333333333371" width="373" height="35"/>
                                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="LKC-mY-Iat"/>
@@ -740,7 +743,7 @@
                     <navigationItem key="navigationItem" title="入力問題新規作成" id="UmF-ou-Oc0">
                         <barButtonItem key="backBarButtonItem" title="戻る" id="CIc-n2-Btu"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Ab8-6o-TBh">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bNp-7o-H6e">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bNp-7o-H6e">
                                 <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -788,7 +791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blK-fq-QIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="1180"/>
+            <point key="canvasLocation" x="3888" y="1524"/>
         </scene>
         <!--選択問題新規作成-->
         <scene sceneID="Sjv-02-J90">
@@ -799,12 +802,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9td-62-TtH">
-                                <rect key="frame" x="15" y="114" width="363" height="34"/>
+                                <rect key="frame" x="15" y="70" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0S-RG-nVj">
-                                <rect key="frame" x="20" y="169" width="353" height="21"/>
+                                <rect key="frame" x="20" y="125" width="353" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Aqh-AV-PeW"/>
                                 </constraints>
@@ -813,7 +816,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzZ-n9-ngS">
-                                <rect key="frame" x="0.0" y="209" width="393" height="590"/>
+                                <rect key="frame" x="0.0" y="165" width="393" height="634"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owe-m7-Qyo">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1600"/>
@@ -845,7 +848,7 @@
                                                 </connections>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="選択肢１" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-eg-YCX">
-                                                <rect key="frame" x="0.0" y="75.333333333333314" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="75.333333333333343" width="373" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="6Um-gB-uJN"/>
@@ -943,7 +946,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ChY-1R-eun">
-                                                <rect key="frame" x="0.0" y="30.333333333333258" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="30.333333333333314" width="373" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="doX-BC-6u4"/>
@@ -956,7 +959,7 @@
                                                 </connections>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-IX-PbT">
-                                                <rect key="frame" x="0.0" y="75.333333333333258" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="75.333333333333314" width="373" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="6Yp-Xw-fTC"/>
@@ -969,7 +972,7 @@
                                                 </connections>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OME-Uu-W1C">
-                                                <rect key="frame" x="0.0" y="120.33333333333326" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="120.33333333333331" width="373" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="nk3-jy-cxX"/>
@@ -982,7 +985,7 @@
                                                 </connections>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d6h-zF-l6Y">
-                                                <rect key="frame" x="0.0" y="165.33333333333326" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="165.33333333333331" width="373" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="D7X-0b-qgh"/>
@@ -995,7 +998,7 @@
                                                 </connections>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g7f-oG-W46">
-                                                <rect key="frame" x="0.0" y="210.33333333333326" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="210.33333333333331" width="373" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="W62-Ku-nAi"/>
@@ -1008,7 +1011,7 @@
                                                 </connections>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iDo-8L-Key">
-                                                <rect key="frame" x="0.0" y="255.33333333333326" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="255.33333333333331" width="373" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="bY7-Co-tsT"/>
@@ -1477,7 +1480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3T2-LJ-sve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775" y="1180"/>
+            <point key="canvasLocation" x="3888" y="787"/>
         </scene>
         <!--問題セレクト-->
         <scene sceneID="9ib-97-lgY">
@@ -1506,8 +1509,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="azL-qB-RYm" id="fhn-eB-LxV"/>
-                        <segue destination="72c-JO-Arq" kind="show" id="EmU-RF-85O"/>
                         <segue destination="ECe-jf-xdX" kind="show" id="3e7-xH-DM7"/>
+                        <segue destination="iVG-47-cSI" kind="show" id="nTA-fI-g4t"/>
+                        <segue destination="Owa-pj-9bl" kind="show" id="oDA-fk-NB5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OkO-rn-y1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1523,12 +1527,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-Py-bCg">
-                                <rect key="frame" x="15" y="113" width="363" height="34"/>
+                                <rect key="frame" x="15" y="69" width="363" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCj-iR-ism">
-                                <rect key="frame" x="0.0" y="209" width="393" height="643"/>
+                                <rect key="frame" x="0.0" y="165" width="393" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XS2-4s-74x">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1393.3333333333333"/>
@@ -1556,7 +1560,7 @@
                                                         </connections>
                                                     </textView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="問題入力" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bB9-sR-5Uu">
-                                                        <rect key="frame" x="0.0" y="75.333333333333314" width="373" height="35"/>
+                                                        <rect key="frame" x="0.0" y="75.333333333333343" width="373" height="35"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="cCu-M3-vBR"/>
@@ -1831,7 +1835,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="問題入力" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-pw-eop">
-                                                        <rect key="frame" x="0.0" y="30.333333333333258" width="373" height="35"/>
+                                                        <rect key="frame" x="0.0" y="30.333333333333371" width="373" height="35"/>
                                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="3MC-Kj-Veu"/>
@@ -2059,7 +2063,7 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ht-Qa-Fgl">
-                                <rect key="frame" x="20" y="167" width="353" height="21"/>
+                                <rect key="frame" x="20" y="123" width="353" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Dl6-9U-rQ5"/>
                                 </constraints>
@@ -2132,7 +2136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cz3-4G-WeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711" y="-218"/>
+            <point key="canvasLocation" x="3888" y="-51"/>
         </scene>
         <!--選択問題編集-->
         <scene sceneID="Ftx-cf-Ck7">
@@ -2819,7 +2823,304 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PzT-uN-hjh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456" y="-807"/>
+            <point key="canvasLocation" x="3888" y="-852"/>
+        </scene>
+        <!--入力問題新規作成-->
+        <scene sceneID="Ymy-me-dDk">
+            <objects>
+                <viewController id="Gpj-wS-NRq" customClass="NewSentenceCreateViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4El-NN-azB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBQ-U5-Q0Z">
+                                <rect key="frame" x="15" y="113" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-gw-8q2">
+                                <rect key="frame" x="20" y="168" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9s0-zf-vVr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VxS-Oj-izo">
+                                <rect key="frame" x="0.0" y="197" width="393" height="655"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NU0-uP-N72"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iBQ-U5-Q0Z" firstAttribute="leading" secondItem="NU0-uP-N72" secondAttribute="leading" constant="15" id="13O-S1-qvL"/>
+                            <constraint firstItem="NU0-uP-N72" firstAttribute="trailing" secondItem="iBQ-U5-Q0Z" secondAttribute="trailing" constant="15" id="26U-52-0fP"/>
+                            <constraint firstItem="VxS-Oj-izo" firstAttribute="leading" secondItem="NU0-uP-N72" secondAttribute="leading" id="L7f-oz-OWC"/>
+                            <constraint firstItem="VxS-Oj-izo" firstAttribute="trailing" secondItem="NU0-uP-N72" secondAttribute="trailing" id="Ul8-0s-MAo"/>
+                            <constraint firstItem="lh6-gw-8q2" firstAttribute="top" secondItem="iBQ-U5-Q0Z" secondAttribute="bottom" constant="21" id="Ur0-ng-FQb"/>
+                            <constraint firstItem="NU0-uP-N72" firstAttribute="trailing" secondItem="lh6-gw-8q2" secondAttribute="trailing" constant="20" id="bit-la-uRM"/>
+                            <constraint firstItem="VxS-Oj-izo" firstAttribute="top" secondItem="lh6-gw-8q2" secondAttribute="bottom" constant="8" id="hbM-kG-7yT"/>
+                            <constraint firstItem="iBQ-U5-Q0Z" firstAttribute="top" secondItem="NU0-uP-N72" secondAttribute="top" constant="10" id="ifV-I0-ipC"/>
+                            <constraint firstAttribute="bottom" secondItem="VxS-Oj-izo" secondAttribute="bottom" id="pvh-wk-uX0"/>
+                            <constraint firstItem="lh6-gw-8q2" firstAttribute="leading" secondItem="NU0-uP-N72" secondAttribute="leading" constant="20" id="rXC-fK-Cq9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="入力問題新規作成" id="72o-VZ-bz3">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="4hL-pN-XSM"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="FTx-Zc-mm9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gYs-dR-UAK">
+                                <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="mdH-5c-6ru"/>
+                                    <constraint firstAttribute="height" constant="35" id="pzR-zs-Qef"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="Gpj-wS-NRq" eventType="touchUpInside" id="Eo7-Z5-PqN"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="393" height="852"/>
+                    <connections>
+                        <outlet property="alertLabel" destination="lh6-gw-8q2" id="L29-dI-uDh"/>
+                        <outlet property="saveButton" destination="gYs-dR-UAK" id="wAY-wa-tPY"/>
+                        <outlet property="tableView" destination="VxS-Oj-izo" id="g3A-C6-QLX"/>
+                        <outlet property="tableViewBottom" destination="pvh-wk-uX0" id="dXs-GI-jEp"/>
+                        <outlet property="titleTextField" destination="iBQ-U5-Q0Z" id="tCZ-tA-CPb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQV-17-AMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.52671755725191" y="1288.7323943661972"/>
+        </scene>
+        <!--入力問題編集-->
+        <scene sceneID="JHa-Zq-esd">
+            <objects>
+                <viewController storyboardIdentifier="NewSentenceEditViewController" id="iVG-47-cSI" customClass="NewSentenceEditViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dia-Xb-YjD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2b-E3-LwT">
+                                <rect key="frame" x="15" y="113" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLZ-2I-RU9">
+                                <rect key="frame" x="20" y="167" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="g0I-Oc-0LF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cI4-2o-fDg">
+                                <rect key="frame" x="0.0" y="196" width="393" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tpG-oo-50I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tpG-oo-50I" firstAttribute="trailing" secondItem="GLZ-2I-RU9" secondAttribute="trailing" constant="20" id="1aj-r8-BEL"/>
+                            <constraint firstItem="cI4-2o-fDg" firstAttribute="top" secondItem="GLZ-2I-RU9" secondAttribute="bottom" constant="8" id="365-fP-AVA"/>
+                            <constraint firstItem="cI4-2o-fDg" firstAttribute="leading" secondItem="tpG-oo-50I" secondAttribute="leading" id="39j-34-1tD"/>
+                            <constraint firstItem="t2b-E3-LwT" firstAttribute="top" secondItem="tpG-oo-50I" secondAttribute="top" constant="10" id="3rq-ws-5r2"/>
+                            <constraint firstItem="GLZ-2I-RU9" firstAttribute="leading" secondItem="tpG-oo-50I" secondAttribute="leading" constant="20" id="Eoe-yf-pJN"/>
+                            <constraint firstItem="t2b-E3-LwT" firstAttribute="leading" secondItem="tpG-oo-50I" secondAttribute="leading" constant="15" id="HVo-MQ-OYK"/>
+                            <constraint firstAttribute="bottom" secondItem="cI4-2o-fDg" secondAttribute="bottom" id="PbA-6J-kLL"/>
+                            <constraint firstItem="cI4-2o-fDg" firstAttribute="trailing" secondItem="tpG-oo-50I" secondAttribute="trailing" id="Q7z-6I-pgq"/>
+                            <constraint firstItem="GLZ-2I-RU9" firstAttribute="top" secondItem="t2b-E3-LwT" secondAttribute="bottom" constant="20" id="rc3-3Y-Qdu"/>
+                            <constraint firstItem="tpG-oo-50I" firstAttribute="trailing" secondItem="t2b-E3-LwT" secondAttribute="trailing" constant="15" id="vjF-CX-t5m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="入力問題編集" id="xcA-zn-2iO">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="Kju-rc-AbO"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="2h8-cR-4Yo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="L4r-Q5-TiH">
+                                <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FCP-tX-To2"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
+                                <connections>
+                                    <action selector="savaButton:" destination="iVG-47-cSI" eventType="touchUpInside" id="X5M-qK-jay"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="393" height="852"/>
+                    <connections>
+                        <outlet property="alertLabel" destination="GLZ-2I-RU9" id="xfe-x3-NJ8"/>
+                        <outlet property="saveButton" destination="L4r-Q5-TiH" id="Ddy-aa-DRt"/>
+                        <outlet property="tableView" destination="cI4-2o-fDg" id="FwJ-WI-kjy"/>
+                        <outlet property="tableViewBottom" destination="PbA-6J-kLL" id="oC5-Gd-3dU"/>
+                        <outlet property="titleEditTextField" destination="t2b-E3-LwT" id="djQ-sp-cQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jS0-Ld-V3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="-1425"/>
+        </scene>
+        <!--選択問題新規作成-->
+        <scene sceneID="iiT-QQ-7l6">
+            <objects>
+                <viewController id="zSQ-BZ-HW4" customClass="NewSelectCreateViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jly-4k-9U7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ckv-5I-czM">
+                                <rect key="frame" x="15" y="114" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg0-0r-XvB">
+                                <rect key="frame" x="20" y="169" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zYh-Yh-lLt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oNW-dA-o1A">
+                                <rect key="frame" x="0.0" y="198" width="393" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yqz-a6-ahM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wg0-0r-XvB" firstAttribute="leading" secondItem="Yqz-a6-ahM" secondAttribute="leading" constant="20" id="1WS-N9-E0D"/>
+                            <constraint firstItem="Yqz-a6-ahM" firstAttribute="trailing" secondItem="Wg0-0r-XvB" secondAttribute="trailing" constant="20" id="5Fu-sb-UIU"/>
+                            <constraint firstItem="Yqz-a6-ahM" firstAttribute="trailing" secondItem="Ckv-5I-czM" secondAttribute="trailing" constant="15" id="8nF-NC-bgS"/>
+                            <constraint firstItem="oNW-dA-o1A" firstAttribute="top" secondItem="Wg0-0r-XvB" secondAttribute="bottom" constant="8" id="Ew2-yR-pbf"/>
+                            <constraint firstItem="Ckv-5I-czM" firstAttribute="top" secondItem="Yqz-a6-ahM" secondAttribute="top" constant="11" id="Imz-C9-fXg"/>
+                            <constraint firstAttribute="bottom" secondItem="oNW-dA-o1A" secondAttribute="bottom" id="TMZ-3C-Ana"/>
+                            <constraint firstItem="Wg0-0r-XvB" firstAttribute="top" secondItem="Ckv-5I-czM" secondAttribute="bottom" constant="21" id="aei-p1-gmq"/>
+                            <constraint firstItem="Ckv-5I-czM" firstAttribute="leading" secondItem="Yqz-a6-ahM" secondAttribute="leading" constant="15" id="eCq-Qc-xP8"/>
+                            <constraint firstItem="oNW-dA-o1A" firstAttribute="trailing" secondItem="Yqz-a6-ahM" secondAttribute="trailing" id="h3L-X6-uw0"/>
+                            <constraint firstItem="oNW-dA-o1A" firstAttribute="leading" secondItem="Yqz-a6-ahM" secondAttribute="leading" id="yD5-h3-mvm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="選択問題新規作成" id="C9G-Vu-C1Q">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="3fe-pr-25z">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6Tm-1I-YLU">
+                                <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FnO-W2-dY8"/>
+                                    <constraint firstAttribute="width" constant="60" id="TQG-m6-e3i"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="zSQ-BZ-HW4" eventType="touchUpInside" id="IY7-6s-Coo"/>
+                                    <action selector="saveButton:" destination="PWJ-ki-fFh" eventType="touchUpInside" id="h8q-i7-fyf"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alertLabel" destination="Wg0-0r-XvB" id="FX2-3U-B4w"/>
+                        <outlet property="saveButton" destination="6Tm-1I-YLU" id="Soz-ev-g6Z"/>
+                        <outlet property="tableView" destination="oNW-dA-o1A" id="ITq-ik-bpp"/>
+                        <outlet property="tableViewBottom" destination="TMZ-3C-Ana" id="VfL-ax-8iU"/>
+                        <outlet property="titleTextField" destination="Ckv-5I-czM" id="xXc-BU-0kI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wo-F1-ymj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="443"/>
+        </scene>
+        <!--選択問題編集-->
+        <scene sceneID="iHY-Uf-3ag">
+            <objects>
+                <viewController storyboardIdentifier="NewSelectEditViewController" id="Owa-pj-9bl" customClass="NewSelectEditViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hDV-Gs-Ooj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mv6-lg-too">
+                                <rect key="frame" x="15" y="113" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM7-nx-rVl">
+                                <rect key="frame" x="20" y="167" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="e65-ix-WxS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7yq-85-YEY">
+                                <rect key="frame" x="0.0" y="196" width="393" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9c6-00-4fR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9c6-00-4fR" firstAttribute="trailing" secondItem="sM7-nx-rVl" secondAttribute="trailing" constant="20" id="5en-sr-EwA"/>
+                            <constraint firstItem="sM7-nx-rVl" firstAttribute="top" secondItem="mv6-lg-too" secondAttribute="bottom" constant="20" id="BgY-Q0-PKM"/>
+                            <constraint firstItem="sM7-nx-rVl" firstAttribute="leading" secondItem="9c6-00-4fR" secondAttribute="leading" constant="20" id="FWP-95-4kw"/>
+                            <constraint firstItem="7yq-85-YEY" firstAttribute="top" secondItem="sM7-nx-rVl" secondAttribute="bottom" constant="8" id="P1y-IA-AuO"/>
+                            <constraint firstItem="mv6-lg-too" firstAttribute="leading" secondItem="9c6-00-4fR" secondAttribute="leading" constant="15" id="Rma-aS-Vyz"/>
+                            <constraint firstAttribute="bottom" secondItem="7yq-85-YEY" secondAttribute="bottom" id="T0f-iY-Yg7"/>
+                            <constraint firstItem="7yq-85-YEY" firstAttribute="leading" secondItem="9c6-00-4fR" secondAttribute="leading" id="dT9-8O-Lwx"/>
+                            <constraint firstItem="mv6-lg-too" firstAttribute="top" secondItem="9c6-00-4fR" secondAttribute="top" constant="10" id="nCA-Vs-66y"/>
+                            <constraint firstItem="9c6-00-4fR" firstAttribute="trailing" secondItem="mv6-lg-too" secondAttribute="trailing" constant="15" id="s24-C4-OEg"/>
+                            <constraint firstItem="7yq-85-YEY" firstAttribute="trailing" secondItem="9c6-00-4fR" secondAttribute="trailing" id="wtD-gp-vOG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="選択問題編集" id="afi-sS-9mh">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="SM6-Eo-RmE"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZW5-uG-xyY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="aNj-o2-eev">
+                                <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="jp4-EL-224"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
+                                <connections>
+                                    <action selector="savaButton:" destination="Owa-pj-9bl" eventType="touchUpInside" id="fqN-PH-cSy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="393" height="852"/>
+                    <connections>
+                        <outlet property="alertLabel" destination="sM7-nx-rVl" id="v8i-hv-nMB"/>
+                        <outlet property="saveButton" destination="aNj-o2-eev" id="P54-r2-Rbi"/>
+                        <outlet property="tableView" destination="7yq-85-YEY" id="CMd-wZ-DZD"/>
+                        <outlet property="tableViewBottom" destination="T0f-iY-Yg7" id="xHK-pt-Am8"/>
+                        <outlet property="titleEditTextField" destination="mv6-lg-too" id="ZOP-Pn-tc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Is-6W-P5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="-405"/>
         </scene>
     </scenes>
     <resources>
@@ -2831,16 +3132,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

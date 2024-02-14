@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="292" id="KGk-i7-Jjw" customClass="SelectTestTableViewCell" customModule="SelfTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="292"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="292"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第1問" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfk-O7-r26">
+                        <rect key="frame" x="10" y="10" width="56" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="K9L-my-yMH"/>
+                            <constraint firstAttribute="width" constant="56" id="vA3-mD-Aae"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="問題入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-sA-38C">
+                        <rect key="frame" x="10" y="39" width="303" height="34"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="CDi-0a-wKl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="選択肢④" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49X-4i-6yk">
+                        <rect key="frame" x="10" y="207" width="303" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="UYH-fA-oeq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="選択肢①" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-IH-kD8">
+                        <rect key="frame" x="10" y="81" width="303" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="41S-r1-t3Q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="選択肢②" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWm-nN-jRX">
+                        <rect key="frame" x="10" y="123" width="303" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="AzF-U6-WhY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="選択肢③" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6A-e4-vNm">
+                        <rect key="frame" x="10" y="165" width="303" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="v0r-L7-QDj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="正解の選択肢" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgR-EP-yav">
+                        <rect key="frame" x="10" y="249" width="303" height="34"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="9AO-if-lXH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="49X-4i-6yk" firstAttribute="top" secondItem="X6A-e4-vNm" secondAttribute="bottom" constant="8" id="1ol-uJ-2c5"/>
+                    <constraint firstItem="JgR-EP-yav" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="8Iu-cQ-ygG"/>
+                    <constraint firstItem="VVr-sA-38C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="9Wh-Uw-4kx"/>
+                    <constraint firstItem="VWm-nN-jRX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="BWk-w4-gdU"/>
+                    <constraint firstAttribute="trailing" secondItem="JgR-EP-yav" secondAttribute="trailing" constant="10" id="Bp7-H9-U5c"/>
+                    <constraint firstItem="X6A-e4-vNm" firstAttribute="top" secondItem="VWm-nN-jRX" secondAttribute="bottom" constant="8" id="Eaf-sX-rSg"/>
+                    <constraint firstItem="49X-4i-6yk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Gru-Qn-ztt"/>
+                    <constraint firstAttribute="trailing" secondItem="VWm-nN-jRX" secondAttribute="trailing" constant="10" id="JhC-lO-tVt"/>
+                    <constraint firstItem="Mfk-O7-r26" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KRi-Dh-T8p"/>
+                    <constraint firstAttribute="trailing" secondItem="VVr-sA-38C" secondAttribute="trailing" constant="10" id="N5q-UX-XiF"/>
+                    <constraint firstAttribute="trailing" secondItem="NhX-IH-kD8" secondAttribute="trailing" constant="10" id="NUe-eZ-yHb"/>
+                    <constraint firstItem="Mfk-O7-r26" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Pqu-KV-kwA"/>
+                    <constraint firstAttribute="trailing" secondItem="X6A-e4-vNm" secondAttribute="trailing" constant="10" id="U1Y-Xn-3Qo"/>
+                    <constraint firstAttribute="bottom" secondItem="JgR-EP-yav" secondAttribute="bottom" constant="8" id="c2C-Gh-HEg"/>
+                    <constraint firstAttribute="trailing" secondItem="49X-4i-6yk" secondAttribute="trailing" constant="10" id="if7-m4-gj3"/>
+                    <constraint firstItem="X6A-e4-vNm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jG0-sQ-PRV"/>
+                    <constraint firstItem="VVr-sA-38C" firstAttribute="top" secondItem="Mfk-O7-r26" secondAttribute="bottom" constant="8" id="lRe-wg-ajP"/>
+                    <constraint firstItem="JgR-EP-yav" firstAttribute="top" secondItem="49X-4i-6yk" secondAttribute="bottom" constant="8" id="pGl-OI-dqk"/>
+                    <constraint firstItem="NhX-IH-kD8" firstAttribute="top" secondItem="VVr-sA-38C" secondAttribute="bottom" constant="8" id="qeh-ZM-GtM"/>
+                    <constraint firstItem="VWm-nN-jRX" firstAttribute="top" secondItem="NhX-IH-kD8" secondAttribute="bottom" constant="8" id="xGk-jT-LIX"/>
+                    <constraint firstItem="NhX-IH-kD8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xqA-Mp-nAR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="answerTextField" destination="JgR-EP-yav" id="7rU-AG-U3e"/>
+                <outlet property="choiceTextField1" destination="NhX-IH-kD8" id="G5a-zE-zXy"/>
+                <outlet property="choiceTextField2" destination="VWm-nN-jRX" id="wAF-B8-FYr"/>
+                <outlet property="choiceTextField3" destination="X6A-e4-vNm" id="FyQ-Fv-Mmc"/>
+                <outlet property="choiceTextField4" destination="49X-4i-6yk" id="RrP-9Q-fCd"/>
+                <outlet property="contentTextField" destination="VVr-sA-38C" id="eKS-Mj-4h0"/>
+                <outlet property="numberOfSentenceTextLabel" destination="Mfk-O7-r26" id="Xye-6f-yce"/>
+            </connections>
+            <point key="canvasLocation" x="219.08396946564883" y="107.04225352112677"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

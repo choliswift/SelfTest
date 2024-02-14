@@ -16,7 +16,6 @@ final class SelectTestViewController: UIViewController {
     }
     
     private(set) var testDataList: [TestDataModel] = []
-    private let versionNumber = 11
     //保存した内容をセルに表示する処理
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,7 +24,7 @@ final class SelectTestViewController: UIViewController {
     }
 
     func setTestData() {
-        let config = Realm.Configuration(schemaVersion: UInt64(versionNumber))
+        let config = Realm.Configuration(schemaVersion: UInt64(Constant.version))
         Realm.Configuration.defaultConfiguration = config
         let realm = try! Realm()
         let result = realm.objects(TestDataModel.self)
@@ -136,16 +135,16 @@ extension SelectTestViewController: TestTableViewCellDelegate {
         let kindTest = self.testDataList[indexPath.row].kind
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if kindTest == 1 {
-            if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "SentenceEditViewController") as? SentenceEditViewController {
+            if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "NewSentenceEditViewController") as? NewSentenceEditViewController {
                 let testData = testDataList[indexPath.row]
                 sentenceEditViewController.configure(test: testData)
                 navigationController?.pushViewController(sentenceEditViewController, animated: true)
             }
         } else if kindTest == 2 {
-            if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "SelectEditViewController") as? SelectEditViewController {
+            if let selectEditViewController = storyboard.instantiateViewController(identifier: "NewSelectEditViewController") as? NewSelectEditViewController {
                 let testData = testDataList[indexPath.row]
-                sentenceEditViewController.configure(test: testData)
-                navigationController?.pushViewController(sentenceEditViewController, animated: true)
+                selectEditViewController.configure(test: testData)
+                navigationController?.pushViewController(selectEditViewController, animated: true)
             }
         }
     }

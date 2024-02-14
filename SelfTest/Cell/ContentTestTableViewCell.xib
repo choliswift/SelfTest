@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="ContentTestTableViewCell" customModule="SelfTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="131"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第1問" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkk-28-Y7A">
+                        <rect key="frame" x="10" y="10" width="56" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="kFq-Tq-cWO"/>
+                            <constraint firstAttribute="width" constant="56" id="keZ-Ha-OYZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ブルーに問題、オレンジに解答を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tk0-Y3-akJ">
+                        <rect key="frame" x="10" y="41" width="303" height="34"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="O6d-6f-nGB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNg-k2-ss6">
+                        <rect key="frame" x="10" y="85" width="303" height="34"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="WAM-m4-mM6"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yNg-k2-ss6" firstAttribute="leading" secondItem="Xkk-28-Y7A" secondAttribute="leading" id="1tj-ho-zM8"/>
+                    <constraint firstAttribute="trailing" secondItem="yNg-k2-ss6" secondAttribute="trailing" constant="10" id="9aq-P7-kw1"/>
+                    <constraint firstItem="yNg-k2-ss6" firstAttribute="top" secondItem="tk0-Y3-akJ" secondAttribute="bottom" constant="10" id="eRM-TZ-4O2"/>
+                    <constraint firstAttribute="trailing" secondItem="tk0-Y3-akJ" secondAttribute="trailing" constant="10" id="euv-RW-aYI"/>
+                    <constraint firstAttribute="bottom" secondItem="yNg-k2-ss6" secondAttribute="bottom" constant="12" id="i2X-dP-wzC"/>
+                    <constraint firstItem="Xkk-28-Y7A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="m7G-YE-l8W"/>
+                    <constraint firstItem="Xkk-28-Y7A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mnO-z5-FTM"/>
+                    <constraint firstItem="tk0-Y3-akJ" firstAttribute="leading" secondItem="Xkk-28-Y7A" secondAttribute="leading" id="pEq-Bx-QXu"/>
+                    <constraint firstItem="tk0-Y3-akJ" firstAttribute="top" secondItem="Xkk-28-Y7A" secondAttribute="bottom" constant="10" id="vyd-b5-qBj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="answerTextView" destination="yNg-k2-ss6" id="Hbf-Jy-FZK"/>
+                <outlet property="numberOfSentenceTextLabel" destination="Xkk-28-Y7A" id="W7H-aG-RtQ"/>
+                <outlet property="testContentTextField" destination="tk0-Y3-akJ" id="l3i-nX-WLK"/>
+            </connections>
+            <point key="canvasLocation" x="16.030534351145036" y="47.535211267605639"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
