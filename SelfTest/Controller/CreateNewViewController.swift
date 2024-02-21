@@ -14,6 +14,5 @@ final class CreateNewViewController: UIViewController {
         sentenceButton.layer.cornerRadius = sentenceButton.bounds.width / 11
         choiceButton.layer.cornerRadius = choiceButton.bounds.width / 11
     }
-    
 }
 

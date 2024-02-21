@@ -9,6 +9,7 @@ final class NewSentenceEditViewController: UIViewController {
     @IBAction private func savaButton(_ sender: UIButton) {
         textIsEmpty()
     }
+    @IBOutlet private weak var tableViewBottom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +116,7 @@ final class NewSentenceEditViewController: UIViewController {
     
     //未入力があった際に保存できないようにする
     func textIsEmpty() {
-        for i in 0...9 {
+        for i in 0..<testDataList.count {
             if testContentData[i].testYobiText.isEmpty {
                 alertLabel.text = "空欄があります。入力してください。"
                 alertLabel.textColor = .red
