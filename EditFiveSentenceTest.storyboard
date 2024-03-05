@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="INd-dc-WCc">
+            <objects>
+                <navigationController id="WJP-cL-5jk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ttP-fz-8n4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hZs-CX-6TU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9iL-ge-xnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="18"/>
+        </scene>
+        <!--選択問題編集（5問）-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FiveSentenceEditViewController" id="Y6W-OH-hqX" customClass="FiveSentenceEditViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P8q-em-3Aw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uII-FG-ff4">
+                                <rect key="frame" x="15" y="114" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMR-wv-SDi">
+                                <rect key="frame" x="20" y="169" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pbr-Nv-hPB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-2L-FYP">
+                                <rect key="frame" x="0.0" y="198" width="393" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dVP-LR-lpb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Kec-2L-FYP" secondAttribute="trailing" id="ABn-QD-dFg"/>
+                            <constraint firstItem="Kec-2L-FYP" firstAttribute="top" secondItem="KMR-wv-SDi" secondAttribute="bottom" constant="8" id="Ss9-pB-06t"/>
+                            <constraint firstItem="Kec-2L-FYP" firstAttribute="leading" secondItem="dVP-LR-lpb" secondAttribute="leading" id="VLw-Lr-vN6"/>
+                            <constraint firstItem="uII-FG-ff4" firstAttribute="leading" secondItem="dVP-LR-lpb" secondAttribute="leading" constant="15" id="jmS-Vx-h0k"/>
+                            <constraint firstItem="KMR-wv-SDi" firstAttribute="leading" secondItem="dVP-LR-lpb" secondAttribute="leading" constant="20" id="nok-M6-HIt"/>
+                            <constraint firstItem="uII-FG-ff4" firstAttribute="top" secondItem="dVP-LR-lpb" secondAttribute="top" constant="11" id="qpO-VK-7MR"/>
+                            <constraint firstItem="KMR-wv-SDi" firstAttribute="top" secondItem="uII-FG-ff4" secondAttribute="bottom" constant="21" id="s5D-4L-m8m"/>
+                            <constraint firstItem="dVP-LR-lpb" firstAttribute="trailing" secondItem="KMR-wv-SDi" secondAttribute="trailing" constant="20" id="sj2-NC-Dwt"/>
+                            <constraint firstItem="dVP-LR-lpb" firstAttribute="trailing" secondItem="uII-FG-ff4" secondAttribute="trailing" constant="15" id="tdV-Tv-zq2"/>
+                            <constraint firstAttribute="bottom" secondItem="Kec-2L-FYP" secondAttribute="bottom" id="xY3-Cf-82H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="選択問題編集（5問）" id="xD9-f1-hFI">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="V2i-Ec-lJe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4eA-fC-sgd">
+                                <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Bmu-G5-BWK"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IW3-Ac-wpV"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alertLabel" destination="KMR-wv-SDi" id="Ynh-y9-X6D"/>
+                        <outlet property="tableView" destination="Kec-2L-FYP" id="4uj-S7-0Il"/>
+                        <outlet property="tableViewButtom" destination="xY3-Cf-82H" id="UnZ-Cb-BCz"/>
+                        <outlet property="titleTextField" destination="uII-FG-ff4" id="Ep1-7s-BGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

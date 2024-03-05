@@ -13,11 +13,14 @@ final class NewSentenceEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTestData()
-        displayData()
-        tableView.register(UINib(nibName: "ContentTestTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentTestTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(UINib(nibName: "ContentTestTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentTestTableViewCell")
+        
+        setDoneButton()
+        setTestData()
+        displayData()
+        setupNotifications()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapDoneButton))
         tapGesture.cancelsTouchesInView = false
@@ -29,6 +32,19 @@ final class NewSentenceEditViewController: UIViewController {
     private var testYobiDataModel = TestYobiDataModel()
     private var testContentData: [TestYobiDataModel] = []
     private var testAnswerData: [TestYobiDataModel] = []
+    
+    func setDoneButton() {
+        //inputAccesoryViewに入れるtoolbar
+        let toolbar = UIToolbar()
+        //完了ボタンを右寄せにする為に、左側を埋めるスペース作成
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        //完了ボタンを作成
+        let done = UIBarButtonItem(title: "閉じる", style: .done, target: self, action: #selector(tapDoneButton))
+        //toolbarのitemsに作成したスペースと完了ボタンを入れる。実際にも左から順に表示されます。
+        toolbar.items = [space, done]
+        toolbar.sizeToFit()
+        titleEditTextField.inputAccessoryView = toolbar
+    }
     
     @objc func tapDoneButton() {
         view.endEditing(true)
@@ -145,6 +161,49 @@ final class NewSentenceEditViewController: UIViewController {
             testContentData.append(testYobiDataModel)
             testAnswerData.append(testYobiDataModel)
         }
+    }
+    
+    //キーボードを表示した際にtextViewが隠れないようにする処理
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillClose), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillAppear(_ notification: Notification) {
+        print("キーボード表示")
+        //キーボードのサイズ
+        guard let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+              //キーボードのアニメーション時間を設定
+              let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+              //キーボードのアニメーションの曲線
+              let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+              //Outletで結びつけたtableViewのButtomをここで制約
+              let tableViewButtomConstraint = self.tableViewBottom else { return }
+        
+        //キーボードの高さを読み込む
+        let keyboardHeight = keyboardFrame.height
+        //tableViewのButtomを再設定
+        tableViewButtomConstraint.constant = keyboardHeight
+        
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @objc private func keyboardWillClose(_ notification: Notification) {
+        //キーボードのアニメーション時間を設定
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval,
+              //キーボードのアニメーションの曲線
+              let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
+              //Outletで結びつけたtableViewのButtomをここで制約
+              let tableViewButtomConstraint = self.tableViewBottom else { return }
+        
+        //tableViewのButtomを再設定
+        tableViewButtomConstraint.constant = 0
+        
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 }
 

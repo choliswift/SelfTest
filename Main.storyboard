@@ -122,17 +122,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-1a-vaz">
-                                <rect key="frame" x="38" y="163" width="317" height="230"/>
+                                <rect key="frame" x="38" y="163" width="317" height="150"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="1bM-Eo-5qK"/>
+                                    <constraint firstAttribute="height" constant="150" id="1bM-Eo-5qK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="文章入力問題"/>
+                                <state key="normal" title="文章入力問題（5）"/>
                                 <connections>
-                                    <segue destination="Gpj-wS-NRq" kind="show" id="ccH-Zq-kfE"/>
+                                    <action selector="fiveSentenceButton:" destination="Bsf-xT-KDZ" eventType="touchUpInside" id="J5G-cL-qIc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-pX-Sst">
@@ -149,22 +149,41 @@
                                     <segue destination="zSQ-BZ-HW4" kind="show" id="ZnW-IM-T7w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn9-wa-eqr">
+                                <rect key="frame" x="38" y="341" width="317" height="150"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3Sl-cz-bJj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="文章入力問題（10）"/>
+                                <connections>
+                                    <segue destination="Gpj-wS-NRq" kind="show" id="lka-7h-3VM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rq2-uG-OvK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iHJ-pX-Sst" firstAttribute="leading" secondItem="rq2-uG-OvK" secondAttribute="leading" constant="38" id="0fg-MS-5La"/>
                             <constraint firstItem="rq2-uG-OvK" firstAttribute="bottom" secondItem="iHJ-pX-Sst" secondAttribute="bottom" constant="60" id="2Uj-KF-dkF"/>
+                            <constraint firstItem="Nn9-wa-eqr" firstAttribute="top" secondItem="3wy-1a-vaz" secondAttribute="bottom" constant="28" id="A7v-hy-aOy"/>
+                            <constraint firstItem="rq2-uG-OvK" firstAttribute="trailing" secondItem="Nn9-wa-eqr" secondAttribute="trailing" constant="38" id="INE-h5-60X"/>
                             <constraint firstItem="3wy-1a-vaz" firstAttribute="leading" secondItem="rq2-uG-OvK" secondAttribute="leading" constant="38" id="Ox6-Ay-WTV"/>
                             <constraint firstItem="3wy-1a-vaz" firstAttribute="top" secondItem="rq2-uG-OvK" secondAttribute="top" constant="60" id="V53-0G-tqH"/>
                             <constraint firstItem="rq2-uG-OvK" firstAttribute="trailing" secondItem="iHJ-pX-Sst" secondAttribute="trailing" constant="38" id="eVi-4U-MJB"/>
+                            <constraint firstItem="Nn9-wa-eqr" firstAttribute="leading" secondItem="rq2-uG-OvK" secondAttribute="leading" constant="38" id="gof-PY-pz0"/>
                             <constraint firstItem="rq2-uG-OvK" firstAttribute="trailing" secondItem="3wy-1a-vaz" secondAttribute="trailing" constant="38" id="tRB-lb-5UV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="新規作成" id="Jq9-yz-V0p"/>
                     <connections>
+                        <outlet property="TenSentenceButton" destination="Nn9-wa-eqr" id="CDA-UF-Yyd"/>
                         <outlet property="choiceButton" destination="iHJ-pX-Sst" id="LGc-I6-lfT"/>
-                        <outlet property="sentenceButton" destination="3wy-1a-vaz" id="xZE-cX-QNY"/>
+                        <outlet property="fiveSentenceButton" destination="3wy-1a-vaz" id="k7e-66-svX"/>
+                        <outlet property="tenSentenceButton" destination="Nn9-wa-eqr" id="8Vz-9M-TGs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMI-bh-DSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
