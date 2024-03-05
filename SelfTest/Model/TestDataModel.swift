@@ -1,4 +1,3 @@
-import Foundation
 import RealmSwift
 //本来はstructで作成したほうがいい
 class TestDataModel: Object {

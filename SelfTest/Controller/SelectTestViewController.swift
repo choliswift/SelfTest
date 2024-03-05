@@ -101,6 +101,14 @@ extension SelectTestViewController: UITableViewDelegate {
                     vc.configure(test: testData)
                     self.present(vc, animated: true, completion: nil)
                 }
+            } else if kindTest == 3 {
+                //文章入力問題5問
+                let storyboard: UIStoryboard = UIStoryboard(name: "StartFiveSentenceTest", bundle: nil)
+                if let vc = storyboard.instantiateViewController(identifier: "StartFiveSentenceTestViewController") as? StartFiveSentenceTestViewController {
+                    let testData = self.testDataList[indexPath.row]
+                    vc.configure(test: testData)
+                    self.present(vc, animated: true, completion: nil)
+                }
             }
         }
         let close = UIAlertAction(title: "いいえ", style: .default, handler: nil)
@@ -134,6 +142,7 @@ extension SelectTestViewController: TestTableViewCellDelegate {
         //いつもならdelegateで記述していた処理を、セルのボタンタップ時に行うように修正
         let kindTest = self.testDataList[indexPath.row].kind
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let fiveSentenceStoryboard = UIStoryboard(name: "EditFiveSentenceTest", bundle: nil)
         if kindTest == 1 {
             if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "NewSentenceEditViewController") as? NewSentenceEditViewController {
                 let testData = testDataList[indexPath.row]
@@ -145,6 +154,12 @@ extension SelectTestViewController: TestTableViewCellDelegate {
                 let testData = testDataList[indexPath.row]
                 selectEditViewController.configure(test: testData)
                 navigationController?.pushViewController(selectEditViewController, animated: true)
+            }
+        } else if kindTest == 3 {
+            if let sentenceEditViewCotroller = fiveSentenceStoryboard.instantiateViewController(identifier: "FiveSentenceEditViewController") as? FiveSentenceEditViewController {
+                let testData = testDataList[indexPath.row]
+                sentenceEditViewCotroller.configure(test: testData)
+                navigationController?.pushViewController(sentenceEditViewCotroller, animated: true)
             }
         }
     }

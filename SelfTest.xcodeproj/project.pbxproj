@@ -24,6 +24,13 @@
 		DF43EBB52B60A4B600A78CBC /* セルフテストロゴ.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB42B60A4B600A78CBC /* セルフテストロゴ.png */; };
 		DF43EBB92B60B96E00A78CBC /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB72B60B96E00A78CBC /* correct.png */; };
 		DF43EBBA2B60B96E00A78CBC /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB82B60B96E00A78CBC /* incorrect.png */; };
+		DF4B3F2C2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */; };
+		DF4B3F2E2B959368007F2AE3 /* FiveSentenceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F2D2B959368007F2AE3 /* FiveSentenceCreateViewController.swift */; };
+		DF4B3F302B959384007F2AE3 /* FiveSentenceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F2F2B959384007F2AE3 /* FiveSentenceEditViewController.swift */; };
+		DF4B3F322B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F312B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard */; };
+		DF4B3F342B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F332B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift */; };
+		DF4B3F362B9602CD007F2AE3 /* ResultFiveTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F352B9602CD007F2AE3 /* ResultFiveTestViewController.swift */; };
+		DF4B3F382B96C473007F2AE3 /* EditFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F372B96C473007F2AE3 /* EditFiveSentenceTest.storyboard */; };
 		DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */; };
 		DFADAA4E2B7C443800B14BCB /* ContentTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFADAA482B7C443800B14BCB /* ContentTestTableViewCell.xib */; };
 		DFADAA4F2B7C443800B14BCB /* SelectTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA492B7C443800B14BCB /* SelectTestTableViewCell.swift */; };
@@ -91,6 +98,13 @@
 		DF43EBB42B60A4B600A78CBC /* セルフテストロゴ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "セルフテストロゴ.png"; path = "SelfTest/Image&Song Data/セルフテストロゴ.png"; sourceTree = SOURCE_ROOT; };
 		DF43EBB72B60B96E00A78CBC /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
 		DF43EBB82B60B96E00A78CBC /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
+		DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartFiveSentenceTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F2D2B959368007F2AE3 /* FiveSentenceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSentenceCreateViewController.swift; sourceTree = "<group>"; };
+		DF4B3F2F2B959384007F2AE3 /* FiveSentenceEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSentenceEditViewController.swift; sourceTree = "<group>"; };
+		DF4B3F312B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateFiveSentenceTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F332B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFiveSentenceTestViewController.swift; sourceTree = "<group>"; };
+		DF4B3F352B9602CD007F2AE3 /* ResultFiveTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFiveTestViewController.swift; sourceTree = "<group>"; };
+		DF4B3F372B96C473007F2AE3 /* EditFiveSentenceTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditFiveSentenceTest.storyboard; sourceTree = "<group>"; };
 		DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartSelectTest.storyboard; sourceTree = "<group>"; };
 		DFADAA482B7C443800B14BCB /* ContentTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTestTableViewCell.xib; sourceTree = "<group>"; };
 		DFADAA492B7C443800B14BCB /* SelectTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTestTableViewCell.swift; sourceTree = "<group>"; };
@@ -223,6 +237,9 @@
 				DF0949D82B2E017700D8642C /* Main.storyboard */,
 				DF0949DA2B2E02F900D8642C /* StartTest.storyboard */,
 				DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */,
+				DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */,
+				DF4B3F312B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard */,
+				DF4B3F372B96C473007F2AE3 /* EditFiveSentenceTest.storyboard */,
 			);
 			name = Storyboard;
 			path = ..;
@@ -239,6 +256,39 @@
 				DF43EBAE2B60A12500A78CBC /* テーマソング.mp3 */,
 			);
 			path = "Image&Song Data";
+			sourceTree = "<group>";
+		};
+		DF4B3F3B2B970449007F2AE3 /* StentenceTest */ = {
+			isa = PBXGroup;
+			children = (
+				DFADAA672B7C447000B14BCB /* NewSentenceCreateViewController.swift */,
+				DFADAA642B7C447000B14BCB /* NewSentenceEditViewController.swift */,
+				DFADAA632B7C447000B14BCB /* StartViewController.swift */,
+				DFADAA5B2B7C447000B14BCB /* ResultViewController.swift */,
+			);
+			path = StentenceTest;
+			sourceTree = "<group>";
+		};
+		DF4B3F3C2B970458007F2AE3 /* FiveSentenceTest */ = {
+			isa = PBXGroup;
+			children = (
+				DF4B3F2D2B959368007F2AE3 /* FiveSentenceCreateViewController.swift */,
+				DF4B3F2F2B959384007F2AE3 /* FiveSentenceEditViewController.swift */,
+				DF4B3F332B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift */,
+				DF4B3F352B9602CD007F2AE3 /* ResultFiveTestViewController.swift */,
+			);
+			path = FiveSentenceTest;
+			sourceTree = "<group>";
+		};
+		DF4B3F3D2B970462007F2AE3 /* SelectTest */ = {
+			isa = PBXGroup;
+			children = (
+				DFADAA5C2B7C447000B14BCB /* NewSelectEditViewController.swift */,
+				DFADAA652B7C447000B14BCB /* NewSelectCreateViewController.swift */,
+				DFADAA682B7C447000B14BCB /* StartSelectTestViewController.swift */,
+				DFADAA622B7C447000B14BCB /* ResultSelectTestViewController.swift */,
+			);
+			path = SelectTest;
 			sourceTree = "<group>";
 		};
 		DFADAA472B7C443800B14BCB /* Cell */ = {
@@ -269,14 +319,9 @@
 				DFADAA612B7C447000B14BCB /* HomeViewController.swift */,
 				DFADAA5D2B7C447000B14BCB /* SelectTestViewController.swift */,
 				DFADAA602B7C447000B14BCB /* CreateNewViewController.swift */,
-				DFADAA632B7C447000B14BCB /* StartViewController.swift */,
-				DFADAA682B7C447000B14BCB /* StartSelectTestViewController.swift */,
-				DFADAA672B7C447000B14BCB /* NewSentenceCreateViewController.swift */,
-				DFADAA642B7C447000B14BCB /* NewSentenceEditViewController.swift */,
-				DFADAA652B7C447000B14BCB /* NewSelectCreateViewController.swift */,
-				DFADAA5C2B7C447000B14BCB /* NewSelectEditViewController.swift */,
-				DFADAA5B2B7C447000B14BCB /* ResultViewController.swift */,
-				DFADAA622B7C447000B14BCB /* ResultSelectTestViewController.swift */,
+				DF4B3F3B2B970449007F2AE3 /* StentenceTest */,
+				DF4B3F3C2B970458007F2AE3 /* FiveSentenceTest */,
+				DF4B3F3D2B970462007F2AE3 /* SelectTest */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -404,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF0949DB2B2E02F900D8642C /* StartTest.storyboard in Resources */,
+				DF4B3F2C2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */,
 				DFADAA522B7C443800B14BCB /* SelectTestTableViewCell.xib in Resources */,
 				DF43EBB52B60A4B600A78CBC /* セルフテストロゴ.png in Resources */,
 				DF0949D92B2E017700D8642C /* Main.storyboard in Resources */,
@@ -411,7 +457,9 @@
 				DF09499F2B2DFCC000D8642C /* Assets.xcassets in Resources */,
 				DF43EBB32B60A12F00A78CBC /* クイズ正解.mp3 in Resources */,
 				DF43EBAF2B60A12500A78CBC /* テーマソング.mp3 in Resources */,
+				DF4B3F322B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard in Resources */,
 				DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */,
+				DF4B3F382B96C473007F2AE3 /* EditFiveSentenceTest.storyboard in Resources */,
 				DF43EBB92B60B96E00A78CBC /* correct.png in Resources */,
 				DF43EBB22B60A12F00A78CBC /* クイズ不正解.mp3 in Resources */,
 				DFADAA502B7C443800B14BCB /* TestTableViewCell.xib in Resources */,
@@ -543,6 +591,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4B3F362B9602CD007F2AE3 /* ResultFiveTestViewController.swift in Sources */,
 				DFADAA732B7C447000B14BCB /* NewSentenceEditViewController.swift in Sources */,
 				DFADAA762B7C447000B14BCB /* NewSentenceCreateViewController.swift in Sources */,
 				DFADAA572B7C444600B14BCB /* TestYobiDataModel.swift in Sources */,
@@ -554,6 +603,7 @@
 				DFADAA6C2B7C447000B14BCB /* SelectTestViewController.swift in Sources */,
 				DFADAA792B7C448000B14BCB /* Constant.swift in Sources */,
 				DFADAA772B7C447000B14BCB /* StartSelectTestViewController.swift in Sources */,
+				DF4B3F2E2B959368007F2AE3 /* FiveSentenceCreateViewController.swift in Sources */,
 				DFADAA4F2B7C443800B14BCB /* SelectTestTableViewCell.swift in Sources */,
 				DFADAA722B7C447000B14BCB /* StartViewController.swift in Sources */,
 				DFADAA6F2B7C447000B14BCB /* CreateNewViewController.swift in Sources */,
@@ -562,6 +612,8 @@
 				DFADAA712B7C447000B14BCB /* ResultSelectTestViewController.swift in Sources */,
 				DF0949982B2DFCC000D8642C /* SceneDelegate.swift in Sources */,
 				DFADAA6A2B7C447000B14BCB /* ResultViewController.swift in Sources */,
+				DF4B3F342B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift in Sources */,
+				DF4B3F302B959384007F2AE3 /* FiveSentenceEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +775,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XT7U97S2A;
@@ -742,9 +795,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-academia.SelfTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,6 +812,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XT7U97S2A;
@@ -773,9 +832,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-academia.SelfTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -787,7 +851,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ42U6X98G;
+				DEVELOPMENT_TEAM = 4XT7U97S2A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -808,7 +872,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ42U6X98G;
+				DEVELOPMENT_TEAM = 4XT7U97S2A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -828,7 +892,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ42U6X98G;
+				DEVELOPMENT_TEAM = 4XT7U97S2A;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-academia.SelfTestUITests";
@@ -847,7 +911,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AJ42U6X98G;
+				DEVELOPMENT_TEAM = 4XT7U97S2A;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-academia.SelfTestUITests";
