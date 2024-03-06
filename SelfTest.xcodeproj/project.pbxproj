@@ -16,28 +16,28 @@
 		DF0949AD2B2DFCC100D8642C /* SelfTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0949AC2B2DFCC100D8642C /* SelfTestTests.swift */; };
 		DF0949B72B2DFCC100D8642C /* SelfTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0949B62B2DFCC100D8642C /* SelfTestUITests.swift */; };
 		DF0949B92B2DFCC100D8642C /* SelfTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0949B82B2DFCC100D8642C /* SelfTestUITestsLaunchTests.swift */; };
-		DF0949D92B2E017700D8642C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0949D82B2E017700D8642C /* Main.storyboard */; };
-		DF0949DB2B2E02F900D8642C /* StartTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0949DA2B2E02F900D8642C /* StartTest.storyboard */; };
 		DF43EBAF2B60A12500A78CBC /* テーマソング.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBAE2B60A12500A78CBC /* テーマソング.mp3 */; };
 		DF43EBB22B60A12F00A78CBC /* クイズ不正解.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB02B60A12F00A78CBC /* クイズ不正解.mp3 */; };
 		DF43EBB32B60A12F00A78CBC /* クイズ正解.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB12B60A12F00A78CBC /* クイズ正解.mp3 */; };
 		DF43EBB52B60A4B600A78CBC /* セルフテストロゴ.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB42B60A4B600A78CBC /* セルフテストロゴ.png */; };
 		DF43EBB92B60B96E00A78CBC /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB72B60B96E00A78CBC /* correct.png */; };
 		DF43EBBA2B60B96E00A78CBC /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = DF43EBB82B60B96E00A78CBC /* incorrect.png */; };
-		DF4B3F2C2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */; };
 		DF4B3F2E2B959368007F2AE3 /* FiveSentenceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F2D2B959368007F2AE3 /* FiveSentenceCreateViewController.swift */; };
 		DF4B3F302B959384007F2AE3 /* FiveSentenceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F2F2B959384007F2AE3 /* FiveSentenceEditViewController.swift */; };
-		DF4B3F322B9593DC007F2AE3 /* FiveSentenceCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F312B9593DC007F2AE3 /* FiveSentenceCreate.storyboard */; };
 		DF4B3F342B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F332B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift */; };
 		DF4B3F362B9602CD007F2AE3 /* ResultFiveTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F352B9602CD007F2AE3 /* ResultFiveTestViewController.swift */; };
-		DF4B3F382B96C473007F2AE3 /* FiveSentenceEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F372B96C473007F2AE3 /* FiveSentenceEdit.storyboard */; };
-		DF4B3F3F2B982F2B007F2AE3 /* TestSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F3E2B982F2B007F2AE3 /* TestSelect.storyboard */; };
-		DF4B3F412B982F46007F2AE3 /* TenSentenceCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F402B982F46007F2AE3 /* TenSentenceCreate.storyboard */; };
-		DF4B3F432B982F5A007F2AE3 /* SelectCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F422B982F5A007F2AE3 /* SelectCreate.storyboard */; };
-		DF4B3F452B982F69007F2AE3 /* TenSentenceEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F442B982F69007F2AE3 /* TenSentenceEdit.storyboard */; };
-		DF4B3F472B982F75007F2AE3 /* SelectEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F462B982F75007F2AE3 /* SelectEdit.storyboard */; };
-		DF4B3F492B982FAF007F2AE3 /* KindTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F482B982FAF007F2AE3 /* KindTest.storyboard */; };
-		DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */; };
+		DF4B3F572B98477C007F2AE3 /* FiveSentenceCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F4B2B98477C007F2AE3 /* FiveSentenceCreate.storyboard */; };
+		DF4B3F582B98477D007F2AE3 /* TenSentenceEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F4C2B98477C007F2AE3 /* TenSentenceEdit.storyboard */; };
+		DF4B3F592B98477D007F2AE3 /* StartSelectTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F4D2B98477C007F2AE3 /* StartSelectTest.storyboard */; };
+		DF4B3F5A2B98477D007F2AE3 /* TestSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F4E2B98477C007F2AE3 /* TestSelect.storyboard */; };
+		DF4B3F5B2B98477D007F2AE3 /* SelectEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F4F2B98477C007F2AE3 /* SelectEdit.storyboard */; };
+		DF4B3F5C2B98477D007F2AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F502B98477C007F2AE3 /* Main.storyboard */; };
+		DF4B3F5D2B98477D007F2AE3 /* SelectCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F512B98477C007F2AE3 /* SelectCreate.storyboard */; };
+		DF4B3F5E2B98477D007F2AE3 /* StartTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F522B98477C007F2AE3 /* StartTest.storyboard */; };
+		DF4B3F5F2B98477D007F2AE3 /* KindTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F532B98477C007F2AE3 /* KindTest.storyboard */; };
+		DF4B3F602B98477D007F2AE3 /* TenSentenceCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F542B98477C007F2AE3 /* TenSentenceCreate.storyboard */; };
+		DF4B3F612B98477D007F2AE3 /* FiveSentenceEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F552B98477C007F2AE3 /* FiveSentenceEdit.storyboard */; };
+		DF4B3F622B98477D007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F562B98477C007F2AE3 /* StartFiveSentenceTest.storyboard */; };
 		DFADAA4E2B7C443800B14BCB /* ContentTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFADAA482B7C443800B14BCB /* ContentTestTableViewCell.xib */; };
 		DFADAA4F2B7C443800B14BCB /* SelectTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA492B7C443800B14BCB /* SelectTestTableViewCell.swift */; };
 		DFADAA502B7C443800B14BCB /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFADAA4A2B7C443800B14BCB /* TestTableViewCell.xib */; };
@@ -96,28 +96,28 @@
 		DF0949B22B2DFCC100D8642C /* SelfTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0949B62B2DFCC100D8642C /* SelfTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfTestUITests.swift; sourceTree = "<group>"; };
 		DF0949B82B2DFCC100D8642C /* SelfTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DF0949D82B2E017700D8642C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DF0949DA2B2E02F900D8642C /* StartTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartTest.storyboard; sourceTree = "<group>"; };
 		DF43EBAE2B60A12500A78CBC /* テーマソング.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "テーマソング.mp3"; path = "SelfTest/Image&Song Data/テーマソング.mp3"; sourceTree = SOURCE_ROOT; };
 		DF43EBB02B60A12F00A78CBC /* クイズ不正解.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "クイズ不正解.mp3"; path = "SelfTest/Image&Song Data/クイズ不正解.mp3"; sourceTree = SOURCE_ROOT; };
 		DF43EBB12B60A12F00A78CBC /* クイズ正解.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "クイズ正解.mp3"; path = "SelfTest/Image&Song Data/クイズ正解.mp3"; sourceTree = SOURCE_ROOT; };
 		DF43EBB42B60A4B600A78CBC /* セルフテストロゴ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "セルフテストロゴ.png"; path = "SelfTest/Image&Song Data/セルフテストロゴ.png"; sourceTree = SOURCE_ROOT; };
 		DF43EBB72B60B96E00A78CBC /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
 		DF43EBB82B60B96E00A78CBC /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
-		DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartFiveSentenceTest.storyboard; sourceTree = "<group>"; };
 		DF4B3F2D2B959368007F2AE3 /* FiveSentenceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSentenceCreateViewController.swift; sourceTree = "<group>"; };
 		DF4B3F2F2B959384007F2AE3 /* FiveSentenceEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSentenceEditViewController.swift; sourceTree = "<group>"; };
-		DF4B3F312B9593DC007F2AE3 /* FiveSentenceCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveSentenceCreate.storyboard; sourceTree = "<group>"; };
 		DF4B3F332B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFiveSentenceTestViewController.swift; sourceTree = "<group>"; };
 		DF4B3F352B9602CD007F2AE3 /* ResultFiveTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFiveTestViewController.swift; sourceTree = "<group>"; };
-		DF4B3F372B96C473007F2AE3 /* FiveSentenceEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveSentenceEdit.storyboard; sourceTree = "<group>"; };
-		DF4B3F3E2B982F2B007F2AE3 /* TestSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSelect.storyboard; sourceTree = "<group>"; };
-		DF4B3F402B982F46007F2AE3 /* TenSentenceCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TenSentenceCreate.storyboard; sourceTree = "<group>"; };
-		DF4B3F422B982F5A007F2AE3 /* SelectCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCreate.storyboard; sourceTree = "<group>"; };
-		DF4B3F442B982F69007F2AE3 /* TenSentenceEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TenSentenceEdit.storyboard; sourceTree = "<group>"; };
-		DF4B3F462B982F75007F2AE3 /* SelectEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectEdit.storyboard; sourceTree = "<group>"; };
-		DF4B3F482B982FAF007F2AE3 /* KindTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KindTest.storyboard; sourceTree = "<group>"; };
-		DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartSelectTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F4B2B98477C007F2AE3 /* FiveSentenceCreate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FiveSentenceCreate.storyboard; sourceTree = "<group>"; };
+		DF4B3F4C2B98477C007F2AE3 /* TenSentenceEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TenSentenceEdit.storyboard; sourceTree = "<group>"; };
+		DF4B3F4D2B98477C007F2AE3 /* StartSelectTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartSelectTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F4E2B98477C007F2AE3 /* TestSelect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TestSelect.storyboard; sourceTree = "<group>"; };
+		DF4B3F4F2B98477C007F2AE3 /* SelectEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectEdit.storyboard; sourceTree = "<group>"; };
+		DF4B3F502B98477C007F2AE3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DF4B3F512B98477C007F2AE3 /* SelectCreate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectCreate.storyboard; sourceTree = "<group>"; };
+		DF4B3F522B98477C007F2AE3 /* StartTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F532B98477C007F2AE3 /* KindTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KindTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F542B98477C007F2AE3 /* TenSentenceCreate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TenSentenceCreate.storyboard; sourceTree = "<group>"; };
+		DF4B3F552B98477C007F2AE3 /* FiveSentenceEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FiveSentenceEdit.storyboard; sourceTree = "<group>"; };
+		DF4B3F562B98477C007F2AE3 /* StartFiveSentenceTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartFiveSentenceTest.storyboard; sourceTree = "<group>"; };
 		DFADAA482B7C443800B14BCB /* ContentTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTestTableViewCell.xib; sourceTree = "<group>"; };
 		DFADAA492B7C443800B14BCB /* SelectTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTestTableViewCell.swift; sourceTree = "<group>"; };
 		DFADAA4A2B7C443800B14BCB /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 				DFADAA542B7C444600B14BCB /* Model */,
 				DFADAA472B7C443800B14BCB /* Cell */,
 				DF43EBB62B60A4EB00A78CBC /* Image&Song Data */,
-				DF0949DC2B2E037400D8642C /* Storyboard */,
+				DF4B3F4A2B98477C007F2AE3 /* Storyboard */,
 				DF0949D52B2DFE3100D8642C /* Delegate */,
 				DFADAA782B7C448000B14BCB /* Constant.swift */,
 				DF09499E2B2DFCC000D8642C /* Assets.xcassets */,
@@ -241,26 +241,6 @@
 				DF0949972B2DFCC000D8642C /* SceneDelegate.swift */,
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		DF0949DC2B2E037400D8642C /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				DF0949D82B2E017700D8642C /* Main.storyboard */,
-				DF4B3F3E2B982F2B007F2AE3 /* TestSelect.storyboard */,
-				DF4B3F482B982FAF007F2AE3 /* KindTest.storyboard */,
-				DF4B3F312B9593DC007F2AE3 /* FiveSentenceCreate.storyboard */,
-				DF4B3F402B982F46007F2AE3 /* TenSentenceCreate.storyboard */,
-				DF4B3F422B982F5A007F2AE3 /* SelectCreate.storyboard */,
-				DF4B3F372B96C473007F2AE3 /* FiveSentenceEdit.storyboard */,
-				DF4B3F442B982F69007F2AE3 /* TenSentenceEdit.storyboard */,
-				DF4B3F462B982F75007F2AE3 /* SelectEdit.storyboard */,
-				DF0949DA2B2E02F900D8642C /* StartTest.storyboard */,
-				DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */,
-				DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */,
-			);
-			name = Storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		DF43EBB62B60A4EB00A78CBC /* Image&Song Data */ = {
@@ -307,6 +287,25 @@
 				DFADAA622B7C447000B14BCB /* ResultSelectTestViewController.swift */,
 			);
 			path = SelectTest;
+			sourceTree = "<group>";
+		};
+		DF4B3F4A2B98477C007F2AE3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DF4B3F4B2B98477C007F2AE3 /* FiveSentenceCreate.storyboard */,
+				DF4B3F4C2B98477C007F2AE3 /* TenSentenceEdit.storyboard */,
+				DF4B3F4D2B98477C007F2AE3 /* StartSelectTest.storyboard */,
+				DF4B3F4E2B98477C007F2AE3 /* TestSelect.storyboard */,
+				DF4B3F4F2B98477C007F2AE3 /* SelectEdit.storyboard */,
+				DF4B3F502B98477C007F2AE3 /* Main.storyboard */,
+				DF4B3F512B98477C007F2AE3 /* SelectCreate.storyboard */,
+				DF4B3F522B98477C007F2AE3 /* StartTest.storyboard */,
+				DF4B3F532B98477C007F2AE3 /* KindTest.storyboard */,
+				DF4B3F542B98477C007F2AE3 /* TenSentenceCreate.storyboard */,
+				DF4B3F552B98477C007F2AE3 /* FiveSentenceEdit.storyboard */,
+				DF4B3F562B98477C007F2AE3 /* StartFiveSentenceTest.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		DFADAA472B7C443800B14BCB /* Cell */ = {
@@ -466,28 +465,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF0949DB2B2E02F900D8642C /* StartTest.storyboard in Resources */,
-				DF4B3F3F2B982F2B007F2AE3 /* TestSelect.storyboard in Resources */,
-				DF4B3F2C2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */,
+				DF4B3F602B98477D007F2AE3 /* TenSentenceCreate.storyboard in Resources */,
+				DF4B3F582B98477D007F2AE3 /* TenSentenceEdit.storyboard in Resources */,
+				DF4B3F5F2B98477D007F2AE3 /* KindTest.storyboard in Resources */,
 				DFADAA522B7C443800B14BCB /* SelectTestTableViewCell.xib in Resources */,
+				DF4B3F5D2B98477D007F2AE3 /* SelectCreate.storyboard in Resources */,
 				DF43EBB52B60A4B600A78CBC /* セルフテストロゴ.png in Resources */,
-				DF0949D92B2E017700D8642C /* Main.storyboard in Resources */,
+				DF4B3F5C2B98477D007F2AE3 /* Main.storyboard in Resources */,
 				DFADAA4E2B7C443800B14BCB /* ContentTestTableViewCell.xib in Resources */,
-				DF4B3F412B982F46007F2AE3 /* TenSentenceCreate.storyboard in Resources */,
-				DF4B3F492B982FAF007F2AE3 /* KindTest.storyboard in Resources */,
+				DF4B3F5A2B98477D007F2AE3 /* TestSelect.storyboard in Resources */,
 				DF09499F2B2DFCC000D8642C /* Assets.xcassets in Resources */,
 				DF43EBB32B60A12F00A78CBC /* クイズ正解.mp3 in Resources */,
 				DF43EBAF2B60A12500A78CBC /* テーマソング.mp3 in Resources */,
-				DF4B3F322B9593DC007F2AE3 /* FiveSentenceCreate.storyboard in Resources */,
-				DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */,
-				DF4B3F452B982F69007F2AE3 /* TenSentenceEdit.storyboard in Resources */,
-				DF4B3F382B96C473007F2AE3 /* FiveSentenceEdit.storyboard in Resources */,
+				DF4B3F622B98477D007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */,
 				DF43EBB92B60B96E00A78CBC /* correct.png in Resources */,
 				DF43EBB22B60A12F00A78CBC /* クイズ不正解.mp3 in Resources */,
-				DF4B3F432B982F5A007F2AE3 /* SelectCreate.storyboard in Resources */,
 				DFADAA502B7C443800B14BCB /* TestTableViewCell.xib in Resources */,
 				DF43EBBA2B60B96E00A78CBC /* incorrect.png in Resources */,
-				DF4B3F472B982F75007F2AE3 /* SelectEdit.storyboard in Resources */,
+				DF4B3F5B2B98477D007F2AE3 /* SelectEdit.storyboard in Resources */,
+				DF4B3F572B98477C007F2AE3 /* FiveSentenceCreate.storyboard in Resources */,
+				DF4B3F5E2B98477D007F2AE3 /* StartTest.storyboard in Resources */,
+				DF4B3F592B98477D007F2AE3 /* StartSelectTest.storyboard in Resources */,
+				DF4B3F612B98477D007F2AE3 /* FiveSentenceEdit.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
