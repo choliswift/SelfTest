@@ -33,7 +33,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureButton()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //この画面に戻ってきたら常時再生されるようにする

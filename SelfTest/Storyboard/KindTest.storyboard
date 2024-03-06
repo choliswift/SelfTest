@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -87,6 +88,7 @@
                             <constraint firstItem="akf-l2-RMh" firstAttribute="leading" secondItem="paf-Px-QBi" secondAttribute="leading" constant="38" id="fdN-kS-QNh"/>
                             <constraint firstItem="paf-Px-QBi" firstAttribute="trailing" secondItem="akf-l2-RMh" secondAttribute="trailing" constant="38" id="jrt-DD-mOA"/>
                             <constraint firstItem="akf-l2-RMh" firstAttribute="top" secondItem="rPc-aa-EyT" secondAttribute="bottom" constant="28" id="m8M-Ce-y3Y"/>
+                            <constraint firstItem="KdE-OS-KQu" firstAttribute="top" secondItem="akf-l2-RMh" secondAttribute="bottom" constant="37" id="zF2-Ws-L1w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="新規作成" id="RiO-Tt-zC6"/>
