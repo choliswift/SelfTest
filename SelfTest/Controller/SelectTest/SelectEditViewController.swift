@@ -1,8 +1,9 @@
 import UIKit
 import RealmSwift
 
-final class NewSentenceEditViewController: UIViewController {
-    @IBOutlet private weak var titleEditTextField: UITextField!
+final class SelectEditViewController: UIViewController {
+    
+    @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var alertLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var saveButton: UIButton!
@@ -13,14 +14,14 @@ final class NewSentenceEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "ContentTestTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentTestTableViewCell")
-        
-        setDoneButton()
+        //ここ順番間違えないように
         setTestData()
         displayData()
+        setDoneButton()
         setupNotifications()
+        tableView.register(UINib(nibName: "SelectTestTableViewCell", bundle: nil), forCellReuseIdentifier: "SelectTestTableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapDoneButton))
         tapGesture.cancelsTouchesInView = false
@@ -31,7 +32,15 @@ final class NewSentenceEditViewController: UIViewController {
     private var testDataModel = TestDataModel()
     private var testYobiDataModel = TestYobiDataModel()
     private var testContentData: [TestYobiDataModel] = []
+    private var testChoiceData1: [TestYobiDataModel] = []
+    private var testChoiceData2: [TestYobiDataModel] = []
+    private var testChoiceData3: [TestYobiDataModel] = []
+    private var testChoiceData4: [TestYobiDataModel] = []
     private var testAnswerData: [TestYobiDataModel] = []
+    
+    @objc func tapDoneButton() {
+        view.endEditing(true)
+    }
     
     func setDoneButton() {
         //inputAccesoryViewに入れるtoolbar
@@ -43,11 +52,7 @@ final class NewSentenceEditViewController: UIViewController {
         //toolbarのitemsに作成したスペースと完了ボタンを入れる。実際にも左から順に表示されます。
         toolbar.items = [space, done]
         toolbar.sizeToFit()
-        titleEditTextField.inputAccessoryView = toolbar
-    }
-    
-    @objc func tapDoneButton() {
-        view.endEditing(true)
+        titleTextField.inputAccessoryView = toolbar
     }
 
     func configure(test: TestDataModel) {
@@ -58,72 +63,102 @@ final class NewSentenceEditViewController: UIViewController {
         testDataModel.testContent3 = test.testContent3
         testDataModel.testContent4 = test.testContent4
         testDataModel.testContent5 = test.testContent5
-        testDataModel.testContent6 = test.testContent6
-        testDataModel.testContent7 = test.testContent7
-        testDataModel.testContent8 = test.testContent8
-        testDataModel.testContent9 = test.testContent9
-        testDataModel.testContent10 = test.testContent10
+        testDataModel.choices1of1 = test.choices1of1
+        testDataModel.choices2of1 = test.choices2of1
+        testDataModel.choices3of1 = test.choices3of1
+        testDataModel.choices4of1 = test.choices4of1
+        testDataModel.choices1of2 = test.choices1of2
+        testDataModel.choices2of2 = test.choices2of2
+        testDataModel.choices3of2 = test.choices3of2
+        testDataModel.choices4of2 = test.choices4of2
+        testDataModel.choices1of3 = test.choices1of3
+        testDataModel.choices2of3 = test.choices2of3
+        testDataModel.choices3of3 = test.choices3of3
+        testDataModel.choices4of3 = test.choices4of3
+        testDataModel.choices1of4 = test.choices1of4
+        testDataModel.choices2of4 = test.choices2of4
+        testDataModel.choices3of4 = test.choices3of4
+        testDataModel.choices4of4 = test.choices4of4
+        testDataModel.choices1of5 = test.choices1of5
+        testDataModel.choices2of5 = test.choices2of5
+        testDataModel.choices3of5 = test.choices3of5
+        testDataModel.choices4of5 = test.choices4of5
         testDataModel.testAnswer1 = test.testAnswer1
         testDataModel.testAnswer2 = test.testAnswer2
         testDataModel.testAnswer3 = test.testAnswer3
         testDataModel.testAnswer4 = test.testAnswer4
         testDataModel.testAnswer5 = test.testAnswer5
-        testDataModel.testAnswer6 = test.testAnswer6
-        testDataModel.testAnswer7 = test.testAnswer7
-        testDataModel.testAnswer8 = test.testAnswer8
-        testDataModel.testAnswer9 = test.testAnswer9
-        testDataModel.testAnswer10 = test.testAnswer10
     }
     
     func displayData() {
-        titleEditTextField.text = testDataModel.title
+        titleTextField.text = testDataModel.title
         testContentData[0].testYobiText = testDataModel.testContent1
         testContentData[1].testYobiText = testDataModel.testContent2
         testContentData[2].testYobiText = testDataModel.testContent3
         testContentData[3].testYobiText = testDataModel.testContent4
         testContentData[4].testYobiText = testDataModel.testContent5
-        testContentData[5].testYobiText = testDataModel.testContent6
-        testContentData[6].testYobiText = testDataModel.testContent7
-        testContentData[7].testYobiText = testDataModel.testContent8
-        testContentData[8].testYobiText = testDataModel.testContent9
-        testContentData[9].testYobiText = testDataModel.testContent10
+        testChoiceData1[0].testYobiText = testDataModel.choices1of1
+        testChoiceData2[0].testYobiText = testDataModel.choices2of1
+        testChoiceData3[0].testYobiText = testDataModel.choices3of1
+        testChoiceData4[0].testYobiText = testDataModel.choices4of1
+        testChoiceData1[1].testYobiText = testDataModel.choices1of2
+        testChoiceData2[1].testYobiText = testDataModel.choices2of2
+        testChoiceData3[1].testYobiText = testDataModel.choices3of2
+        testChoiceData4[1].testYobiText = testDataModel.choices4of2
+        testChoiceData1[2].testYobiText = testDataModel.choices1of3
+        testChoiceData2[2].testYobiText = testDataModel.choices2of3
+        testChoiceData3[2].testYobiText = testDataModel.choices3of3
+        testChoiceData4[2].testYobiText = testDataModel.choices4of3
+        testChoiceData1[3].testYobiText = testDataModel.choices1of4
+        testChoiceData2[3].testYobiText = testDataModel.choices2of4
+        testChoiceData3[3].testYobiText = testDataModel.choices3of4
+        testChoiceData4[3].testYobiText = testDataModel.choices4of4
+        testChoiceData1[4].testYobiText = testDataModel.choices1of5
+        testChoiceData2[4].testYobiText = testDataModel.choices2of5
+        testChoiceData3[4].testYobiText = testDataModel.choices3of5
+        testChoiceData4[4].testYobiText = testDataModel.choices4of5
         testAnswerData[0].testYobiText = testDataModel.testAnswer1
         testAnswerData[1].testYobiText = testDataModel.testAnswer2
         testAnswerData[2].testYobiText = testDataModel.testAnswer3
         testAnswerData[3].testYobiText = testDataModel.testAnswer4
         testAnswerData[4].testYobiText = testDataModel.testAnswer5
-        testAnswerData[5].testYobiText = testDataModel.testAnswer6
-        testAnswerData[6].testYobiText = testDataModel.testAnswer7
-        testAnswerData[7].testYobiText = testDataModel.testAnswer8
-        testAnswerData[8].testYobiText = testDataModel.testAnswer9
-        testAnswerData[9].testYobiText = testDataModel.testAnswer10
     }
     
     func saveData() {
         let realm = try! Realm()
             if let editedTest = realm.object(ofType: TestDataModel.self, forPrimaryKey: testDataModel.id) {
                 try! realm.write {
-                    editedTest.title = titleEditTextField.text ?? ""
+                    editedTest.title = titleTextField.text ?? ""
                     editedTest.testContent1 = testContentData[0].testYobiText
                     editedTest.testContent2 = testContentData[1].testYobiText
                     editedTest.testContent3 = testContentData[2].testYobiText
                     editedTest.testContent4 = testContentData[3].testYobiText
                     editedTest.testContent5 = testContentData[4].testYobiText
-                    editedTest.testContent6 = testContentData[5].testYobiText
-                    editedTest.testContent7 = testContentData[6].testYobiText
-                    editedTest.testContent8 = testContentData[7].testYobiText
-                    editedTest.testContent9 = testContentData[8].testYobiText
-                    editedTest.testContent10 = testContentData[9].testYobiText
                     editedTest.testAnswer1 = testAnswerData[0].testYobiText
                     editedTest.testAnswer2 = testAnswerData[1].testYobiText
                     editedTest.testAnswer3 = testAnswerData[2].testYobiText
                     editedTest.testAnswer4 = testAnswerData[3].testYobiText
                     editedTest.testAnswer5 = testAnswerData[4].testYobiText
-                    editedTest.testAnswer6 = testAnswerData[5].testYobiText
-                    editedTest.testAnswer7 = testAnswerData[6].testYobiText
-                    editedTest.testAnswer8 = testAnswerData[7].testYobiText
-                    editedTest.testAnswer9 = testAnswerData[8].testYobiText
-                    editedTest.testAnswer10 = testAnswerData[9].testYobiText
+                    editedTest.choices1of1 = testChoiceData1[0].testYobiText
+                    editedTest.choices2of1 = testChoiceData2[0].testYobiText
+                    editedTest.choices3of1 = testChoiceData3[0].testYobiText
+                    editedTest.choices4of1 = testChoiceData4[0].testYobiText
+                    editedTest.choices1of2 = testChoiceData1[1].testYobiText
+                    editedTest.choices2of2 = testChoiceData2[1].testYobiText
+                    editedTest.choices3of2 = testChoiceData3[1].testYobiText
+                    editedTest.choices4of2 = testChoiceData4[1].testYobiText
+                    editedTest.choices1of3 = testChoiceData1[2].testYobiText
+                    editedTest.choices2of3 = testChoiceData2[2].testYobiText
+                    editedTest.choices3of3 = testChoiceData3[2].testYobiText
+                    editedTest.choices4of3 = testChoiceData4[2].testYobiText
+                    editedTest.choices1of4 = testChoiceData1[3].testYobiText
+                    editedTest.choices2of4 = testChoiceData2[3].testYobiText
+                    editedTest.choices3of4 = testChoiceData3[3].testYobiText
+                    editedTest.choices4of4 = testChoiceData4[3].testYobiText
+                    editedTest.choices1of5 = testChoiceData1[4].testYobiText
+                    editedTest.choices2of5 = testChoiceData2[4].testYobiText
+                    editedTest.choices3of5 = testChoiceData3[4].testYobiText
+                    editedTest.choices4of5 = testChoiceData4[4].testYobiText
                     realm.add(editedTest, update: .modified)
                 }
             }
@@ -132,7 +167,7 @@ final class NewSentenceEditViewController: UIViewController {
     
     //未入力があった際に保存できないようにする
     func textIsEmpty() {
-        for i in 0..<testDataList.count {
+        for i in 0...4 {
             if testContentData[i].testYobiText.isEmpty {
                 alertLabel.text = "空欄があります。入力してください。"
                 alertLabel.textColor = .red
@@ -143,7 +178,7 @@ final class NewSentenceEditViewController: UIViewController {
                 alertLabel.textColor = .red
                 return
             }
-            if titleEditTextField.text == "" {
+            if titleTextField.text == "" {
                 alertLabel.text = "空欄があります。入力してください。"
                 alertLabel.textColor = .red
                 return
@@ -153,12 +188,16 @@ final class NewSentenceEditViewController: UIViewController {
         alertLabel.textColor = .blue
         saveData()
     }
-    
+
     func setTestData() {
-        for _ in 1...10 {
+        for _ in 1...5 {
             testDataList.append(testDataModel)
             //配列にない要素にアクセスしようとするとクラッシュするので、先に要素を追加しておく
             testContentData.append(testYobiDataModel)
+            testChoiceData1.append(testYobiDataModel)
+            testChoiceData2.append(testYobiDataModel)
+            testChoiceData3.append(testYobiDataModel)
+            testChoiceData4.append(testYobiDataModel)
             testAnswerData.append(testYobiDataModel)
         }
     }
@@ -207,18 +246,28 @@ final class NewSentenceEditViewController: UIViewController {
     }
 }
 
-extension NewSentenceEditViewController: UITableViewDataSource {
+extension SelectEditViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContentTestTableViewCell", for: indexPath) as? ContentTestTableViewCell else { return UITableViewCell()}
-        cell.testContentTextField.text = nil
-        cell.answerTextView.text = nil
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SelectTestTableViewCell", for: indexPath) as? SelectTestTableViewCell else { return UITableViewCell()}
+        //cellを初期化する処理。
+        cell.contentTextField.text = nil
+        cell.choiceTextField1.text = nil
+        cell.choiceTextField2.text = nil
+        cell.choiceTextField3.text = nil
+        cell.choiceTextField4.text = nil
+        cell.answerTextField.text = nil
         
-        cell.testContentTextField.text = testContentData[indexPath.row].testYobiText
-        cell.answerTextView.text = testAnswerData[indexPath.row].testYobiText
+        //cellに入力した値を随時代入していく処理
+        cell.contentTextField.text = testContentData[indexPath.row].testYobiText
+        cell.choiceTextField1.text = testChoiceData1[indexPath.row].testYobiText
+        cell.choiceTextField2.text = testChoiceData2[indexPath.row].testYobiText
+        cell.choiceTextField3.text = testChoiceData3[indexPath.row].testYobiText
+        cell.choiceTextField4.text = testChoiceData4[indexPath.row].testYobiText
+        cell.answerTextField.text = testAnswerData[indexPath.row].testYobiText
         
         //第⚪︎問の数字がセルが増えるごとにセルに合わせて増えるように処理。修正が必要。
         cell.addSentenceNumber(update: "\(indexPath.row + 1)")
@@ -227,26 +276,53 @@ extension NewSentenceEditViewController: UITableViewDataSource {
     }
 }
 
-extension NewSentenceEditViewController: UITableViewDelegate {
+extension SelectEditViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("タップしたindexpathは\(indexPath.row)です")
     }
 }
 
-extension NewSentenceEditViewController: SentenceTableViewCellDelegate {
-    //cellに配置したtextFieldの変更の通知を受け取る
-    func testContentTextFieldDidEditing(_ cell: ContentTestTableViewCell, didChangeValue contentvalue: String) {
+extension SelectEditViewController: SelectTableViewCellDelegate {
+    func contentTextFieldDidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
         let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
         let testNumber = indexPath?.row
-        testContentData.append(TestYobiDataModel(testYobiText: contentvalue))
-        testContentData[testNumber ?? 0] = TestYobiDataModel(testYobiText: contentvalue)
+        testContentData.append(TestYobiDataModel(testYobiText: value))
+        testContentData[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
-    //cellに配置したtextViewの変更の通知を受け取る
-    func answerTextViewDidEditing(_ cell: ContentTestTableViewCell, didChangeValue answervalue: String) {
+    
+    func choiceTextField1DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
         let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
         let testNumber = indexPath?.row
-        testAnswerData.append(TestYobiDataModel(testYobiText: answervalue))
-        testAnswerData[testNumber ?? 0] = TestYobiDataModel(testYobiText: answervalue)
+        testChoiceData1.append(TestYobiDataModel(testYobiText: value))
+        testChoiceData1[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
+    }
+    
+    func choiceTextField2DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
+        testChoiceData2.append(TestYobiDataModel(testYobiText: value))
+        testChoiceData2[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
+    }
+    
+    func choiceTextField3DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
+        testChoiceData3.append(TestYobiDataModel(testYobiText: value))
+        testChoiceData3[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
+    }
+    
+    func choiceTextField4DidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
+        testChoiceData4.append(TestYobiDataModel(testYobiText: value))
+        testChoiceData4[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
+    }
+    
+    func answerTextFieldDidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
+        let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
+        let testNumber = indexPath?.row
+        testAnswerData.append(TestYobiDataModel(testYobiText: value))
+        testAnswerData[testNumber ?? 0] = TestYobiDataModel(testYobiText: value)
     }
 }

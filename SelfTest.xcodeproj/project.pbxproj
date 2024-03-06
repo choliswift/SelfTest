@@ -27,10 +27,16 @@
 		DF4B3F2C2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */; };
 		DF4B3F2E2B959368007F2AE3 /* FiveSentenceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F2D2B959368007F2AE3 /* FiveSentenceCreateViewController.swift */; };
 		DF4B3F302B959384007F2AE3 /* FiveSentenceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F2F2B959384007F2AE3 /* FiveSentenceEditViewController.swift */; };
-		DF4B3F322B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F312B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard */; };
+		DF4B3F322B9593DC007F2AE3 /* FiveSentenceCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F312B9593DC007F2AE3 /* FiveSentenceCreate.storyboard */; };
 		DF4B3F342B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F332B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift */; };
 		DF4B3F362B9602CD007F2AE3 /* ResultFiveTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B3F352B9602CD007F2AE3 /* ResultFiveTestViewController.swift */; };
-		DF4B3F382B96C473007F2AE3 /* EditFiveSentenceTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F372B96C473007F2AE3 /* EditFiveSentenceTest.storyboard */; };
+		DF4B3F382B96C473007F2AE3 /* FiveSentenceEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F372B96C473007F2AE3 /* FiveSentenceEdit.storyboard */; };
+		DF4B3F3F2B982F2B007F2AE3 /* TestSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F3E2B982F2B007F2AE3 /* TestSelect.storyboard */; };
+		DF4B3F412B982F46007F2AE3 /* TenSentenceCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F402B982F46007F2AE3 /* TenSentenceCreate.storyboard */; };
+		DF4B3F432B982F5A007F2AE3 /* SelectCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F422B982F5A007F2AE3 /* SelectCreate.storyboard */; };
+		DF4B3F452B982F69007F2AE3 /* TenSentenceEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F442B982F69007F2AE3 /* TenSentenceEdit.storyboard */; };
+		DF4B3F472B982F75007F2AE3 /* SelectEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F462B982F75007F2AE3 /* SelectEdit.storyboard */; };
+		DF4B3F492B982FAF007F2AE3 /* KindTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B3F482B982FAF007F2AE3 /* KindTest.storyboard */; };
 		DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */; };
 		DFADAA4E2B7C443800B14BCB /* ContentTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFADAA482B7C443800B14BCB /* ContentTestTableViewCell.xib */; };
 		DFADAA4F2B7C443800B14BCB /* SelectTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA492B7C443800B14BCB /* SelectTestTableViewCell.swift */; };
@@ -41,15 +47,15 @@
 		DFADAA572B7C444600B14BCB /* TestYobiDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA552B7C444600B14BCB /* TestYobiDataModel.swift */; };
 		DFADAA582B7C444600B14BCB /* TestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA562B7C444600B14BCB /* TestDataModel.swift */; };
 		DFADAA6A2B7C447000B14BCB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA5B2B7C447000B14BCB /* ResultViewController.swift */; };
-		DFADAA6B2B7C447000B14BCB /* NewSelectEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA5C2B7C447000B14BCB /* NewSelectEditViewController.swift */; };
+		DFADAA6B2B7C447000B14BCB /* SelectEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA5C2B7C447000B14BCB /* SelectEditViewController.swift */; };
 		DFADAA6C2B7C447000B14BCB /* SelectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA5D2B7C447000B14BCB /* SelectTestViewController.swift */; };
 		DFADAA6F2B7C447000B14BCB /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA602B7C447000B14BCB /* CreateNewViewController.swift */; };
 		DFADAA702B7C447000B14BCB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA612B7C447000B14BCB /* HomeViewController.swift */; };
 		DFADAA712B7C447000B14BCB /* ResultSelectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA622B7C447000B14BCB /* ResultSelectTestViewController.swift */; };
 		DFADAA722B7C447000B14BCB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA632B7C447000B14BCB /* StartViewController.swift */; };
-		DFADAA732B7C447000B14BCB /* NewSentenceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA642B7C447000B14BCB /* NewSentenceEditViewController.swift */; };
-		DFADAA742B7C447000B14BCB /* NewSelectCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA652B7C447000B14BCB /* NewSelectCreateViewController.swift */; };
-		DFADAA762B7C447000B14BCB /* NewSentenceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA672B7C447000B14BCB /* NewSentenceCreateViewController.swift */; };
+		DFADAA732B7C447000B14BCB /* TenSentenceEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA642B7C447000B14BCB /* TenSentenceEditViewController.swift */; };
+		DFADAA742B7C447000B14BCB /* SelectCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA652B7C447000B14BCB /* SelectCreateViewController.swift */; };
+		DFADAA762B7C447000B14BCB /* TenSentenceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA672B7C447000B14BCB /* TenSentenceCreateViewController.swift */; };
 		DFADAA772B7C447000B14BCB /* StartSelectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA682B7C447000B14BCB /* StartSelectTestViewController.swift */; };
 		DFADAA792B7C448000B14BCB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAA782B7C448000B14BCB /* Constant.swift */; };
 /* End PBXBuildFile section */
@@ -101,10 +107,16 @@
 		DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartFiveSentenceTest.storyboard; sourceTree = "<group>"; };
 		DF4B3F2D2B959368007F2AE3 /* FiveSentenceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSentenceCreateViewController.swift; sourceTree = "<group>"; };
 		DF4B3F2F2B959384007F2AE3 /* FiveSentenceEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSentenceEditViewController.swift; sourceTree = "<group>"; };
-		DF4B3F312B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateFiveSentenceTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F312B9593DC007F2AE3 /* FiveSentenceCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveSentenceCreate.storyboard; sourceTree = "<group>"; };
 		DF4B3F332B95B94B007F2AE3 /* StartFiveSentenceTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFiveSentenceTestViewController.swift; sourceTree = "<group>"; };
 		DF4B3F352B9602CD007F2AE3 /* ResultFiveTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFiveTestViewController.swift; sourceTree = "<group>"; };
-		DF4B3F372B96C473007F2AE3 /* EditFiveSentenceTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditFiveSentenceTest.storyboard; sourceTree = "<group>"; };
+		DF4B3F372B96C473007F2AE3 /* FiveSentenceEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiveSentenceEdit.storyboard; sourceTree = "<group>"; };
+		DF4B3F3E2B982F2B007F2AE3 /* TestSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSelect.storyboard; sourceTree = "<group>"; };
+		DF4B3F402B982F46007F2AE3 /* TenSentenceCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TenSentenceCreate.storyboard; sourceTree = "<group>"; };
+		DF4B3F422B982F5A007F2AE3 /* SelectCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCreate.storyboard; sourceTree = "<group>"; };
+		DF4B3F442B982F69007F2AE3 /* TenSentenceEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TenSentenceEdit.storyboard; sourceTree = "<group>"; };
+		DF4B3F462B982F75007F2AE3 /* SelectEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectEdit.storyboard; sourceTree = "<group>"; };
+		DF4B3F482B982FAF007F2AE3 /* KindTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KindTest.storyboard; sourceTree = "<group>"; };
 		DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartSelectTest.storyboard; sourceTree = "<group>"; };
 		DFADAA482B7C443800B14BCB /* ContentTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTestTableViewCell.xib; sourceTree = "<group>"; };
 		DFADAA492B7C443800B14BCB /* SelectTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTestTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,15 +127,15 @@
 		DFADAA552B7C444600B14BCB /* TestYobiDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestYobiDataModel.swift; sourceTree = "<group>"; };
 		DFADAA562B7C444600B14BCB /* TestDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataModel.swift; sourceTree = "<group>"; };
 		DFADAA5B2B7C447000B14BCB /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		DFADAA5C2B7C447000B14BCB /* NewSelectEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSelectEditViewController.swift; sourceTree = "<group>"; };
+		DFADAA5C2B7C447000B14BCB /* SelectEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectEditViewController.swift; sourceTree = "<group>"; };
 		DFADAA5D2B7C447000B14BCB /* SelectTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTestViewController.swift; sourceTree = "<group>"; };
 		DFADAA602B7C447000B14BCB /* CreateNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
 		DFADAA612B7C447000B14BCB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFADAA622B7C447000B14BCB /* ResultSelectTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultSelectTestViewController.swift; sourceTree = "<group>"; };
 		DFADAA632B7C447000B14BCB /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		DFADAA642B7C447000B14BCB /* NewSentenceEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSentenceEditViewController.swift; sourceTree = "<group>"; };
-		DFADAA652B7C447000B14BCB /* NewSelectCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSelectCreateViewController.swift; sourceTree = "<group>"; };
-		DFADAA672B7C447000B14BCB /* NewSentenceCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSentenceCreateViewController.swift; sourceTree = "<group>"; };
+		DFADAA642B7C447000B14BCB /* TenSentenceEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenSentenceEditViewController.swift; sourceTree = "<group>"; };
+		DFADAA652B7C447000B14BCB /* SelectCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCreateViewController.swift; sourceTree = "<group>"; };
+		DFADAA672B7C447000B14BCB /* TenSentenceCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenSentenceCreateViewController.swift; sourceTree = "<group>"; };
 		DFADAA682B7C447000B14BCB /* StartSelectTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartSelectTestViewController.swift; sourceTree = "<group>"; };
 		DFADAA782B7C448000B14BCB /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		EEA782B9CFE5FD4F9F204801 /* Pods-SelfTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfTestTests.debug.xcconfig"; path = "Target Support Files/Pods-SelfTestTests/Pods-SelfTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,11 +247,17 @@
 			isa = PBXGroup;
 			children = (
 				DF0949D82B2E017700D8642C /* Main.storyboard */,
+				DF4B3F3E2B982F2B007F2AE3 /* TestSelect.storyboard */,
+				DF4B3F482B982FAF007F2AE3 /* KindTest.storyboard */,
+				DF4B3F312B9593DC007F2AE3 /* FiveSentenceCreate.storyboard */,
+				DF4B3F402B982F46007F2AE3 /* TenSentenceCreate.storyboard */,
+				DF4B3F422B982F5A007F2AE3 /* SelectCreate.storyboard */,
+				DF4B3F372B96C473007F2AE3 /* FiveSentenceEdit.storyboard */,
+				DF4B3F442B982F69007F2AE3 /* TenSentenceEdit.storyboard */,
+				DF4B3F462B982F75007F2AE3 /* SelectEdit.storyboard */,
 				DF0949DA2B2E02F900D8642C /* StartTest.storyboard */,
 				DF50453B2B5A35120046B3FD /* StartSelectTest.storyboard */,
 				DF4B3F2B2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard */,
-				DF4B3F312B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard */,
-				DF4B3F372B96C473007F2AE3 /* EditFiveSentenceTest.storyboard */,
 			);
 			name = Storyboard;
 			path = ..;
@@ -261,8 +279,8 @@
 		DF4B3F3B2B970449007F2AE3 /* StentenceTest */ = {
 			isa = PBXGroup;
 			children = (
-				DFADAA672B7C447000B14BCB /* NewSentenceCreateViewController.swift */,
-				DFADAA642B7C447000B14BCB /* NewSentenceEditViewController.swift */,
+				DFADAA672B7C447000B14BCB /* TenSentenceCreateViewController.swift */,
+				DFADAA642B7C447000B14BCB /* TenSentenceEditViewController.swift */,
 				DFADAA632B7C447000B14BCB /* StartViewController.swift */,
 				DFADAA5B2B7C447000B14BCB /* ResultViewController.swift */,
 			);
@@ -283,8 +301,8 @@
 		DF4B3F3D2B970462007F2AE3 /* SelectTest */ = {
 			isa = PBXGroup;
 			children = (
-				DFADAA5C2B7C447000B14BCB /* NewSelectEditViewController.swift */,
-				DFADAA652B7C447000B14BCB /* NewSelectCreateViewController.swift */,
+				DFADAA652B7C447000B14BCB /* SelectCreateViewController.swift */,
+				DFADAA5C2B7C447000B14BCB /* SelectEditViewController.swift */,
 				DFADAA682B7C447000B14BCB /* StartSelectTestViewController.swift */,
 				DFADAA622B7C447000B14BCB /* ResultSelectTestViewController.swift */,
 			);
@@ -449,21 +467,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF0949DB2B2E02F900D8642C /* StartTest.storyboard in Resources */,
+				DF4B3F3F2B982F2B007F2AE3 /* TestSelect.storyboard in Resources */,
 				DF4B3F2C2B9591C7007F2AE3 /* StartFiveSentenceTest.storyboard in Resources */,
 				DFADAA522B7C443800B14BCB /* SelectTestTableViewCell.xib in Resources */,
 				DF43EBB52B60A4B600A78CBC /* セルフテストロゴ.png in Resources */,
 				DF0949D92B2E017700D8642C /* Main.storyboard in Resources */,
 				DFADAA4E2B7C443800B14BCB /* ContentTestTableViewCell.xib in Resources */,
+				DF4B3F412B982F46007F2AE3 /* TenSentenceCreate.storyboard in Resources */,
+				DF4B3F492B982FAF007F2AE3 /* KindTest.storyboard in Resources */,
 				DF09499F2B2DFCC000D8642C /* Assets.xcassets in Resources */,
 				DF43EBB32B60A12F00A78CBC /* クイズ正解.mp3 in Resources */,
 				DF43EBAF2B60A12500A78CBC /* テーマソング.mp3 in Resources */,
-				DF4B3F322B9593DC007F2AE3 /* CreateFiveSentenceTest.storyboard in Resources */,
+				DF4B3F322B9593DC007F2AE3 /* FiveSentenceCreate.storyboard in Resources */,
 				DF50453C2B5A35120046B3FD /* StartSelectTest.storyboard in Resources */,
-				DF4B3F382B96C473007F2AE3 /* EditFiveSentenceTest.storyboard in Resources */,
+				DF4B3F452B982F69007F2AE3 /* TenSentenceEdit.storyboard in Resources */,
+				DF4B3F382B96C473007F2AE3 /* FiveSentenceEdit.storyboard in Resources */,
 				DF43EBB92B60B96E00A78CBC /* correct.png in Resources */,
 				DF43EBB22B60A12F00A78CBC /* クイズ不正解.mp3 in Resources */,
+				DF4B3F432B982F5A007F2AE3 /* SelectCreate.storyboard in Resources */,
 				DFADAA502B7C443800B14BCB /* TestTableViewCell.xib in Resources */,
 				DF43EBBA2B60B96E00A78CBC /* incorrect.png in Resources */,
+				DF4B3F472B982F75007F2AE3 /* SelectEdit.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,11 +616,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4B3F362B9602CD007F2AE3 /* ResultFiveTestViewController.swift in Sources */,
-				DFADAA732B7C447000B14BCB /* NewSentenceEditViewController.swift in Sources */,
-				DFADAA762B7C447000B14BCB /* NewSentenceCreateViewController.swift in Sources */,
+				DFADAA732B7C447000B14BCB /* TenSentenceEditViewController.swift in Sources */,
+				DFADAA762B7C447000B14BCB /* TenSentenceCreateViewController.swift in Sources */,
 				DFADAA572B7C444600B14BCB /* TestYobiDataModel.swift in Sources */,
 				DFADAA512B7C443800B14BCB /* ContentTestTableViewCell.swift in Sources */,
-				DFADAA742B7C447000B14BCB /* NewSelectCreateViewController.swift in Sources */,
+				DFADAA742B7C447000B14BCB /* SelectCreateViewController.swift in Sources */,
 				DFADAA532B7C443800B14BCB /* TestTableViewCell.swift in Sources */,
 				DF0949962B2DFCC000D8642C /* AppDelegate.swift in Sources */,
 				DFADAA702B7C447000B14BCB /* HomeViewController.swift in Sources */,
@@ -608,7 +632,7 @@
 				DFADAA722B7C447000B14BCB /* StartViewController.swift in Sources */,
 				DFADAA6F2B7C447000B14BCB /* CreateNewViewController.swift in Sources */,
 				DFADAA582B7C444600B14BCB /* TestDataModel.swift in Sources */,
-				DFADAA6B2B7C447000B14BCB /* NewSelectEditViewController.swift in Sources */,
+				DFADAA6B2B7C447000B14BCB /* SelectEditViewController.swift in Sources */,
 				DFADAA712B7C447000B14BCB /* ResultSelectTestViewController.swift in Sources */,
 				DF0949982B2DFCC000D8642C /* SceneDelegate.swift in Sources */,
 				DFADAA6A2B7C447000B14BCB /* ResultViewController.swift in Sources */,
@@ -777,7 +801,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4XT7U97S2A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -792,7 +816,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-academia.SelfTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -814,7 +838,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4XT7U97S2A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -829,7 +853,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-academia.SelfTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

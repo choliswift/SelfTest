@@ -8,13 +8,22 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var createButton: UIButton!
     @IBOutlet private weak var modeButton: UIButton!
     
-    @IBAction func selectButton(_ sender: UIButton) {
+    @IBAction private func selectButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "TestSelect", bundle: nil)
+        if let vc = storyboard.instantiateViewController(identifier: "SelectTestViewController") as? SelectTestViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        audioPlayer?.stop()
         audioPlayer?.stop()
     }
-    @IBAction func createButton(_ sender: UIButton) {
+    @IBAction private func createButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "KindTest", bundle: nil)
+        if let vc = storyboard.instantiateViewController(identifier: "CreateNewViewController") as? CreateNewViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
         audioPlayer?.stop()
     }
-    @IBAction func stopMusicButton(_ sender: UIButton) {
+    @IBAction private func stopMusicButton(_ sender: UIButton) {
         audioPlayer?.stop()
     }
     

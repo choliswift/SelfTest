@@ -3,14 +3,13 @@ import RealmSwift
 
 final class FiveSentenceEditViewController: UIViewController {
     
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var alertLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    @IBAction func saveButton(_ sender: UIButton) {
+    @IBOutlet private weak var titleTextField: UITextField!
+    @IBOutlet private weak var alertLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBAction private func saveButton(_ sender: UIButton) {
         textIsEmpty()
     }
-    
-    @IBOutlet weak var tableViewButtom: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewButtom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()

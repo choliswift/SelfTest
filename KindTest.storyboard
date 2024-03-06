@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="c3M-Lf-ayF">
+            <objects>
+                <navigationController id="nu6-dl-IXh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2qV-88-qyZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="J52-CX-vaq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBr-sh-1yb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="-2"/>
+        </scene>
+        <!--新規作成-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CreateNewViewController" id="Y6W-OH-hqX" customClass="CreateNewViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aqU-iM-5GK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-aa-EyT">
+                                <rect key="frame" x="38" y="163" width="317" height="150"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="kok-Fo-9A9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="文章入力問題（5）"/>
+                                <connections>
+                                    <action selector="fiveSentenceButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pDI-lY-V9g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdE-OS-KQu">
+                                <rect key="frame" x="38" y="528" width="317" height="230"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="klc-vI-aCC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="選択問題"/>
+                                <connections>
+                                    <action selector="selectTestButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ycy-6L-R3t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akf-l2-RMh">
+                                <rect key="frame" x="38" y="341" width="317" height="150"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="JOy-q3-wWd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="文章入力問題（10）"/>
+                                <connections>
+                                    <action selector="tenSentenceButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BVN-a7-ZHy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="paf-Px-QBi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="paf-Px-QBi" firstAttribute="trailing" secondItem="rPc-aa-EyT" secondAttribute="trailing" constant="38" id="NB8-ZX-h85"/>
+                            <constraint firstItem="KdE-OS-KQu" firstAttribute="leading" secondItem="paf-Px-QBi" secondAttribute="leading" constant="38" id="NOg-a4-5RQ"/>
+                            <constraint firstItem="rPc-aa-EyT" firstAttribute="leading" secondItem="paf-Px-QBi" secondAttribute="leading" constant="38" id="WBB-rQ-pWZ"/>
+                            <constraint firstItem="rPc-aa-EyT" firstAttribute="top" secondItem="paf-Px-QBi" secondAttribute="top" constant="60" id="ZD4-WD-oWw"/>
+                            <constraint firstItem="paf-Px-QBi" firstAttribute="trailing" secondItem="KdE-OS-KQu" secondAttribute="trailing" constant="38" id="ZqA-V6-Rrp"/>
+                            <constraint firstItem="paf-Px-QBi" firstAttribute="bottom" secondItem="KdE-OS-KQu" secondAttribute="bottom" constant="60" id="brY-kd-MNx"/>
+                            <constraint firstItem="akf-l2-RMh" firstAttribute="leading" secondItem="paf-Px-QBi" secondAttribute="leading" constant="38" id="fdN-kS-QNh"/>
+                            <constraint firstItem="paf-Px-QBi" firstAttribute="trailing" secondItem="akf-l2-RMh" secondAttribute="trailing" constant="38" id="jrt-DD-mOA"/>
+                            <constraint firstItem="akf-l2-RMh" firstAttribute="top" secondItem="rPc-aa-EyT" secondAttribute="bottom" constant="28" id="m8M-Ce-y3Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="新規作成" id="RiO-Tt-zC6"/>
+                    <connections>
+                        <outlet property="fiveSentenceButton" destination="rPc-aa-EyT" id="6bI-bl-aZh"/>
+                        <outlet property="selectTestButton" destination="KdE-OS-KQu" id="RVm-gR-2xp"/>
+                        <outlet property="tenSentenceButton" destination="akf-l2-RMh" id="Mjl-nz-IiB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

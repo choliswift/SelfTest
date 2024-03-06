@@ -43,9 +43,11 @@ extension SelectTestViewController: UITableViewDataSource {
             //テストの種類を判別
             let kindTest = testDataList[indexPath.row].kind
             if kindTest == 1 {
-                cell.testKindsLabel.text = "入力式問題"
+                cell.testKindsLabel.text = "入力式問題(10)"
             } else if kindTest == 2 {
                 cell.testKindsLabel.text = "選択式問題"
+            } else if kindTest == 3 {
+                cell.testKindsLabel.text = "入力式問題(5)"
             }
             //削除ボタンをセル内で押せるようにaddTarget方式で追加
             let deleteButton = cell.deleteButton
@@ -141,25 +143,26 @@ extension SelectTestViewController: TestTableViewCellDelegate {
         
         //いつもならdelegateで記述していた処理を、セルのボタンタップ時に行うように修正
         let kindTest = self.testDataList[indexPath.row].kind
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let fiveSentenceStoryboard = UIStoryboard(name: "EditFiveSentenceTest", bundle: nil)
         if kindTest == 1 {
-            if let sentenceEditViewController = storyboard.instantiateViewController(identifier: "NewSentenceEditViewController") as? NewSentenceEditViewController {
+            let storyboard = UIStoryboard(name: "TenSentenceEdit", bundle: nil)
+            if let vc = storyboard.instantiateViewController(identifier: "TenSentenceEditViewController") as? TenSentenceEditViewController {
                 let testData = testDataList[indexPath.row]
-                sentenceEditViewController.configure(test: testData)
-                navigationController?.pushViewController(sentenceEditViewController, animated: true)
+                vc.configure(test: testData)
+                navigationController?.pushViewController(vc, animated: true)
             }
         } else if kindTest == 2 {
-            if let selectEditViewController = storyboard.instantiateViewController(identifier: "NewSelectEditViewController") as? NewSelectEditViewController {
+            let storyboard = UIStoryboard(name: "SelectEdit", bundle: nil)
+            if let vc = storyboard.instantiateViewController(identifier: "SelectEditViewController") as? SelectEditViewController {
                 let testData = testDataList[indexPath.row]
-                selectEditViewController.configure(test: testData)
-                navigationController?.pushViewController(selectEditViewController, animated: true)
+                vc.configure(test: testData)
+                navigationController?.pushViewController(vc, animated: true)
             }
         } else if kindTest == 3 {
-            if let sentenceEditViewCotroller = fiveSentenceStoryboard.instantiateViewController(identifier: "FiveSentenceEditViewController") as? FiveSentenceEditViewController {
+            let storyboard = UIStoryboard(name: "FiveSentenceEdit", bundle: nil)
+            if let vc = storyboard.instantiateViewController(identifier: "FiveSentenceEditViewController") as? FiveSentenceEditViewController {
                 let testData = testDataList[indexPath.row]
-                sentenceEditViewCotroller.configure(test: testData)
-                navigationController?.pushViewController(sentenceEditViewCotroller, animated: true)
+                vc.configure(test: testData)
+                navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
