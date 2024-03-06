@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tyN-mD-hWF">
+            <objects>
+                <navigationController id="5oW-lI-R3H" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ttr-Wq-bbq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="a4E-yU-NXL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JqL-L3-0jG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-723" y="-2"/>
+        </scene>
+        <!--入力問題編集-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TenSentenceEditViewController" id="Y6W-OH-hqX" customClass="TenSentenceEditViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wzY-ja-rFe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iP-9d-rBS">
+                                <rect key="frame" x="15" y="113" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRW-s3-VB4">
+                                <rect key="frame" x="20" y="167" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="rIO-Yy-qrn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-2e-Z0D">
+                                <rect key="frame" x="0.0" y="196" width="393" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Jp-NP-i3G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ekb-2e-Z0D" firstAttribute="trailing" secondItem="4Jp-NP-i3G" secondAttribute="trailing" id="56f-OA-DEr"/>
+                            <constraint firstItem="dRW-s3-VB4" firstAttribute="top" secondItem="1iP-9d-rBS" secondAttribute="bottom" constant="20" id="BSt-Ti-3LQ"/>
+                            <constraint firstItem="4Jp-NP-i3G" firstAttribute="trailing" secondItem="1iP-9d-rBS" secondAttribute="trailing" constant="15" id="BoB-vA-eLI"/>
+                            <constraint firstItem="4Jp-NP-i3G" firstAttribute="trailing" secondItem="dRW-s3-VB4" secondAttribute="trailing" constant="20" id="GYM-dN-Af7"/>
+                            <constraint firstItem="Ekb-2e-Z0D" firstAttribute="leading" secondItem="4Jp-NP-i3G" secondAttribute="leading" id="SWD-vh-GhJ"/>
+                            <constraint firstItem="1iP-9d-rBS" firstAttribute="top" secondItem="4Jp-NP-i3G" secondAttribute="top" constant="10" id="VT5-le-NMx"/>
+                            <constraint firstItem="1iP-9d-rBS" firstAttribute="leading" secondItem="4Jp-NP-i3G" secondAttribute="leading" constant="15" id="eC9-kT-C0J"/>
+                            <constraint firstItem="Ekb-2e-Z0D" firstAttribute="top" secondItem="dRW-s3-VB4" secondAttribute="bottom" constant="8" id="pIL-mb-DUj"/>
+                            <constraint firstItem="dRW-s3-VB4" firstAttribute="leading" secondItem="4Jp-NP-i3G" secondAttribute="leading" constant="20" id="waN-FX-0kn"/>
+                            <constraint firstAttribute="bottom" secondItem="Ekb-2e-Z0D" secondAttribute="bottom" id="yoS-xc-1Fk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="入力問題編集" id="pkA-Cy-vIf">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="zoc-Gb-RE8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="J6N-jf-IL6">
+                                <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ldr-uJ-tha"/>
+                                    <constraint firstAttribute="width" constant="60" id="yom-iC-zrb"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
+                                <connections>
+                                    <action selector="savaButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4kC-2t-yIk"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alertLabel" destination="dRW-s3-VB4" id="nu3-WM-OXm"/>
+                        <outlet property="saveButton" destination="J6N-jf-IL6" id="dB2-yU-4NY"/>
+                        <outlet property="tableView" destination="Ekb-2e-Z0D" id="RRQ-iR-jPZ"/>
+                        <outlet property="tableViewBottom" destination="yoS-xc-1Fk" id="GpI-VR-411"/>
+                        <outlet property="titleTextField" destination="1iP-9d-rBS" id="NA9-OM-AjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

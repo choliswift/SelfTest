@@ -18,7 +18,7 @@ final class StartFiveSentenceTestViewController: UIViewController {
     @IBAction private func nextButton(_ sender: UIButton) {
         nextTest()
     }
-    @IBOutlet weak var endButton: UIButton!
+    @IBOutlet private weak var endButton: UIButton!
     
     @IBAction func endButon(_ sender: UIButton) {
         let alert = UIAlertController(title: "問題を終了しますか？", message: "終了するとここまでの正解数のみカウントされます。", preferredStyle: UIAlertController.Style.alert)

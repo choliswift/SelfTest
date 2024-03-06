@@ -1,7 +1,7 @@
 import UIKit
 import RealmSwift
 
-final class NewSentenceCreateViewController: UIViewController {
+final class TenSentenceCreateViewController: UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var saveButton: UIButton!
@@ -163,7 +163,7 @@ final class NewSentenceCreateViewController: UIViewController {
     }
 }
 
-extension NewSentenceCreateViewController: UITableViewDataSource {
+extension TenSentenceCreateViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDataList.count
     }
@@ -183,14 +183,14 @@ extension NewSentenceCreateViewController: UITableViewDataSource {
     }
 }
 
-extension NewSentenceCreateViewController: UITableViewDelegate {
+extension TenSentenceCreateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("タップしたindexpathは\(indexPath.row)です")
     }
 }
 
-extension NewSentenceCreateViewController: SentenceTableViewCellDelegate {
+extension TenSentenceCreateViewController: SentenceTableViewCellDelegate {
     //cellに配置したtextFieldの変更の通知を受け取る
     func testContentTextFieldDidEditing(_ cell: ContentTestTableViewCell, didChangeValue contentvalue: String) {
         let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))

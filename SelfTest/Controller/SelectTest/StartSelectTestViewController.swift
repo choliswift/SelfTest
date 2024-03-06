@@ -9,8 +9,7 @@ final class StartSelectTestViewController: UIViewController {
     @IBOutlet private weak var correctAnswerLabel: UILabel!
     @IBOutlet private weak var bestAnswerLabel: UILabel!
     @IBOutlet private weak var nextButton: UIButton!
-
-    @IBOutlet weak var judgeImageView: UIImageView!
+    @IBOutlet private weak var judgeImageView: UIImageView!
     
     @IBOutlet private weak var choicesButton1: UIButton!
     @IBOutlet private weak var choicesButton2: UIButton!

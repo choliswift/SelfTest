@@ -7,7 +7,7 @@ final class FiveSentenceCreateViewController:UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var tableViewBottom: NSLayoutConstraint!
-    @IBOutlet weak var alertLabel: UILabel!
+    @IBOutlet private weak var alertLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

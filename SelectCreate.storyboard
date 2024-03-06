@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cEX-rg-9Pw">
+            <objects>
+                <navigationController id="cMc-EJ-3q4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tLm-2K-bew">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="bUH-d3-AB9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfo-bQ-eRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-737" y="-2"/>
+        </scene>
+        <!--選択問題作成-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SelectCreateViewController" id="Y6W-OH-hqX" customClass="SelectCreateViewController" customModule="SelfTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oH5-PD-uwY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テストのタイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3J-3h-Msp">
+                                <rect key="frame" x="15" y="114" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての問題と解答を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ2-C2-gsl">
+                                <rect key="frame" x="20" y="169" width="353" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RqR-2q-jPI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-NQ-eYf">
+                                <rect key="frame" x="0.0" y="198" width="393" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8jq-9A-W57"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b2v-NQ-eYf" firstAttribute="leading" secondItem="8jq-9A-W57" secondAttribute="leading" id="4aD-Bc-f4j"/>
+                            <constraint firstItem="b2v-NQ-eYf" firstAttribute="trailing" secondItem="8jq-9A-W57" secondAttribute="trailing" id="JhX-mQ-De9"/>
+                            <constraint firstItem="8jq-9A-W57" firstAttribute="trailing" secondItem="e3J-3h-Msp" secondAttribute="trailing" constant="15" id="NxD-Yb-an3"/>
+                            <constraint firstItem="e3J-3h-Msp" firstAttribute="leading" secondItem="8jq-9A-W57" secondAttribute="leading" constant="15" id="QQm-Q7-lfc"/>
+                            <constraint firstItem="zJ2-C2-gsl" firstAttribute="top" secondItem="e3J-3h-Msp" secondAttribute="bottom" constant="21" id="RGh-wv-ZmP"/>
+                            <constraint firstItem="zJ2-C2-gsl" firstAttribute="leading" secondItem="8jq-9A-W57" secondAttribute="leading" constant="20" id="SPF-PY-YoB"/>
+                            <constraint firstItem="e3J-3h-Msp" firstAttribute="top" secondItem="8jq-9A-W57" secondAttribute="top" constant="11" id="Snk-1d-6dl"/>
+                            <constraint firstItem="b2v-NQ-eYf" firstAttribute="top" secondItem="zJ2-C2-gsl" secondAttribute="bottom" constant="8" id="VVk-BH-iD7"/>
+                            <constraint firstAttribute="bottom" secondItem="b2v-NQ-eYf" secondAttribute="bottom" id="Xkc-79-715"/>
+                            <constraint firstItem="8jq-9A-W57" firstAttribute="trailing" secondItem="zJ2-C2-gsl" secondAttribute="trailing" constant="20" id="Yhm-44-qm2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="選択問題作成" id="QGY-GZ-Epm">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Hrg-Zk-daK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0Vr-0R-1PF">
+                                <rect key="frame" x="321" y="4.6666666666666679" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Hap-J0-xJM"/>
+                                    <constraint firstAttribute="height" constant="35" id="qsz-0b-C9G"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zjg-hK-ljz"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alertLabel" destination="zJ2-C2-gsl" id="QWH-kA-M4M"/>
+                        <outlet property="saveButton" destination="0Vr-0R-1PF" id="bLY-pi-BdM"/>
+                        <outlet property="tableView" destination="b2v-NQ-eYf" id="lgS-LF-dws"/>
+                        <outlet property="tableViewBottom" destination="Xkc-79-715" id="s8t-7k-5sH"/>
+                        <outlet property="titleTextField" destination="e3J-3h-Msp" id="ylf-nT-KAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

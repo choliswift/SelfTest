@@ -6,7 +6,6 @@ final class ResultSelectTestViewController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var evaluationLabel: UILabel!
     @IBOutlet private weak var viewCloseButon: UIButton!
-    
     @IBAction private func viewCloseButton(_ sender: UIButton) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }

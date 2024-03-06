@@ -1,13 +1,13 @@
 import UIKit
 import RealmSwift
 
-final class NewSelectCreateViewController: UIViewController {
+final class SelectCreateViewController: UIViewController {
+    
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
     @IBAction private func saveButton(_ sender: UIButton) {
         textIsEmpty()
     }
-
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var tableViewBottom: NSLayoutConstraint!
     @IBOutlet private weak var alertLabel: UILabel!
@@ -176,7 +176,7 @@ final class NewSelectCreateViewController: UIViewController {
     }
 }
 
-extension NewSelectCreateViewController: UITableViewDataSource {
+extension SelectCreateViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testDataList.count
     }
@@ -206,7 +206,7 @@ extension NewSelectCreateViewController: UITableViewDataSource {
     }
 }
 
-extension NewSelectCreateViewController: UITableViewDelegate {
+extension SelectCreateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("タップしたindexpathは\(indexPath.row)です")
@@ -214,7 +214,7 @@ extension NewSelectCreateViewController: UITableViewDelegate {
 }
 //、一つ一つfuncで分けてあげないと全部同じ値になる。
 //もし一つの関数で行った場合、どれか一つに入力した内容がすべてのtextFieldに反映され(最後に入力したvalueがすべてに反映)、datasourceの中で記述した代入処理が行われ、全て同じ値になる。
-extension NewSelectCreateViewController: SelectTableViewCellDelegate {
+extension SelectCreateViewController: SelectTableViewCellDelegate {
     func contentTextFieldDidEditing(_ cell: SelectTestTableViewCell, didChangeValue value: String) {
         let indexPath = tableView.indexPathForRow(at: cell.convert(cell.bounds.origin, to: tableView))
         let testNumber = indexPath?.row
